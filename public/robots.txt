@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://moroccofresh.ma/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Allow important pages
+Allow: /
+Allow: /products
+Allow: /about
+Allow: /contact
+Allow: /blog
+
+# SEO optimized for agricultural export keywords
+# bulk export moroccan vegetables
+# wholesale moroccan produce supplier
+# fresh produce direct from moroccan farm
+# export vegetables morocco to europe
