@@ -1,79 +1,82 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, User, Tag } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const blogPosts = [
   {
     id: 1,
-    title: "The Benefits of Eating Seasonal Produce",
-    excerpt:
-      "Discover why eating fruits and vegetables in season is better for your health, wallet, and the environment.",
+    titleKey: "blog.post1.title",
+    excerptKey: "blog.post1.excerpt",
     image: "/placeholder.svg?height=300&width=400",
     author: "Ahmed Hassan",
     date: "2024-01-15",
-    category: "Nutrition",
-    readTime: "5 min read",
+    categoryKey: "blog.category.nutrition",
+    readTime: 5,
   },
   {
     id: 2,
-    title: "Our Organic Certification Journey",
-    excerpt:
-      "Learn about the rigorous process we went through to achieve organic certification and what it means for our customers.",
+    titleKey: "blog.post2.title",
+    excerptKey: "blog.post2.excerpt",
     image: "/placeholder.svg?height=300&width=400",
     author: "Fatima Benali",
     date: "2024-01-10",
-    category: "Farming",
-    readTime: "7 min read",
+    categoryKey: "blog.category.farming",
+    readTime: 7,
   },
   {
     id: 3,
-    title: "Sustainable Water Management in Agriculture",
-    excerpt: "How we use advanced irrigation techniques to conserve water while maintaining crop quality.",
+    titleKey: "blog.post3.title",
+    excerptKey: "blog.post3.excerpt",
     image: "/placeholder.svg?height=300&width=400",
     author: "Omar Alami",
     date: "2024-01-05",
-    category: "Sustainability",
-    readTime: "6 min read",
+    categoryKey: "blog.category.sustainability",
+    readTime: 6,
   },
   {
     id: 4,
-    title: "Recipe: Fresh Orange and Avocado Salad",
-    excerpt: "A refreshing and nutritious salad recipe using our farm-fresh oranges and creamy avocados.",
+    titleKey: "blog.post4.title",
+    excerptKey: "blog.post4.excerpt",
     image: "/placeholder.svg?height=300&width=400",
     author: "Aicha Benali",
     date: "2024-01-01",
-    category: "Recipes",
-    readTime: "3 min read",
+    categoryKey: "blog.category.recipes",
+    readTime: 3,
   },
   {
     id: 5,
-    title: "Export Success: Reaching New Markets",
-    excerpt: "Our journey expanding to new international markets and the challenges we overcame.",
+    titleKey: "blog.post5.title",
+    excerptKey: "blog.post5.excerpt",
     image: "/placeholder.svg?height=300&width=400",
     author: "Omar Alami",
     date: "2023-12-28",
-    category: "Business",
-    readTime: "8 min read",
+    categoryKey: "blog.category.business",
+    readTime: 8,
   },
   {
     id: 6,
-    title: "Winter Harvest: What's Fresh This Season",
-    excerpt: "Explore the delicious winter produce available from our farm and their nutritional benefits.",
+    titleKey: "blog.post6.title",
+    excerptKey: "blog.post6.excerpt",
     image: "/placeholder.svg?height=300&width=400",
     author: "Ahmed Hassan",
     date: "2023-12-20",
-    category: "Seasonal",
-    readTime: "4 min read",
+    categoryKey: "blog.category.seasonal",
+    readTime: 4,
   },
 ]
 
 export default function BlogGrid() {
+  const { t } = useTranslation()
+
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-gray-900">Latest Posts</h2>
-        <div className="text-gray-600">Showing {blogPosts.length} articles</div>
+        <h2 className="text-2xl font-bold text-gray-900">{t("blog.latestPosts")}</h2>
+        <div className="text-gray-600">{t("blog.showingArticles").replace("{count}", blogPosts.length.toString())}</div>
       </div>
 
       <div className="grid grid-cols-1 gap-8">
@@ -84,7 +87,7 @@ export default function BlogGrid() {
                 <div className="md:col-span-1">
                   <Image
                     src={post.image || "/placeholder.svg"}
-                    alt={post.title}
+                    alt={t(post.titleKey)}
                     width={400}
                     height={300}
                     className="w-full h-64 md:h-full object-cover"
@@ -94,20 +97,20 @@ export default function BlogGrid() {
                   <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
                     <div className="flex items-center space-x-1">
                       <Tag className="w-4 h-4" />
-                      <span className="text-orange-500 font-medium">{post.category}</span>
+                      <span className="text-orange-500 font-medium">{t(post.categoryKey)}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
                       <span>{new Date(post.date).toLocaleDateString()}</span>
                     </div>
-                    <span>{post.readTime}</span>
+                    <span>{t("blog.readTime").replace("{time}", post.readTime.toString())}</span>
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 transition-colors">
-                    <Link href={`/blog/${post.id}`}>{post.title}</Link>
+                    <Link href={`/blog/${post.id}`}>{t(post.titleKey)}</Link>
                   </h3>
 
-                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{t(post.excerptKey)}</p>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
@@ -118,7 +121,7 @@ export default function BlogGrid() {
                       href={`/blog/${post.id}`}
                       className="text-orange-500 hover:text-orange-600 font-medium text-sm"
                     >
-                      Read More →
+                      {t("blog.readMore")}
                     </Link>
                   </div>
                 </div>

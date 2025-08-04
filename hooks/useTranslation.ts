@@ -188,6 +188,41 @@ const translations: Translations = {
       "Stay updated with the latest from our farm, seasonal harvests, nutrition tips, and sustainable farming insights",
     "blog.farmingTips": "Farming Tips",
     "blog.latestUpdates": "Latest Updates",
+    "blog.latestPosts": "Latest Posts",
+    "blog.showingArticles": "Showing {count} articles",
+    "blog.readMore": "Read More →",
+    "blog.search": "Search",
+    "blog.searchPlaceholder": "Search articles...",
+    "blog.categories": "Categories",
+    "blog.recentPosts": "Recent Posts",
+    "blog.tags": "Tags",
+    "blog.newsletter": "Newsletter",
+    "blog.newsletterDesc": "Get the latest updates from our farm delivered to your inbox.",
+    "blog.emailPlaceholder": "Your email address",
+    "blog.subscribe": "Subscribe",
+    "blog.readTime": "{time} min read",
+    
+    // Blog Posts Content
+    "blog.post1.title": "The Benefits of Eating Seasonal Produce",
+    "blog.post1.excerpt": "Discover why eating fruits and vegetables in season is better for your health, wallet, and the environment.",
+    "blog.post2.title": "Our Organic Certification Journey",
+    "blog.post2.excerpt": "Learn about the rigorous process we went through to achieve organic certification and what it means for our customers.",
+    "blog.post3.title": "Sustainable Water Management in Agriculture",
+    "blog.post3.excerpt": "How we use advanced irrigation techniques to conserve water while maintaining crop quality.",
+    "blog.post4.title": "Recipe: Fresh Orange and Avocado Salad",
+    "blog.post4.excerpt": "A refreshing and nutritious salad recipe using our farm-fresh oranges and creamy avocados.",
+    "blog.post5.title": "Export Success: Reaching New Markets",
+    "blog.post5.excerpt": "Our journey expanding to new international markets and the challenges we overcame.",
+    "blog.post6.title": "Winter Harvest: What's Fresh This Season",
+    "blog.post6.excerpt": "Explore the delicious winter produce available from our farm and their nutritional benefits.",
+    
+    // Blog Categories
+    "blog.category.nutrition": "Nutrition",
+    "blog.category.farming": "Farming",
+    "blog.category.sustainability": "Sustainability",
+    "blog.category.recipes": "Recipes",
+    "blog.category.business": "Business",
+    "blog.category.seasonal": "Seasonal",
 
     // Shop Page
     "shop.title": "Fresh Produce Shop",
@@ -373,12 +408,54 @@ const translations: Translations = {
     "contact.quickResponse": "Réponse Rapide",
     "contact.partnershipReady": "Prêt pour Partenariat",
 
+    // // Blog Page
+    // "blog.title": "Blog & Actualités de la Ferme",
+    // "blog.subtitle":
+    //   "Restez informé des dernières nouvelles de notre ferme, récoltes saisonnières, conseils nutritionnels et perspectives d'agriculture durable",
+    // "blog.farmingTips": "Conseils Agricoles",
+    // "blog.latestUpdates": "Dernières Mises à Jour",
+
     // Blog Page
     "blog.title": "Blog & Actualités de la Ferme",
     "blog.subtitle":
       "Restez informé des dernières nouvelles de notre ferme, récoltes saisonnières, conseils nutritionnels et perspectives d'agriculture durable",
     "blog.farmingTips": "Conseils Agricoles",
     "blog.latestUpdates": "Dernières Mises à Jour",
+    "blog.latestPosts": "Derniers Articles",
+    "blog.showingArticles": "Affichage de {count} articles",
+    "blog.readMore": "Lire Plus →",
+    "blog.search": "Rechercher",
+    "blog.searchPlaceholder": "Rechercher des articles...",
+    "blog.categories": "Catégories",
+    "blog.recentPosts": "Articles Récents",
+    "blog.tags": "Tags",
+    "blog.newsletter": "Newsletter",
+    "blog.newsletterDesc": "Recevez les dernières mises à jour de notre ferme directement dans votre boîte mail.",
+    "blog.emailPlaceholder": "Votre adresse email",
+    "blog.subscribe": "S'abonner",
+    "blog.readTime": "{time} min de lecture",
+    
+    // Blog Posts Content
+    "blog.post1.title": "Les Avantages de Manger des Produits de Saison",
+    "blog.post1.excerpt": "Découvrez pourquoi manger des fruits et légumes de saison est meilleur pour votre santé, votre portefeuille et l'environnement.",
+    "blog.post2.title": "Notre Parcours de Certification Biologique",
+    "blog.post2.excerpt": "Apprenez-en plus sur le processus rigoureux que nous avons suivi pour obtenir la certification biologique et ce que cela signifie pour nos clients.",
+    "blog.post3.title": "Gestion Durable de l'Eau en Agriculture",
+    "blog.post3.excerpt": "Comment nous utilisons des techniques d'irrigation avancées pour économiser l'eau tout en maintenant la qualité des cultures.",
+    "blog.post4.title": "Recette: Salade d'Oranges et d'Avocats Frais",
+    "blog.post4.excerpt": "Une recette de salade rafraîchissante et nutritive utilisant nos oranges fraîches de la ferme et nos avocats crémeux.",
+    "blog.post5.title": "Succès Export: Atteindre de Nouveaux Marchés",
+    "blog.post5.excerpt": "Notre parcours d'expansion vers de nouveaux marchés internationaux et les défis que nous avons surmontés.",
+    "blog.post6.title": "Récolte d'Hiver: Ce qui est Frais Cette Saison",
+    "blog.post6.excerpt": "Explorez les délicieux produits d'hiver disponibles de notre ferme et leurs bienfaits nutritionnels.",
+    
+    // Blog Categories
+    "blog.category.nutrition": "Nutrition",
+    "blog.category.farming": "Agriculture",
+    "blog.category.sustainability": "Durabilité",
+    "blog.category.recipes": "Recettes",
+    "blog.category.business": "Entreprise",
+    "blog.category.seasonal": "Saisonnier",
 
     // Shop Page
     "shop.title": "Boutique de Produits Frais",

@@ -1,6 +1,11 @@
+"use client"
+
 import { BookOpen, Leaf, TrendingUp } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function BlogHeader() {
+  const { t } = useTranslation()
+
   return (
     <section className="relative py-24 bg-gradient-to-br from-emerald-800 via-slate-800 to-gray-900 overflow-hidden">
       {/* Background Elements */}
@@ -20,25 +25,24 @@ export default function BlogHeader() {
 
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Farm Blog
-            <span className="block text-emerald-300">& News</span>
+            {t("blog.title").split(" & ")[0]}
+            <span className="block text-emerald-300">& {t("blog.title").split(" & ")[1]}</span>
           </h1>
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Stay updated with the latest from our farm, seasonal harvests, nutrition tips, and sustainable farming
-            insights
+            {t("blog.subtitle")}
           </p>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
               <Leaf className="w-5 h-5 text-orange-400" />
-              <span className="text-white font-medium">Farming Tips</span>
+              <span className="text-white font-medium">{t("blog.farmingTips")}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
               <TrendingUp className="w-5 h-5 text-orange-400" />
-              <span className="text-white font-medium">Latest Updates</span>
+              <span className="text-white font-medium">{t("blog.latestUpdates")}</span>
             </div>
           </div>
         </div>
