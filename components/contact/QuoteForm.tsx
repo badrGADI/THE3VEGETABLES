@@ -53,15 +53,15 @@ export default function QuoteForm() {
   ]
 
   return (
-    <Card>
+    <Card className="border-orange-100 dark:border-orange-200 bg-white dark:bg-gray-700">
       <CardHeader>
-        <CardTitle className="text-2xl text-gray-900">B2B Quote Request</CardTitle>
+        <CardTitle className="text-2xl text-gray-900 dark:text-gray-100">B2B Quote Request</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Company Name *
               </label>
               <Input
@@ -74,7 +74,7 @@ export default function QuoteForm() {
               />
             </div>
             <div>
-              <label htmlFor="contactName" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="contactName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Contact Person *
               </label>
               <Input
@@ -90,7 +90,7 @@ export default function QuoteForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Business Email *
               </label>
               <Input
@@ -103,7 +103,7 @@ export default function QuoteForm() {
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Phone Number *
               </label>
               <Input
@@ -118,7 +118,7 @@ export default function QuoteForm() {
           </div>
 
           <div>
-            <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="country" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Delivery Country *
             </label>
             <Select onValueChange={(value) => handleChange("country", value)}>
@@ -138,7 +138,7 @@ export default function QuoteForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-4">Products of Interest *</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">Products of Interest *</label>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {productOptions.map((product) => (
                 <div key={product} className="flex items-center space-x-2">
@@ -147,7 +147,7 @@ export default function QuoteForm() {
                     checked={formData.products.includes(product)}
                     onCheckedChange={(checked) => handleProductChange(product, checked as boolean)}
                   />
-                  <label htmlFor={product} className="text-sm text-gray-700 cursor-pointer">
+                  <label htmlFor={product} className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
                     {product}
                   </label>
                 </div>
@@ -157,7 +157,7 @@ export default function QuoteForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Expected Quantity (kg/month)
               </label>
               <Select onValueChange={(value) => handleChange("quantity", value)}>
@@ -174,7 +174,7 @@ export default function QuoteForm() {
               </Select>
             </div>
             <div>
-              <label htmlFor="frequency" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="frequency" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Delivery Frequency
               </label>
               <Select onValueChange={(value) => handleChange("frequency", value)}>
@@ -193,7 +193,7 @@ export default function QuoteForm() {
           </div>
 
           <div>
-            <label htmlFor="requirements" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="requirements" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Special Requirements
             </label>
             <Textarea
@@ -212,7 +212,7 @@ export default function QuoteForm() {
               checked={formData.agreedToTerms}
               onCheckedChange={(checked) => handleChange("agreedToTerms", checked as boolean)}
             />
-            <label htmlFor="terms" className="text-sm text-gray-700">
+            <label htmlFor="terms" className="text-sm text-gray-700 dark:text-gray-300">
               I agree to the terms and conditions and privacy policy *
             </label>
           </div>

@@ -20,7 +20,28 @@ export const metadata: Metadata = {
       "Leading Moroccan agricultural export company supplying bulk quantities of fresh fruits and vegetables worldwide.",
     type: "website",
   },
-    generator: 'v0.dev'
+  icons: {
+    icon: [
+      {
+        url: "/logo.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/logo.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/logo.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

@@ -30,15 +30,15 @@ export default function ContactForm() {
   }
 
   return (
-    <Card>
+    <Card className="border-orange-100 dark:border-orange-200 bg-white dark:bg-gray-700">
       <CardHeader>
-        <CardTitle className="text-2xl text-gray-900">Send us a Message</CardTitle>
+        <CardTitle className="text-2xl text-gray-900 dark:text-gray-100">Send us a Message</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Full Name *
               </label>
               <Input
@@ -51,7 +51,7 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Email Address *
               </label>
               <Input
@@ -67,7 +67,7 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Phone Number
               </label>
               <Input
@@ -79,7 +79,7 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Company Name
               </label>
               <Input
@@ -93,7 +93,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Subject *
             </label>
             <Select onValueChange={(value) => handleChange("subject", value)}>
@@ -112,7 +112,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Message *
             </label>
             <Textarea

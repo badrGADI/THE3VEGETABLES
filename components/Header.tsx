@@ -16,11 +16,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">M</span>
-            </div>
+            <img src="/logo.png" alt="The3Vegetables Logo" className="w-24 h-24 object-contain" />
             <div>
-              <div className="text-xl font-bold text-gray-900 dark:text-gray-100">MoroccoFresh</div>
+              <div className="text-xl font-bold text-gray-900 dark:text-gray-100">THE 3 VEGETABLES</div>
               <div className="text-xs text-gray-600 dark:text-gray-400">Agricultural Export</div>
             </div>
           </Link>

@@ -17,7 +17,7 @@ const products = [
     id: 2,
     name: "Organic Tomatoes",
     category: "Vegetables",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/tomato.png",
     description: "Vine-ripened organic tomatoes, perfect for cooking",
     price: "From $3.20/kg",
   },
