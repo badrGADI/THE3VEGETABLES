@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <div className="text-gray-300">Hectares of Land</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-4xl font-bold text-white mb-2">18+</div>
                 <div className="text-gray-300">Countries Served</div>
               </div>
             </div>
