@@ -8,8 +8,8 @@ export default function CallToAction() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 bg-gray-900 dark:bg-gray-950">
-      <div className="container mx-auto px-4 text-center">
+    <section className="py-20 bg-gray-900 dark:bg-gray-900">
+      <div className="container mx-auto px-4 text-center dark:bg-gray-900 rounded-2xl">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {t("callToAction.title")}

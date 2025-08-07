@@ -93,7 +93,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/story.png"
                 alt="Three generations of our farming family"
                 width={600}
                 height={500}
@@ -202,7 +202,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/business.png"
                 alt="Sustainable farming practices on our farm"
                 width={600}
                 height={500}
@@ -279,12 +279,12 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="Ahmed Hassan - Farm Owner"
+                  alt="Ahmed GADI - Farm Owner"
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Ahmed Hassan</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Ahmed GADI</h3>
                 <p className="text-orange-500 font-medium mb-4">Farm Owner & CEO</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Third-generation farmer leading our sustainable agriculture initiatives and global expansion.
@@ -296,12 +296,12 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="Fatima Benali - Agricultural Engineer"
+                  alt="Ayoub ELOUAZZANI - Agricultural Engineer"
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Fatima Benali</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Ayoub ELOUAZZANI</h3>
                 <p className="text-orange-500 font-medium mb-4">Agricultural Engineer</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Expert in sustainable farming practices and organic certification processes.
@@ -313,12 +313,12 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="Omar Alami - Export Manager"
+                  alt="Badr GADI - Export Manager"
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Omar Alami</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Badr GADI</h3>
                 <p className="text-orange-500 font-medium mb-4">Export Manager</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Manages international logistics and ensures quality delivery to customers worldwide.

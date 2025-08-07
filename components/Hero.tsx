@@ -125,7 +125,7 @@ export default function Hero() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/placeholder.svg?height=600&width=500&text=Fresh+Moroccan+Vegetables"
+                src="/nobgmain.png"
                 alt="Fresh Moroccan vegetables ready for bulk export"
                 width={500}
                 height={600}
