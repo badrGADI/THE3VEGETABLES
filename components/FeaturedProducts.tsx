@@ -98,7 +98,7 @@ export default function FeaturedProducts() {
 
         <div className="text-center">
           <Link href="/shop">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">
+            <Button className="bg-orange-500 hover:bg-orange-600  text-white px-8 py-3 text-lg">
               View All Products
             </Button>
           </Link>
