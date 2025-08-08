@@ -14,7 +14,7 @@ export default function CallToAction() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {t("callToAction.title")}
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-7">
             {t("callToAction.description")}
           </p>
 
