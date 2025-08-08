@@ -21,15 +21,30 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
+              {/* Logo */}
+            <Link href="/" className="flex items-center space-x-2">
+            <img src="/logo.png" alt="The3Vegetables Logo" className="w-20 h-20 object-contain" />
+            
               <div>
-                <div className="text-xl font-bold">{t("companyName")}</div>
+                <div className="text-xl font-bold">
+                  {(() => {
+                    const name = t("companyName");
+                    const parts = name.split("3");
+                    return (
+                      <>
+                        {parts[0]}
+                        <span className="text-green-600 dark:text-green-400">3</span>
+                        {parts[1]}
+                      </>
+                    );
+                  })()}
+                </div>
+                
                 <div className="text-sm text-gray-400">
                   {t("companyDescription")}
                 </div>
               </div>
+              </Link>
             </div>
             <p className="text-gray-400 mb-4">{t("companyMission")}</p>
             <div className="flex space-x-4">

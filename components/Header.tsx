@@ -20,7 +20,19 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3">
             <img src="/logo.png" alt="The3Vegetables Logo" className="w-24 h-24 object-contain" />
             <div>
-              <div className="text-xl font-bold text-gray-900 dark:text-gray-100">{t("companyName")}</div>
+              <div className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                {(() => {
+                  const name = t("companyName");
+                  const parts = name.split("3");
+                  return (
+                    <>
+                      {parts[0]}
+                      <span className="text-green-600 dark:text-green-400">3</span>
+                      {parts[1]}
+                    </>
+                  );
+                })()}
+              </div>
               <div className="text-xs text-gray-600 dark:text-gray-400">{t("companyDescription")}</div>
             </div>
           </Link>
@@ -48,10 +60,12 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
             <LanguageToggle />
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-              <Phone className="w-4 h-4 mr-2" />
-              {t("nav.getQuote")}
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Phone className="w-4 h-4 mr-2" />
+                {t("nav.getQuote")}
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -88,7 +102,9 @@ export default function Header() {
               <div className="flex items-center space-x-4 pt-4">
                 <ThemeToggle />
                 <LanguageToggle />
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white">{t("nav.getQuote")}</Button>
+                <Link href="/contact">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">{t("nav.getQuote")}</Button>
+                </Link>
               </div>
             </nav>
           </div>

@@ -86,7 +86,7 @@ const translations: Translations = {
     "callToAction.customSolutionsDescription": "Tailored packaging and logistics for your needs",
 
     // Footer
-    companyName: "MoroccoFresh",
+    companyName: "The 3 Vegetabeles",
     companyDescription: "Agricultural Export",
     companyMission:
       "Leading Moroccan agricultural export company supplying premium fresh produce to international markets worldwide.",
@@ -312,7 +312,7 @@ const translations: Translations = {
     "callToAction.customSolutionsDescription": "Emballage et logistique adaptés à vos besoins",
 
     // Footer
-    companyName: "MoroccoFresh",
+    companyName: "The 3 Vegetabeles",
     companyDescription: "Export Agricole",
     companyMission:
       "Entreprise leader d'export agricole marocain fournissant des produits frais premium aux marchés internationaux du monde entier.",

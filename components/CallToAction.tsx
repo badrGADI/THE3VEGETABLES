@@ -25,13 +25,15 @@ export default function CallToAction() {
                 {t("callToAction.requestBulkQuote")}
               </Button>
             </Link>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg bg-transparent"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              {t("callToAction.scheduleCall")}
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg bg-transparent"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                {t("callToAction.scheduleCall")}
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
