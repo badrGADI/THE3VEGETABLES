@@ -9,13 +9,13 @@ export default function ExportExperience() {
   const stats = [
     {
       icon: Globe,
-      number: "50+",
+      number: "18+",
       labelKey: "exportExperience.countriesServed",
       descKey: "exportExperience.countriesDesc",
     },
     {
       icon: Truck,
-      number: "500+",
+      number: "78+",
       labelKey: "exportExperience.containersMonth",
       descKey: "exportExperience.containersDesc",
     },
@@ -27,7 +27,7 @@ export default function ExportExperience() {
     },
     {
       icon: Users,
-      number: "200+",
+      number: "120+",
       labelKey: "exportExperience.happyClients",
       descKey: "exportExperience.clientsDesc",
     },

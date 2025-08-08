@@ -117,7 +117,7 @@ export default function ProductsPreview() {
           <Link href="/products">
             <Button
               variant="outline"
-              className="border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
+              className="border-orange-500 text-orange-500 hover:bg-orange-50 hover:text-orange-500 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
             >
               {t("productsPreview.viewAllProducts")}
             </Button>

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
-type TranslationKey = string
-type Translations = Record<string, Record<string, string>>
+type TranslationKey = string;
+type Translations = Record<string, Record<string, string>>;
 
 const translations: Translations = {
   en: {
@@ -34,20 +34,25 @@ const translations: Translations = {
     "hero.requestQuote": "Request Quote",
     "hero.stats1Value": "500+",
     "hero.stats1Label": "Tons/Month",
-    "hero.stats2Value": "50+",
+    "hero.stats2Value": "18+",
     "hero.stats2Label": "Countries",
 
     // Why Choose Us
     "whyChoose.title": "Why Choose MoroccoFresh?",
-    "whyChoose.subtitle": "Your trusted partner for bulk agricultural exports from Morocco to international markets",
+    "whyChoose.subtitle":
+      "Your trusted partner for bulk agricultural exports from Morocco to international markets",
     "whyChoose.farmFresh": "Farm Fresh Quality",
-    "whyChoose.farmFreshDesc": "Direct from our certified organic farms in Morocco's fertile regions",
+    "whyChoose.farmFreshDesc":
+      "Direct from our certified organic farms in Morocco's fertile regions",
     "whyChoose.international": "International Standards",
-    "whyChoose.internationalDesc": "GlobalGAP, ISO 22000, and organic certifications for global markets",
+    "whyChoose.internationalDesc":
+      "GlobalGAP, ISO 22000, and organic certifications for global markets",
     "whyChoose.worldwide": "Worldwide Export",
-    "whyChoose.worldwideDesc": "Reliable shipping to any port with temperature-controlled logistics",
+    "whyChoose.worldwideDesc":
+      "Reliable shipping to any port with temperature-controlled logistics",
     "whyChoose.trusted": "Trusted Partner",
-    "whyChoose.trustedDesc": "15+ years serving international importers and distributors",
+    "whyChoose.trustedDesc":
+      "15+ years serving international importers and distributors",
 
     // Products Preview
     "productsPreview.title": "Our Export Products",
@@ -79,11 +84,14 @@ const translations: Translations = {
     "callToAction.requestBulkQuote": "Request Bulk Quote",
     "callToAction.scheduleCall": "Schedule Call",
     "callToAction.quickResponseTitle": "Quick Response",
-    "callToAction.quickResponseDescription": "Get quotes within 24 hours for all bulk inquiries",
+    "callToAction.quickResponseDescription":
+      "Get quotes within 24 hours for all bulk inquiries",
     "callToAction.directContactTitle": "Direct Contact",
-    "callToAction.directContactDescription": "Speak directly with our export specialists",
+    "callToAction.directContactDescription":
+      "Speak directly with our export specialists",
     "callToAction.customSolutionsTitle": "Custom Solutions",
-    "callToAction.customSolutionsDescription": "Tailored packaging and logistics for your needs",
+    "callToAction.customSolutionsDescription":
+      "Tailored packaging and logistics for your needs",
 
     // Footer
     companyName: "The 3 Vegetabeles",
@@ -144,13 +152,17 @@ const translations: Translations = {
     "quality.organic": "Organic",
     "quality.compliant": "Compliant",
     "quality.farmSelection": "Farm Selection",
-    "quality.farmSelectionDesc": "Careful selection of optimal harvest timing based on quality parameters",
+    "quality.farmSelectionDesc":
+      "Careful selection of optimal harvest timing based on quality parameters",
     "quality.inspection": "Quality Inspection",
-    "quality.inspectionDesc": "Rigorous quality control and grading by certified inspectors",
+    "quality.inspectionDesc":
+      "Rigorous quality control and grading by certified inspectors",
     "quality.coldChain": "Cold Chain",
-    "quality.coldChainDesc": "Immediate cold storage and temperature-controlled handling",
+    "quality.coldChainDesc":
+      "Immediate cold storage and temperature-controlled handling",
     "quality.exportReady": "Export Ready",
-    "quality.exportReadyDesc": "Final quality check and certification before international shipping",
+    "quality.exportReadyDesc":
+      "Final quality check and certification before international shipping",
 
     // Partnership
     "partnership.title": "Partnership Excellence",
@@ -167,7 +179,8 @@ const translations: Translations = {
 
     // About Page
     "about.title": "Our Family Farm Story",
-    "about.subtitle": "Three generations of passion, tradition, and innovation in sustainable agriculture",
+    "about.subtitle":
+      "Three generations of passion, tradition, and innovation in sustainable agriculture",
     "about.yearsExperience": "70+",
     "about.yearsLabel": "Years of Experience",
     "about.hectares": "500",
@@ -197,25 +210,32 @@ const translations: Translations = {
     "blog.recentPosts": "Recent Posts",
     "blog.tags": "Tags",
     "blog.newsletter": "Newsletter",
-    "blog.newsletterDesc": "Get the latest updates from our farm delivered to your inbox.",
+    "blog.newsletterDesc":
+      "Get the latest updates from our farm delivered to your inbox.",
     "blog.emailPlaceholder": "Your email address",
     "blog.subscribe": "Subscribe",
     "blog.readTime": "{time} min read",
-    
+
     // Blog Posts Content
     "blog.post1.title": "The Benefits of Eating Seasonal Produce",
-    "blog.post1.excerpt": "Discover why eating fruits and vegetables in season is better for your health, wallet, and the environment.",
+    "blog.post1.excerpt":
+      "Discover why eating fruits and vegetables in season is better for your health, wallet, and the environment.",
     "blog.post2.title": "Our Organic Certification Journey",
-    "blog.post2.excerpt": "Learn about the rigorous process we went through to achieve organic certification and what it means for our customers.",
+    "blog.post2.excerpt":
+      "Learn about the rigorous process we went through to achieve organic certification and what it means for our customers.",
     "blog.post3.title": "Sustainable Water Management in Agriculture",
-    "blog.post3.excerpt": "How we use advanced irrigation techniques to conserve water while maintaining crop quality.",
+    "blog.post3.excerpt":
+      "How we use advanced irrigation techniques to conserve water while maintaining crop quality.",
     "blog.post4.title": "Recipe: Fresh Orange and Avocado Salad",
-    "blog.post4.excerpt": "A refreshing and nutritious salad recipe using our farm-fresh oranges and creamy avocados.",
+    "blog.post4.excerpt":
+      "A refreshing and nutritious salad recipe using our farm-fresh oranges and creamy avocados.",
     "blog.post5.title": "Export Success: Reaching New Markets",
-    "blog.post5.excerpt": "Our journey expanding to new international markets and the challenges we overcame.",
+    "blog.post5.excerpt":
+      "Our journey expanding to new international markets and the challenges we overcame.",
     "blog.post6.title": "Winter Harvest: What's Fresh This Season",
-    "blog.post6.excerpt": "Explore the delicious winter produce available from our farm and their nutritional benefits.",
-    
+    "blog.post6.excerpt":
+      "Explore the delicious winter produce available from our farm and their nutritional benefits.",
+
     // Blog Categories
     "blog.category.nutrition": "Nutrition",
     "blog.category.farming": "Farming",
@@ -259,7 +279,7 @@ const translations: Translations = {
     "hero.requestQuote": "Demander Devis",
     "hero.stats1Value": "500+",
     "hero.stats1Label": "Tonnes/Mois",
-    "hero.stats2Value": "50+",
+    "hero.stats2Value": "18+",
     "hero.stats2Label": "Pays",
 
     // Why Choose Us
@@ -267,13 +287,17 @@ const translations: Translations = {
     "whyChoose.subtitle":
       "Votre partenaire de confiance pour les exportations agricoles en vrac du Maroc vers les marchés internationaux",
     "whyChoose.farmFresh": "Qualité Fraîche de la Ferme",
-    "whyChoose.farmFreshDesc": "Directement de nos fermes biologiques certifiées dans les régions fertiles du Maroc",
+    "whyChoose.farmFreshDesc":
+      "Directement de nos fermes biologiques certifiées dans les régions fertiles du Maroc",
     "whyChoose.international": "Standards Internationaux",
-    "whyChoose.internationalDesc": "Certifications GlobalGAP, ISO 22000 et biologiques pour les marchés mondiaux",
+    "whyChoose.internationalDesc":
+      "Certifications GlobalGAP, ISO 22000 et biologiques pour les marchés mondiaux",
     "whyChoose.worldwide": "Export Mondial",
-    "whyChoose.worldwideDesc": "Expédition fiable vers tous les ports avec logistique à température contrôlée",
+    "whyChoose.worldwideDesc":
+      "Expédition fiable vers tous les ports avec logistique à température contrôlée",
     "whyChoose.trusted": "Partenaire de Confiance",
-    "whyChoose.trustedDesc": "15+ années au service des importateurs et distributeurs internationaux",
+    "whyChoose.trustedDesc":
+      "15+ années au service des importateurs et distributeurs internationaux",
 
     // Products Preview
     "productsPreview.title": "Nos Produits d'Export",
@@ -305,11 +329,14 @@ const translations: Translations = {
     "callToAction.requestBulkQuote": "Demander Devis en Vrac",
     "callToAction.scheduleCall": "Planifier Appel",
     "callToAction.quickResponseTitle": "Réponse Rapide",
-    "callToAction.quickResponseDescription": "Obtenez des devis sous 24h pour toutes demandes en vrac",
+    "callToAction.quickResponseDescription":
+      "Obtenez des devis sous 24h pour toutes demandes en vrac",
     "callToAction.directContactTitle": "Contact Direct",
-    "callToAction.directContactDescription": "Parlez directement avec nos spécialistes export",
+    "callToAction.directContactDescription":
+      "Parlez directement avec nos spécialistes export",
     "callToAction.customSolutionsTitle": "Solutions Personnalisées",
-    "callToAction.customSolutionsDescription": "Emballage et logistique adaptés à vos besoins",
+    "callToAction.customSolutionsDescription":
+      "Emballage et logistique adaptés à vos besoins",
 
     // Footer
     companyName: "The 3 Vegetabeles",
@@ -370,13 +397,17 @@ const translations: Translations = {
     "quality.organic": "Biologique",
     "quality.compliant": "Conforme",
     "quality.farmSelection": "Sélection Ferme",
-    "quality.farmSelectionDesc": "Sélection minutieuse du timing optimal de récolte basé sur les paramètres de qualité",
+    "quality.farmSelectionDesc":
+      "Sélection minutieuse du timing optimal de récolte basé sur les paramètres de qualité",
     "quality.inspection": "Inspection Qualité",
-    "quality.inspectionDesc": "Contrôle qualité rigoureux et classement par inspecteurs certifiés",
+    "quality.inspectionDesc":
+      "Contrôle qualité rigoureux et classement par inspecteurs certifiés",
     "quality.coldChain": "Chaîne du Froid",
-    "quality.coldChainDesc": "Stockage frigorifique immédiat et manipulation à température contrôlée",
+    "quality.coldChainDesc":
+      "Stockage frigorifique immédiat et manipulation à température contrôlée",
     "quality.exportReady": "Prêt Export",
-    "quality.exportReadyDesc": "Contrôle qualité final et certification avant expédition internationale",
+    "quality.exportReadyDesc":
+      "Contrôle qualité final et certification avant expédition internationale",
 
     // Partnership
     "partnership.title": "Excellence Partenariat",
@@ -393,7 +424,8 @@ const translations: Translations = {
 
     // About Page
     "about.title": "L'Histoire de Notre Ferme Familiale",
-    "about.subtitle": "Trois générations de passion, tradition et innovation en agriculture durable",
+    "about.subtitle":
+      "Trois générations de passion, tradition et innovation en agriculture durable",
     "about.yearsExperience": "70+",
     "about.yearsLabel": "Années d'Expérience",
     "about.hectares": "500",
@@ -430,25 +462,32 @@ const translations: Translations = {
     "blog.recentPosts": "Articles Récents",
     "blog.tags": "Tags",
     "blog.newsletter": "Newsletter",
-    "blog.newsletterDesc": "Recevez les dernières mises à jour de notre ferme directement dans votre boîte mail.",
+    "blog.newsletterDesc":
+      "Recevez les dernières mises à jour de notre ferme directement dans votre boîte mail.",
     "blog.emailPlaceholder": "Votre adresse email",
     "blog.subscribe": "S'abonner",
     "blog.readTime": "{time} min de lecture",
-    
+
     // Blog Posts Content
     "blog.post1.title": "Les Avantages de Manger des Produits de Saison",
-    "blog.post1.excerpt": "Découvrez pourquoi manger des fruits et légumes de saison est meilleur pour votre santé, votre portefeuille et l'environnement.",
+    "blog.post1.excerpt":
+      "Découvrez pourquoi manger des fruits et légumes de saison est meilleur pour votre santé, votre portefeuille et l'environnement.",
     "blog.post2.title": "Notre Parcours de Certification Biologique",
-    "blog.post2.excerpt": "Apprenez-en plus sur le processus rigoureux que nous avons suivi pour obtenir la certification biologique et ce que cela signifie pour nos clients.",
+    "blog.post2.excerpt":
+      "Apprenez-en plus sur le processus rigoureux que nous avons suivi pour obtenir la certification biologique et ce que cela signifie pour nos clients.",
     "blog.post3.title": "Gestion Durable de l'Eau en Agriculture",
-    "blog.post3.excerpt": "Comment nous utilisons des techniques d'irrigation avancées pour économiser l'eau tout en maintenant la qualité des cultures.",
+    "blog.post3.excerpt":
+      "Comment nous utilisons des techniques d'irrigation avancées pour économiser l'eau tout en maintenant la qualité des cultures.",
     "blog.post4.title": "Recette: Salade d'Oranges et d'Avocats Frais",
-    "blog.post4.excerpt": "Une recette de salade rafraîchissante et nutritive utilisant nos oranges fraîches de la ferme et nos avocats crémeux.",
+    "blog.post4.excerpt":
+      "Une recette de salade rafraîchissante et nutritive utilisant nos oranges fraîches de la ferme et nos avocats crémeux.",
     "blog.post5.title": "Succès Export: Atteindre de Nouveaux Marchés",
-    "blog.post5.excerpt": "Notre parcours d'expansion vers de nouveaux marchés internationaux et les défis que nous avons surmontés.",
+    "blog.post5.excerpt":
+      "Notre parcours d'expansion vers de nouveaux marchés internationaux et les défis que nous avons surmontés.",
     "blog.post6.title": "Récolte d'Hiver: Ce qui est Frais Cette Saison",
-    "blog.post6.excerpt": "Explorez les délicieux produits d'hiver disponibles de notre ferme et leurs bienfaits nutritionnels.",
-    
+    "blog.post6.excerpt":
+      "Explorez les délicieux produits d'hiver disponibles de notre ferme et leurs bienfaits nutritionnels.",
+
     // Blog Categories
     "blog.category.nutrition": "Nutrition",
     "blog.category.farming": "Agriculture",
@@ -464,29 +503,35 @@ const translations: Translations = {
     "shop.premiumQuality": "Qualité Premium",
     "shop.fastDelivery": "Livraison Rapide",
   },
-}
+};
 
 export function useTranslation() {
-  const [language, setLanguage] = useState("en")
+  const [language, setLanguage] = useState("en");
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") || "en"
-    setLanguage(savedLanguage)
+    const savedLanguage = localStorage.getItem("language") || "en";
+    setLanguage(savedLanguage);
 
     const handleLanguageChange = (event: CustomEvent) => {
-      setLanguage(event.detail)
-    }
+      setLanguage(event.detail);
+    };
 
-    window.addEventListener("languageChange", handleLanguageChange as EventListener)
+    window.addEventListener(
+      "languageChange",
+      handleLanguageChange as EventListener
+    );
 
     return () => {
-      window.removeEventListener("languageChange", handleLanguageChange as EventListener)
-    }
-  }, [])
+      window.removeEventListener(
+        "languageChange",
+        handleLanguageChange as EventListener
+      );
+    };
+  }, []);
 
   const t = (key: TranslationKey): string => {
-    return translations[language]?.[key] || translations["en"][key] || key
-  }
+    return translations[language]?.[key] || translations["en"][key] || key;
+  };
 
-  return { t, language }
+  return { t, language };
 }
