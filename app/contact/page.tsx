@@ -1,17 +1,14 @@
-import type { Metadata } from "next"
+"use client"
+
 import ContactForm from "@/components/contact/ContactForm"
 import ContactInfo from "@/components/contact/ContactInfo"
 import QuoteForm from "@/components/contact/QuoteForm"
 import { MessageCircle, Handshake, Mail } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Contact Us | Order Fresh Produce or Become a Distributor",
-  description:
-    "Get in touch with our team for product inquiries, export options, or partnership opportunities. Contact us via WhatsApp, email, or contact form.",
-  keywords: "contact fresh farm morocco, order organic produce, become distributor, export inquiries, whatsapp contact",
-}
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function ContactPage() {
+  const { t } = useTranslation()
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -33,24 +30,24 @@ export default function ContactPage() {
 
             {/* Main Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Get In
-              <span className="block text-gray-300">Touch</span>
+              {t("contact.title").split(" ")[0]} {t("contact.title").split(" ")[1]}
+              <span className="block text-gray-300">{t("contact.title").split(" ")[2]}</span>
             </h1>
 
             {/* Description */}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Ready to start your fresh produce journey? Contact us for orders, partnerships, or any questions
+              {t("contact.subtitle")}
             </p>
 
             {/* Feature Pills */}
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
                 <Mail className="w-5 h-5 text-orange-400" />
-                <span className="text-white font-medium">Quick Response</span>
+                <span className="text-white font-medium">{t("contact.quickResponse")}</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
                 <Handshake className="w-5 h-5 text-orange-400" />
-                <span className="text-white font-medium">Partnership Ready</span>
+                <span className="text-white font-medium">{t("contact.partnershipReady")}</span>
               </div>
             </div>
           </div>
@@ -77,10 +74,10 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Request a B2B Quote
+                {t("contact.requestB2BQuote")}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Looking for bulk orders or regular supply? Get a customized quote for your business needs
+                {t("contact.bulkOrdersDescription")}
               </p>
             </div>
             <QuoteForm />
@@ -92,13 +89,13 @@ export default function ContactPage() {
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Visit Our Farm</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t("contact.visitOurFarm")}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              Located in the fertile valleys of Agadir, Morocco
+              {t("contact.farmLocation")}
             </p>
           </div>
           <div className="bg-gray-200 dark:bg-gray-700 rounded-lg h-96 flex items-center justify-center">
-            <p className="text-gray-600 dark:text-gray-400">Google Maps integration would go here</p>
+            <p className="text-gray-600 dark:text-gray-400">{t("contact.mapPlaceholder")}</p>
           </div>
         </div>
       </section>

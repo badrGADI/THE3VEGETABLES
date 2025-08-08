@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,8 @@ export default function ContactForm() {
     subject: "",
     message: "",
   })
+
+  const { t } = useTranslation()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -32,14 +35,14 @@ export default function ContactForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl text-gray-900">Send us a Message</CardTitle>
+        <CardTitle className="text-2xl text-gray-900">{t("contactForm.sendMessage")}</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Full Name *
+                {t("contactForm.fullName")}
               </label>
               <Input
                 id="name"
@@ -52,7 +55,7 @@ export default function ContactForm() {
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
+                {t("contactForm.emailAddress")}
               </label>
               <Input
                 id="email"
@@ -68,7 +71,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
+                {t("contactForm.phoneNumber")}
               </label>
               <Input
                 id="phone"
@@ -80,7 +83,7 @@ export default function ContactForm() {
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company Name
+                {t("contactForm.companyName")}
               </label>
               <Input
                 id="company"
@@ -94,26 +97,26 @@ export default function ContactForm() {
 
           <div>
             <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-              Subject *
+              {t("contactForm.subject")}
             </label>
             <Select onValueChange={(value) => handleChange("subject", value)}>
               <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                <SelectValue placeholder="Select a subject" />
+                <SelectValue placeholder={t("contactForm.selectSubject")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="general">General Inquiry</SelectItem>
-                <SelectItem value="order">Product Order</SelectItem>
-                <SelectItem value="partnership">Partnership Opportunity</SelectItem>
-                <SelectItem value="export">Export Information</SelectItem>
-                <SelectItem value="quality">Quality Concern</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+                <SelectItem value="general">{t("contactForm.generalInquiry")}</SelectItem>
+                <SelectItem value="order">{t("contactForm.productOrder")}</SelectItem>
+                <SelectItem value="partnership">{t("contactForm.partnershipOpportunity")}</SelectItem>
+                <SelectItem value="export">{t("contactForm.exportInformation")}</SelectItem>
+                <SelectItem value="quality">{t("contactForm.qualityConcern")}</SelectItem>
+                <SelectItem value="other">{t("contactForm.other")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-              Message *
+              {t("contactForm.message")}
             </label>
             <Textarea
               id="message"
@@ -122,12 +125,12 @@ export default function ContactForm() {
               onChange={(e) => handleChange("message", e.target.value)}
               required
               className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
-              placeholder="Please provide details about your inquiry..."
+              placeholder={t("contactForm.messagePlaceholder")}
             />
           </div>
 
           <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg">
-            Send Message
+            {t("contactForm.sendMessageButton")}
           </Button>
         </form>
       </CardContent>

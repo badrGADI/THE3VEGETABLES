@@ -3,30 +3,32 @@
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const categories = [
-  { id: "fruits", name: "Fruits", count: 24 },
-  { id: "vegetables", name: "Vegetables", count: 18 },
-  { id: "organic", name: "Organic", count: 32 },
-  { id: "seasonal", name: "Seasonal", count: 12 },
+  { id: "fruits", nameKey: "shop.fruits", count: 24 },
+  { id: "vegetables", nameKey: "shop.vegetables", count: 18 },
+  { id: "organic", nameKey: "shop.organic", count: 32 },
+  { id: "seasonal", nameKey: "shop.seasonal", count: 12 },
 ]
 
 const priceRanges = [
-  { id: "under-5", name: "Under $5/kg", count: 15 },
-  { id: "5-10", name: "$5 - $10/kg", count: 20 },
-  { id: "10-20", name: "$10 - $20/kg", count: 8 },
-  { id: "over-20", name: "Over $20/kg", count: 3 },
+  { id: "under-5", nameKey: "shop.under5", count: 15 },
+  { id: "5-10", nameKey: "shop.5to10", count: 20 },
+  { id: "10-20", nameKey: "shop.10to20", count: 8 },
+  { id: "over-20", nameKey: "shop.over20", count: 3 },
 ]
 
 export default function CategoryFilter() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [selectedPriceRanges, setSelectedPriceRanges] = useState<string[]>([])
+  const { t } = useTranslation()
 
   return (
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>Categories</CardTitle>
+          <CardTitle>{t("shop.categories")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {categories.map((category) => (
@@ -43,7 +45,7 @@ export default function CategoryFilter() {
                 }}
               />
               <label htmlFor={category.id} className="flex-1 cursor-pointer">
-                <span>{category.name}</span>
+                <span>{t(category.nameKey)}</span>
                 <span className="text-gray-500 ml-2">({category.count})</span>
               </label>
             </div>
@@ -53,7 +55,7 @@ export default function CategoryFilter() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Price Range</CardTitle>
+          <CardTitle>{t("shop.priceRange")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {priceRanges.map((range) => (
@@ -70,7 +72,7 @@ export default function CategoryFilter() {
                 }}
               />
               <label htmlFor={range.id} className="flex-1 cursor-pointer">
-                <span>{range.name}</span>
+                <span>{t(range.nameKey)}</span>
                 <span className="text-gray-500 ml-2">({range.count})</span>
               </label>
             </div>

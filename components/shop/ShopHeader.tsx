@@ -1,6 +1,11 @@
+"use client"
+
 import { ShoppingBag, Sparkles, Truck } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function ShopHeader() {
+  const { t } = useTranslation()
+
   return (
     <section className="relative py-24 bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900 overflow-hidden">
       {/* Background Pattern */}
@@ -20,25 +25,24 @@ export default function ShopHeader() {
 
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Fresh Produce
-            <span className="block text-gray-300">Shop</span>
+            {t("shop.freshProduce")}
+            <span className="block text-gray-300">{t("shop.shop")}</span>
           </h1>
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Browse our complete selection of premium organic fruits and vegetables, delivered fresh from our Moroccan
-            farm to your doorstep
+            {t("shop.browseSelection")}
           </p>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
               <Sparkles className="w-5 h-5 text-orange-400" />
-              <span className="text-white font-medium">Premium Quality</span>
+              <span className="text-white font-medium">{t("shop.premiumQuality")}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
               <Truck className="w-5 h-5 text-orange-400" />
-              <span className="text-white font-medium">Fast Delivery</span>
+              <span className="text-white font-medium">{t("shop.fastDelivery")}</span>
             </div>
           </div>
         </div>

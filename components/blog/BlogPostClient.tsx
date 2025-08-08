@@ -1,0 +1,215 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Calendar, User, Tag, ArrowLeft, Clock } from "lucide-react"
+import { blogPosts } from "@/lib/blogData"
+import { useTranslation } from "@/hooks/useTranslation"
+
+interface BlogPostClientProps {
+  params: Promise<{ id: string }>
+}
+
+export default function BlogPostClient({ params }: BlogPostClientProps) {
+  const [post, setPost] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
+
+  useEffect(() => {
+    const loadPost = async () => {
+      const { id } = await params
+      const postId = parseInt(id)
+      const foundPost = blogPosts.find(p => p.id === postId)
+      setPost(foundPost)
+      setLoading(false)
+    }
+
+    loadPost()
+  }, [params])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">{t("blog.loading")}</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!post) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t("blog.blogPostNotFound")}</h1>
+          <p className="text-gray-600 mb-6">{t("blog.postNotFoundMessage")}</p>
+          <Link href="/blog">
+            <Button className="bg-orange-500 hover:bg-orange-600">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {t("blog.backToBlog")}
+            </Button>
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white border-b">
+        <div className="container mx-auto px-4 py-6">
+          <Link href="/blog">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {t("blog.backToBlog")}
+            </Button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          {/* Article Header */}
+          <div className="mb-8">
+            <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+              <div className="flex items-center space-x-1">
+                <Tag className="w-4 h-4" />
+                <span className="text-orange-500 font-medium">{t(post.categoryKey)}</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Calendar className="w-4 h-4" />
+                <span>{new Date(post.date).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Clock className="w-4 h-4" />
+                <span>{t("blog.readTime").replace("{time}", post.readTime.toString())}</span>
+              </div>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              {t(post.titleKey)}
+            </h1>
+
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="flex items-center space-x-2">
+                <User className="w-5 h-5 text-gray-400" />
+                <span className="text-gray-600 font-medium">{post.author}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Image */}
+          <div className="mb-8">
+            <Image
+              src={post.image || "/placeholder.svg"}
+              alt={t(post.titleKey)}
+              width={800}
+              height={400}
+              className="w-full h-64 md:h-96 object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Article Content */}
+          <Card className="mb-8">
+            <CardContent className="p-8">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-xl text-gray-600 leading-relaxed mb-6">
+                  {t(post.excerptKey)}
+                </p>
+                
+                {/* Placeholder content - in a real app, this would come from a CMS or database */}
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p>
+                    This is a detailed blog post about {t(post.titleKey).toLowerCase()}. 
+                    The content would typically be much longer and include multiple paragraphs, 
+                    images, and possibly embedded media.
+                  </p>
+                  
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                  
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  
+                  <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                    {t("blog.keyPoints")}
+                  </h2>
+                  
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Important information about the topic</li>
+                    <li>Key insights and findings</li>
+                    <li>Practical applications and recommendations</li>
+                    <li>Future implications and trends</li>
+                  </ul>
+                  
+                  <p className="mt-6">
+                    In conclusion, this blog post provides valuable insights into the subject matter 
+                    and offers practical guidance for readers interested in learning more about this topic.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Related Posts */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">{t("blog.relatedPosts")}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {blogPosts
+                .filter(p => p.id !== post.id)
+                .slice(0, 2)
+                .map((relatedPost) => (
+                  <Card key={relatedPost.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <CardContent className="p-0">
+                      <div className="grid grid-cols-1 gap-0">
+                        <div>
+                          <Image
+                            src={relatedPost.image || "/placeholder.svg"}
+                            alt={t(relatedPost.titleKey)}
+                            width={400}
+                            height={200}
+                            className="w-full h-48 object-cover"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+                            <Tag className="w-3 h-3" />
+                            <span className="text-orange-500 font-medium">{t(relatedPost.categoryKey)}</span>
+                          </div>
+                          <h4 className="text-lg font-bold text-gray-900 mb-2 hover:text-orange-500 transition-colors">
+                            <Link href={`/blog/${relatedPost.id}`}>{t(relatedPost.titleKey)}</Link>
+                          </h4>
+                          <p className="text-gray-600 text-sm line-clamp-2">{t(relatedPost.excerptKey)}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          </div>
+
+          {/* Back to Blog Button */}
+          <div className="text-center">
+            <Link href="/blog">
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {t("blog.backToAllPosts")}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

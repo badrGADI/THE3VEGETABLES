@@ -1,13 +1,18 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Mail, MessageCircle, Clock, Globe } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function ContactInfo() {
+  const { t } = useTranslation()
+
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">{t("contactInfo.contactInformation")}</h2>
         <p className="text-lg text-gray-600 mb-8">
-          We're here to help with all your fresh produce needs. Reach out to us through any of these channels.
+          {t("contactInfo.helpDescription")}
         </p>
       </div>
 
@@ -19,11 +24,9 @@ export default function ContactInfo() {
                 <MapPin className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Farm Location</h3>
-                <p className="text-gray-600">
-                  Route de Taroudant, Km 15
-                  <br />
-                  Agadir 80000, Morocco
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("contactInfo.farmLocation")}</h3>
+                <p className="text-gray-600 whitespace-pre-line">
+                  {t("contactInfo.farmAddress")}
                 </p>
               </div>
             </div>
@@ -37,11 +40,11 @@ export default function ContactInfo() {
                 <Phone className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone Numbers</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("contactInfo.phoneNumbers")}</h3>
                 <p className="text-gray-600">
-                  Main: +212 528 123 456
+                  {t("contactInfo.mainPhone")}
                   <br />
-                  Export: +212 661 234 567
+                  {t("contactInfo.exportPhone")}
                 </p>
               </div>
             </div>
@@ -55,11 +58,11 @@ export default function ContactInfo() {
                 <MessageCircle className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("contactInfo.whatsapp")}</h3>
                 <p className="text-gray-600">
-                  +212 661 234 567
+                  {t("contactInfo.whatsappNumber")}
                   <br />
-                  Available 24/7 for urgent inquiries
+                  {t("contactInfo.whatsappAvailable")}
                 </p>
               </div>
             </div>
@@ -73,13 +76,13 @@ export default function ContactInfo() {
                 <Mail className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Addresses</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("contactInfo.emailAddresses")}</h3>
                 <p className="text-gray-600">
-                  General: info@freshfarm.ma
+                  {t("contactInfo.generalEmail")}
                   <br />
-                  Sales: sales@freshfarm.ma
+                  {t("contactInfo.salesEmail")}
                   <br />
-                  Export: export@freshfarm.ma
+                  {t("contactInfo.exportEmail")}
                 </p>
               </div>
             </div>
@@ -93,13 +96,13 @@ export default function ContactInfo() {
                 <Clock className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("contactInfo.businessHours")}</h3>
                 <p className="text-gray-600">
-                  Monday - Friday: 8:00 AM - 6:00 PM
+                  {t("contactInfo.weekdays")}
                   <br />
-                  Saturday: 9:00 AM - 4:00 PM
+                  {t("contactInfo.saturday")}
                   <br />
-                  Sunday: Closed
+                  {t("contactInfo.sunday")}
                 </p>
               </div>
             </div>
@@ -113,11 +116,11 @@ export default function ContactInfo() {
                 <Globe className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Languages</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("contactInfo.languages")}</h3>
                 <p className="text-gray-600">
-                  Arabic, French, English
+                  {t("contactInfo.languagesList")}
                   <br />
-                  Spanish (Export team)
+                  {t("contactInfo.spanishExport")}
                 </p>
               </div>
             </div>

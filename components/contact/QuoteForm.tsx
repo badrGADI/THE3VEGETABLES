@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function QuoteForm() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,8 @@ export default function QuoteForm() {
     requirements: "",
     agreedToTerms: false,
   })
+
+  const { t } = useTranslation()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -42,27 +45,27 @@ export default function QuoteForm() {
   }
 
   const productOptions = [
-    "Fresh Oranges",
-    "Organic Tomatoes",
-    "Fresh Avocados",
-    "Bell Peppers",
-    "Fresh Lemons",
-    "Organic Carrots",
-    "Seasonal Fruits",
-    "Mixed Vegetables",
+    { key: "quoteForm.freshOranges", value: "Fresh Oranges" },
+    { key: "quoteForm.organicTomatoes", value: "Organic Tomatoes" },
+    { key: "quoteForm.freshAvocados", value: "Fresh Avocados" },
+    { key: "quoteForm.bellPeppers", value: "Bell Peppers" },
+    { key: "quoteForm.freshLemons", value: "Fresh Lemons" },
+    { key: "quoteForm.organicCarrots", value: "Organic Carrots" },
+    { key: "quoteForm.seasonalFruits", value: "Seasonal Fruits" },
+    { key: "quoteForm.mixedVegetables", value: "Mixed Vegetables" },
   ]
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl text-gray-900">B2B Quote Request</CardTitle>
+        <CardTitle className="text-2xl text-gray-900">{t("quoteForm.b2bQuoteRequest")}</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-2">
-                Company Name *
+                {t("quoteForm.companyName")}
               </label>
               <Input
                 id="companyName"
@@ -75,7 +78,7 @@ export default function QuoteForm() {
             </div>
             <div>
               <label htmlFor="contactName" className="block text-sm font-medium text-gray-700 mb-2">
-                Contact Person *
+                {t("quoteForm.contactPerson")}
               </label>
               <Input
                 id="contactName"
@@ -91,7 +94,7 @@ export default function QuoteForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Business Email *
+                {t("quoteForm.businessEmail")}
               </label>
               <Input
                 id="email"
@@ -104,7 +107,7 @@ export default function QuoteForm() {
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number *
+                {t("quoteForm.phoneNumber")}
               </label>
               <Input
                 id="phone"
@@ -119,36 +122,36 @@ export default function QuoteForm() {
 
           <div>
             <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-2">
-              Delivery Country *
+              {t("quoteForm.deliveryCountry")}
             </label>
             <Select onValueChange={(value) => handleChange("country", value)}>
               <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                <SelectValue placeholder="Select delivery country" />
+                <SelectValue placeholder={t("quoteForm.selectDeliveryCountry")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="france">France</SelectItem>
-                <SelectItem value="spain">Spain</SelectItem>
-                <SelectItem value="germany">Germany</SelectItem>
-                <SelectItem value="uk">United Kingdom</SelectItem>
-                <SelectItem value="netherlands">Netherlands</SelectItem>
-                <SelectItem value="uae">United Arab Emirates</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+                <SelectItem value="france">{t("quoteForm.france")}</SelectItem>
+                <SelectItem value="spain">{t("quoteForm.spain")}</SelectItem>
+                <SelectItem value="germany">{t("quoteForm.germany")}</SelectItem>
+                <SelectItem value="uk">{t("quoteForm.uk")}</SelectItem>
+                <SelectItem value="netherlands">{t("quoteForm.netherlands")}</SelectItem>
+                <SelectItem value="uae">{t("quoteForm.uae")}</SelectItem>
+                <SelectItem value="other">{t("quoteForm.other")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-4">Products of Interest *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-4">{t("quoteForm.productsOfInterest")}</label>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {productOptions.map((product) => (
-                <div key={product} className="flex items-center space-x-2">
+                <div key={product.key} className="flex items-center space-x-2">
                   <Checkbox
-                    id={product}
-                    checked={formData.products.includes(product)}
-                    onCheckedChange={(checked) => handleProductChange(product, checked as boolean)}
+                    id={product.key}
+                    checked={formData.products.includes(product.value)}
+                    onCheckedChange={(checked) => handleProductChange(product.value, checked as boolean)}
                   />
-                  <label htmlFor={product} className="text-sm text-gray-700 cursor-pointer">
-                    {product}
+                  <label htmlFor={product.key} className="text-sm text-gray-700 cursor-pointer">
+                    {t(product.key)}
                   </label>
                 </div>
               ))}
@@ -158,35 +161,35 @@ export default function QuoteForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
-                Expected Quantity (kg/month)
+                {t("quoteForm.expectedQuantity")}
               </label>
               <Select onValueChange={(value) => handleChange("quantity", value)}>
                 <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                  <SelectValue placeholder="Select quantity range" />
+                  <SelectValue placeholder={t("quoteForm.selectQuantityRange")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="100-500">100 - 500 kg</SelectItem>
-                  <SelectItem value="500-1000">500 - 1,000 kg</SelectItem>
-                  <SelectItem value="1000-5000">1,000 - 5,000 kg</SelectItem>
-                  <SelectItem value="5000-10000">5,000 - 10,000 kg</SelectItem>
-                  <SelectItem value="10000+">10,000+ kg</SelectItem>
+                  <SelectItem value="100-500">{t("quoteForm.quantity100500")}</SelectItem>
+                  <SelectItem value="500-1000">{t("quoteForm.quantity5001000")}</SelectItem>
+                  <SelectItem value="1000-5000">{t("quoteForm.quantity10005000")}</SelectItem>
+                  <SelectItem value="5000-10000">{t("quoteForm.quantity500010000")}</SelectItem>
+                  <SelectItem value="10000+">{t("quoteForm.quantity10000plus")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div>
               <label htmlFor="frequency" className="block text-sm font-medium text-gray-700 mb-2">
-                Delivery Frequency
+                {t("quoteForm.deliveryFrequency")}
               </label>
               <Select onValueChange={(value) => handleChange("frequency", value)}>
                 <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                  <SelectValue placeholder="Select frequency" />
+                  <SelectValue placeholder={t("quoteForm.selectFrequency")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="weekly">Weekly</SelectItem>
-                  <SelectItem value="biweekly">Bi-weekly</SelectItem>
-                  <SelectItem value="monthly">Monthly</SelectItem>
-                  <SelectItem value="seasonal">Seasonal</SelectItem>
-                  <SelectItem value="one-time">One-time order</SelectItem>
+                  <SelectItem value="weekly">{t("quoteForm.weekly")}</SelectItem>
+                  <SelectItem value="biweekly">{t("quoteForm.biweekly")}</SelectItem>
+                  <SelectItem value="monthly">{t("quoteForm.monthly")}</SelectItem>
+                  <SelectItem value="seasonal">{t("quoteForm.seasonal")}</SelectItem>
+                  <SelectItem value="one-time">{t("quoteForm.oneTime")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -194,7 +197,7 @@ export default function QuoteForm() {
 
           <div>
             <label htmlFor="requirements" className="block text-sm font-medium text-gray-700 mb-2">
-              Special Requirements
+              {t("quoteForm.specialRequirements")}
             </label>
             <Textarea
               id="requirements"
@@ -202,7 +205,7 @@ export default function QuoteForm() {
               value={formData.requirements}
               onChange={(e) => handleChange("requirements", e.target.value)}
               className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
-              placeholder="Please specify any special packaging, certification, or delivery requirements..."
+              placeholder={t("quoteForm.requirementsPlaceholder")}
             />
           </div>
 
@@ -213,7 +216,7 @@ export default function QuoteForm() {
               onCheckedChange={(checked) => handleChange("agreedToTerms", checked as boolean)}
             />
             <label htmlFor="terms" className="text-sm text-gray-700">
-              I agree to the terms and conditions and privacy policy *
+              {t("quoteForm.agreeTerms")}
             </label>
           </div>
 
@@ -222,7 +225,7 @@ export default function QuoteForm() {
             disabled={!formData.agreedToTerms}
             className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg disabled:opacity-50"
           >
-            Request Quote
+            {t("quoteForm.requestQuote")}
           </Button>
         </form>
       </CardContent>

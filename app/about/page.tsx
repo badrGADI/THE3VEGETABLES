@@ -1,17 +1,13 @@
-import type { Metadata } from "next"
+"use client"
+
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Leaf, Users, Award, Globe, Heart, Truck, TreePine, Sparkles } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Our Family Farm in Morocco | Sustainable & Organic Agriculture",
-  description:
-    "Learn about our story, values, and commitment to sustainable farming. Our farm in Morocco grows top-quality fruits and vegetables for local and international markets.",
-  keywords:
-    "moroccan family farm, sustainable agriculture, organic farming morocco, farm story, agricultural practices",
-}
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function AboutPage() {
+  const { t } = useTranslation()
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -33,8 +29,8 @@ export default function AboutPage() {
 
             {/* Main Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Our Family Farm
-              <span className="block text-emerald-300">Story</span>
+              {t("about.title").split(" ")[0]} {t("about.title").split(" ")[1]} {t("about.title").split(" ")[2]}
+              <span className="block text-emerald-300">{t("about.title").split(" ")[3]}</span>
             </h1>
 
             {/* Subtitle */}
@@ -46,22 +42,22 @@ export default function AboutPage() {
 
             {/* Description */}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-              Three generations of passion, tradition, and innovation in sustainable agriculture
+              {t("about.subtitle")}
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">70+</div>
-                <div className="text-gray-300">Years of Experience</div>
+                <div className="text-4xl font-bold text-white mb-2">{t("about.yearsExperience")}</div>
+                <div className="text-gray-300">{t("about.yearsLabel")}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">500</div>
-                <div className="text-gray-300">Hectares of Land</div>
+                <div className="text-4xl font-bold text-white mb-2">{t("about.hectares")}</div>
+                <div className="text-gray-300">{t("about.hectaresLabel")}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300">Countries Served</div>
+                <div className="text-4xl font-bold text-white mb-2">{t("about.countriesServed")}</div>
+                <div className="text-gray-300">{t("about.countriesLabel")}</div>
               </div>
             </div>
           </div>
@@ -74,27 +70,22 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
-                From Humble Beginnings to Global Reach
+                {t("about.fromHumbleBeginnings")}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Our journey began in 1952 when my grandfather, Hassan, started cultivating a small plot of land in the
-                fertile valleys of Morocco. With nothing but determination and a deep love for the earth, he grew the
-                finest fruits and vegetables the region had ever seen.
+                {t("about.storyParagraph1")}
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                Today, three generations later, we continue his legacy while embracing modern sustainable practices. Our
-                500-hectare farm now supplies premium organic produce to customers across 50 countries, but we've never
-                forgotten our roots or compromised on quality.
+                {t("about.storyParagraph2")}
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                Every fruit and vegetable that leaves our farm carries with it the same care, attention, and love that
-                Hassan put into his first harvest over 70 years ago.
+                {t("about.storyParagraph3")}
               </p>
             </div>
             <div className="relative">
               <Image
                 src="/placeholder.svg?height=500&width=600"
-                alt="Three generations of our farming family"
+                alt={t("about.threeGenerationsAlt")}
                 width={600}
                 height={500}
                 className="rounded-lg shadow-xl"
@@ -108,9 +99,9 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t("about.coreValues")}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              These principles guide everything we do, from seed to harvest to your table
+              {t("about.coreValuesDesc")}
             </p>
           </div>
 
@@ -120,10 +111,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Leaf className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Sustainability</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("about.sustainability")}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We use eco-friendly farming practices that protect our soil, water, and biodiversity for future
-                  generations.
+                  {t("about.sustainabilityDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -133,10 +123,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Family Tradition</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("about.familyTradition")}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Every decision we make honors our family's legacy while embracing innovation and modern best
-                  practices.
+                  {t("about.familyTraditionDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -146,10 +135,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Award className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Quality Excellence</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("about.qualityExcellence")}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We never compromise on quality. Every product meets the highest international standards before it
-                  reaches our customers.
+                  {t("about.qualityExcellenceDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -159,10 +147,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Community Care</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("about.communityCare")}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We support our local community by providing fair employment and investing in local infrastructure and
-                  education.
+                  {t("about.communityCareDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -172,10 +159,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Globe className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Global Responsibility</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("about.globalResponsibility")}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We believe in responsible global trade that benefits both our customers and our local farming
-                  community.
+                  {t("about.globalResponsibilityDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -185,10 +171,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Truck className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Reliable Service</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("about.reliableService")}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We guarantee timely delivery and consistent quality, building long-term partnerships with our
-                  customers worldwide.
+                  {t("about.reliableServiceDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -203,7 +188,7 @@ export default function AboutPage() {
             <div className="relative">
               <Image
                 src="/placeholder.svg?height=500&width=600"
-                alt="Sustainable farming practices on our farm"
+                alt={t("about.sustainablePracticesAlt")}
                 width={600}
                 height={500}
                 className="rounded-lg shadow-xl"
@@ -211,20 +196,19 @@ export default function AboutPage() {
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
-                Sustainable Farming Practices
+                {t("about.sustainablePractices")}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                We're committed to farming methods that protect our environment while producing the highest quality
-                fruits and vegetables.
+                {t("about.sustainablePracticesDesc")}
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Water Conservation</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{t("about.waterConservation")}</h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Advanced drip irrigation systems reduce water usage by 40% while ensuring optimal plant hydration.
+                      {t("about.waterConservationDesc")}
                     </p>
                   </div>
                 </div>
@@ -232,9 +216,9 @@ export default function AboutPage() {
                 <div className="flex items-start space-x-4">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Organic Certification</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{t("about.organicCertification")}</h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      100% certified organic practices with no synthetic pesticides or fertilizers.
+                      {t("about.organicCertificationDesc")}
                     </p>
                   </div>
                 </div>
@@ -242,9 +226,9 @@ export default function AboutPage() {
                 <div className="flex items-start space-x-4">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Solar Energy</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{t("about.solarEnergy")}</h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Solar panels power 80% of our farm operations, reducing our carbon footprint significantly.
+                      {t("about.solarEnergyDesc")}
                     </p>
                   </div>
                 </div>
@@ -252,9 +236,9 @@ export default function AboutPage() {
                 <div className="flex items-start space-x-4">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Soil Health</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{t("about.soilHealth")}</h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Crop rotation and natural composting maintain soil fertility and prevent erosion.
+                      {t("about.soilHealthDesc")}
                     </p>
                   </div>
                 </div>
@@ -268,9 +252,9 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Meet Our Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">{t("about.meetOurTeam")}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              The passionate people behind our farm's success
+              {t("about.teamDesc")}
             </p>
           </div>
 
@@ -279,15 +263,15 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="Ahmed Hassan - Farm Owner"
+                  alt={t("about.ahmedAlt")}
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Ahmed Hassan</h3>
-                <p className="text-orange-500 font-medium mb-4">Farm Owner & CEO</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{t("about.ahmedHassan")}</h3>
+                <p className="text-orange-500 font-medium mb-4">{t("about.ahmedRole")}</p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Third-generation farmer leading our sustainable agriculture initiatives and global expansion.
+                  {t("about.ahmedDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -296,15 +280,15 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="Fatima Benali - Agricultural Engineer"
+                  alt={t("about.fatimaAlt")}
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Fatima Benali</h3>
-                <p className="text-orange-500 font-medium mb-4">Agricultural Engineer</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{t("about.fatimaBenali")}</h3>
+                <p className="text-orange-500 font-medium mb-4">{t("about.fatimaRole")}</p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Expert in sustainable farming practices and organic certification processes.
+                  {t("about.fatimaDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -313,15 +297,15 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="Omar Alami - Export Manager"
+                  alt={t("about.omarAlt")}
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Omar Alami</h3>
-                <p className="text-orange-500 font-medium mb-4">Export Manager</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{t("about.omarAlami")}</h3>
+                <p className="text-orange-500 font-medium mb-4">{t("about.omarRole")}</p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Manages international logistics and ensures quality delivery to customers worldwide.
+                  {t("about.omarDesc")}
                 </p>
               </CardContent>
             </Card>
