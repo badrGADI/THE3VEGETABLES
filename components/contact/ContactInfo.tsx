@@ -1,7 +1,12 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
-import { Phone, MapPin } from "lucide-react"
+import { MapPin, Phone } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export default function ContactInfo() {
+  const { t } = useTranslation()
+
   return (
     <div className="space-y-8">
       <div>
@@ -45,7 +50,7 @@ export default function ContactInfo() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Main: +212 528 123 456
                   <br />
-                  Export: +212 661 234 567
+                  {t("contactInfo.exportPhone")}
                 </p>
               </div>
             </div>

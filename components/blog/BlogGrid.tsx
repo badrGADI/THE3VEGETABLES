@@ -5,69 +5,7 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, User, Tag } from "lucide-react"
 import { useTranslation } from "@/hooks/useTranslation"
-
-const blogPosts = [
-  {
-    id: 1,
-    titleKey: "blog.post1.title",
-    excerptKey: "blog.post1.excerpt",
-    image: "/placeholder.svg?height=300&width=400",
-    author: "Ahmed Hassan",
-    date: "2024-01-15",
-    categoryKey: "blog.category.nutrition",
-    readTime: 5,
-  },
-  {
-    id: 2,
-    titleKey: "blog.post2.title",
-    excerptKey: "blog.post2.excerpt",
-    image: "/placeholder.svg?height=300&width=400",
-    author: "Fatima Benali",
-    date: "2024-01-10",
-    categoryKey: "blog.category.farming",
-    readTime: 7,
-  },
-  {
-    id: 3,
-    titleKey: "blog.post3.title",
-    excerptKey: "blog.post3.excerpt",
-    image: "/placeholder.svg?height=300&width=400",
-    author: "Omar Alami",
-    date: "2024-01-05",
-    categoryKey: "blog.category.sustainability",
-    readTime: 6,
-  },
-  {
-    id: 4,
-    titleKey: "blog.post4.title",
-    excerptKey: "blog.post4.excerpt",
-    image: "/placeholder.svg?height=300&width=400",
-    author: "Aicha Benali",
-    date: "2024-01-01",
-    categoryKey: "blog.category.recipes",
-    readTime: 3,
-  },
-  {
-    id: 5,
-    titleKey: "blog.post5.title",
-    excerptKey: "blog.post5.excerpt",
-    image: "/placeholder.svg?height=300&width=400",
-    author: "Omar Alami",
-    date: "2023-12-28",
-    categoryKey: "blog.category.business",
-    readTime: 8,
-  },
-  {
-    id: 6,
-    titleKey: "blog.post6.title",
-    excerptKey: "blog.post6.excerpt",
-    image: "/placeholder.svg?height=300&width=400",
-    author: "Ahmed Hassan",
-    date: "2023-12-20",
-    categoryKey: "blog.category.seasonal",
-    readTime: 4,
-  },
-]
+import { blogPosts } from "@/lib/blogData"
 
 export default function BlogGrid() {
   const { t } = useTranslation()

@@ -187,6 +187,50 @@ const translations: Translations = {
     "about.hectaresLabel": "Hectares of Land",
     "about.countriesServed": "50+",
     "about.countriesLabel": "Countries Served",
+    "about.fromHumbleBeginnings": "From Humble Beginnings to Global Reach",
+    "about.storyParagraph1": "Our journey began in 1952 when my grandfather, Hassan, started cultivating a small plot of land in the fertile valleys of Morocco. With nothing but determination and a deep love for the earth, he grew the finest fruits and vegetables the region had ever seen.",
+    "about.storyParagraph2": "Today, three generations later, we continue his legacy while embracing modern sustainable practices. Our 500-hectare farm now supplies premium organic produce to customers across 50 countries, but we've never forgotten our roots or compromised on quality.",
+    "about.storyParagraph3": "Every fruit and vegetable that leaves our farm carries with it the same care, attention, and love that Hassan put into his first harvest over 70 years ago.",
+    "about.threeGenerationsAlt": "Three generations of our farming family",
+    "about.coreValues": "Our Core Values",
+    "about.coreValuesDesc": "These principles guide everything we do, from seed to harvest to your table",
+    "about.sustainability": "Sustainability",
+    "about.sustainabilityDesc": "We use eco-friendly farming practices that protect our soil, water, and biodiversity for future generations.",
+    "about.familyTradition": "Family Tradition",
+    "about.familyTraditionDesc": "Every decision we make honors our family's legacy while embracing innovation and modern best practices.",
+    "about.qualityExcellence": "Quality Excellence",
+    "about.qualityExcellenceDesc": "We never compromise on quality. Every product meets the highest international standards before it reaches our customers.",
+    "about.communityCare": "Community Care",
+    "about.communityCareDesc": "We support our local community by providing fair employment and investing in local infrastructure and education.",
+    "about.globalResponsibility": "Global Responsibility",
+    "about.globalResponsibilityDesc": "We believe in responsible global trade that benefits both our customers and our local farming community.",
+    "about.reliableService": "Reliable Service",
+    "about.reliableServiceDesc": "We guarantee timely delivery and consistent quality, building long-term partnerships with our customers worldwide.",
+    "about.sustainablePractices": "Sustainable Farming Practices",
+    "about.sustainablePracticesDesc": "We're committed to farming methods that protect our environment while producing the highest quality fruits and vegetables.",
+    "about.waterConservation": "Water Conservation",
+    "about.waterConservationDesc": "Advanced drip irrigation systems reduce water usage by 40% while ensuring optimal plant hydration.",
+    "about.organicCertification": "Organic Certification",
+    "about.organicCertificationDesc": "100% certified organic practices with no synthetic pesticides or fertilizers.",
+    "about.solarEnergy": "Solar Energy",
+    "about.solarEnergyDesc": "Solar panels power 80% of our farm operations, reducing our carbon footprint significantly.",
+    "about.soilHealth": "Soil Health",
+    "about.soilHealthDesc": "Crop rotation and natural composting maintain soil fertility and prevent erosion.",
+    "about.sustainablePracticesAlt": "Sustainable farming practices on our farm",
+    "about.meetOurTeam": "Meet Our Team",
+    "about.teamDesc": "The passionate people behind our farm's success",
+    "about.ahmedHassan": "Badr GADI",
+    "about.ahmedRole": "Farm Owner & CEO",
+    "about.ahmedDesc": "Third-generation farmer leading our sustainable agriculture initiatives and global expansion.",
+    "about.ahmedAlt": "Badr GADI - Farm Owner",
+    "about.fatimaBenali": "Ayoub ELOUAZZANI",
+    "about.fatimaRole": "Agricultural Engineer",
+    "about.fatimaDesc": "Expert in sustainable farming practices and organic certification processes.",
+    "about.fatimaAlt": "Ayoub ELOUAZZANI - Agricultural Engineer",
+    "about.omarAlami": "Ahmed GADI",
+    "about.omarRole": "Export Manager",
+    "about.omarDesc": "Manages international logistics and ensures quality delivery to customers worldwide.",
+    "about.omarAlt": "Ahmed GADI - Export Manager",
 
     // Contact Page
     "contact.title": "Get In Touch",
@@ -194,6 +238,95 @@ const translations: Translations = {
       "Ready to start your fresh produce journey? Contact us for orders, partnerships, or any questions",
     "contact.quickResponse": "Quick Response",
     "contact.partnershipReady": "Partnership Ready",
+    "contact.requestB2BQuote": "Request a B2B Quote",
+    "contact.bulkOrdersDescription": "Looking for bulk orders or regular supply? Get a customized quote for your business needs",
+    "contact.visitOurFarm": "Visit Our Farm",
+    "contact.farmLocation": "Located in the fertile valleys of Agadir, Morocco",
+    "contact.mapPlaceholder": "Google Maps integration would go here",
+
+    // Contact Form
+    "contactForm.sendMessage": "Send us a Message",
+    "contactForm.fullName": "Full Name *",
+    "contactForm.emailAddress": "Email Address *",
+    "contactForm.phoneNumber": "Phone Number",
+    "contactForm.companyName": "Company Name",
+    "contactForm.subject": "Subject *",
+    "contactForm.selectSubject": "Select a subject",
+    "contactForm.generalInquiry": "General Inquiry",
+    "contactForm.productOrder": "Product Order",
+    "contactForm.partnershipOpportunity": "Partnership Opportunity",
+    "contactForm.exportInformation": "Export Information",
+    "contactForm.qualityConcern": "Quality Concern",
+    "contactForm.other": "Other",
+    "contactForm.message": "Message *",
+    "contactForm.messagePlaceholder": "Please provide details about your inquiry...",
+    "contactForm.sendMessageButton": "Send Message",
+
+    // Contact Info
+    "contactInfo.contactInformation": "Contact Information",
+    "contactInfo.helpDescription": "We're here to help with all your fresh produce needs. Reach out to us through any of these channels.",
+    "contactInfo.farmLocation": "Farm Location",
+    "contactInfo.farmAddress": "Route de Taroudant, Km 15\nAgadir 80000, Morocco",
+    "contactInfo.phoneNumbers": "Phone Numbers",
+    "contactInfo.mainPhone": "Main: +212 528 123 456",
+    "contactInfo.exportPhone": "Export: +212 661 234 567",
+    "contactInfo.whatsapp": "WhatsApp",
+    "contactInfo.whatsappNumber": "+212 661 234 567",
+    "contactInfo.whatsappAvailable": "Available 24/7 for urgent inquiries",
+    "contactInfo.emailAddresses": "Email Addresses",
+    "contactInfo.generalEmail": "General: info@freshfarm.ma",
+    "contactInfo.salesEmail": "Sales: sales@freshfarm.ma",
+    "contactInfo.exportEmail": "Export: export@freshfarm.ma",
+    "contactInfo.businessHours": "Business Hours",
+    "contactInfo.weekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
+    "contactInfo.saturday": "Saturday: 9:00 AM - 4:00 PM",
+    "contactInfo.sunday": "Sunday: Closed",
+    "contactInfo.languages": "Languages",
+    "contactInfo.languagesList": "Arabic, French, English",
+    "contactInfo.spanishExport": "Spanish (Export team)",
+
+    // Quote Form
+    "quoteForm.b2bQuoteRequest": "B2B Quote Request",
+    "quoteForm.companyName": "Company Name *",
+    "quoteForm.contactPerson": "Contact Person *",
+    "quoteForm.businessEmail": "Business Email *",
+    "quoteForm.phoneNumber": "Phone Number *",
+    "quoteForm.deliveryCountry": "Delivery Country *",
+    "quoteForm.selectDeliveryCountry": "Select delivery country",
+    "quoteForm.france": "France",
+    "quoteForm.spain": "Spain",
+    "quoteForm.germany": "Germany",
+    "quoteForm.uk": "United Kingdom",
+    "quoteForm.netherlands": "Netherlands",
+    "quoteForm.uae": "United Arab Emirates",
+    "quoteForm.other": "Other",
+    "quoteForm.productsOfInterest": "Products of Interest *",
+    "quoteForm.freshOranges": "Fresh Oranges",
+    "quoteForm.organicTomatoes": "Organic Tomatoes",
+    "quoteForm.freshAvocados": "Fresh Avocados",
+    "quoteForm.bellPeppers": "Bell Peppers",
+    "quoteForm.freshLemons": "Fresh Lemons",
+    "quoteForm.organicCarrots": "Organic Carrots",
+    "quoteForm.seasonalFruits": "Seasonal Fruits",
+    "quoteForm.mixedVegetables": "Mixed Vegetables",
+    "quoteForm.expectedQuantity": "Expected Quantity (kg/month)",
+    "quoteForm.selectQuantityRange": "Select quantity range",
+    "quoteForm.quantity100500": "100 - 500 kg",
+    "quoteForm.quantity5001000": "500 - 1,000 kg",
+    "quoteForm.quantity10005000": "1,000 - 5,000 kg",
+    "quoteForm.quantity500010000": "5,000 - 10,000 kg",
+    "quoteForm.quantity10000plus": "10,000+ kg",
+    "quoteForm.deliveryFrequency": "Delivery Frequency",
+    "quoteForm.selectFrequency": "Select frequency",
+    "quoteForm.weekly": "Weekly",
+    "quoteForm.biweekly": "Bi-weekly",
+    "quoteForm.monthly": "Monthly",
+    "quoteForm.seasonal": "Seasonal",
+    "quoteForm.oneTime": "One-time order",
+    "quoteForm.specialRequirements": "Special Requirements",
+    "quoteForm.requirementsPlaceholder": "Please specify any special packaging, certification, or delivery requirements...",
+    "quoteForm.agreeTerms": "I agree to the terms and conditions and privacy policy *",
+    "quoteForm.requestQuote": "Request Quote",
 
     // Blog Page
     "blog.title": "Farm Blog & News",
@@ -215,26 +348,40 @@ const translations: Translations = {
     "blog.emailPlaceholder": "Your email address",
     "blog.subscribe": "Subscribe",
     "blog.readTime": "{time} min read",
-
+    "blog.backToBlog": "Back to Blog",
+    "blog.backToAllPosts": "Back to All Posts",
+    "blog.blogPostNotFound": "Blog Post Not Found",
+    "blog.postNotFoundMessage": "The blog post you're looking for doesn't exist.",
+    "blog.relatedPosts": "Related Posts",
+    "blog.keyPoints": "Key Points",
+    "blog.loading": "Loading...",
+    
     // Blog Posts Content
-    "blog.post1.title": "The Benefits of Eating Seasonal Produce",
-    "blog.post1.excerpt":
-      "Discover why eating fruits and vegetables in season is better for your health, wallet, and the environment.",
-    "blog.post2.title": "Our Organic Certification Journey",
-    "blog.post2.excerpt":
-      "Learn about the rigorous process we went through to achieve organic certification and what it means for our customers.",
-    "blog.post3.title": "Sustainable Water Management in Agriculture",
-    "blog.post3.excerpt":
-      "How we use advanced irrigation techniques to conserve water while maintaining crop quality.",
-    "blog.post4.title": "Recipe: Fresh Orange and Avocado Salad",
-    "blog.post4.excerpt":
-      "A refreshing and nutritious salad recipe using our farm-fresh oranges and creamy avocados.",
-    "blog.post5.title": "Export Success: Reaching New Markets",
-    "blog.post5.excerpt":
-      "Our journey expanding to new international markets and the challenges we overcame.",
-    "blog.post6.title": "Winter Harvest: What's Fresh This Season",
-    "blog.post6.excerpt":
-      "Explore the delicious winter produce available from our farm and their nutritional benefits.",
+// Blog Posts Content (English)
+"blog.rainfall_impact_2024.title": "Exceptional Rainfall in 2024: A 41% Boost in Morocco’s Cereal Harvest",
+"blog.rainfall_impact_2024.excerpt":
+  "Discover how the abundant rains of 2024 boosted Morocco’s cereal production, strengthening food security and reviving hope for farmers.",
+
+"blog.sand_to_green_oasis.title": "From Sand to Orchards: Regenerative Farming Transforms the Moroccan Desert",
+"blog.sand_to_green_oasis.excerpt":
+  "Solar pumping, drip irrigation, and biochar: how the Sand to Green project is bringing life back to Morocco’s arid lands.",
+
+"blog.no_till_expansion.title": "No-Till Farming: Morocco’s Commitment to Climate Resilience",
+"blog.no_till_expansion.excerpt":
+  "Morocco is investing in no-till agriculture to save water, reduce erosion, and sustainably boost productivity.",
+
+"blog.green_deal_opportunity.title": "European Green Deal: An Opportunity to Modernize Moroccan Agriculture",
+"blog.green_deal_opportunity.excerpt":
+  "Morocco’s Minister of Agriculture sees the Green Deal as a chance to enhance sustainability and competitiveness in EU markets.",
+
+"blog.food_quality_standards.title": "Standards and Quality: Ensuring the Safety of Moroccan Food Exports",
+"blog.food_quality_standards.excerpt":
+  "From ISO certifications to good agricultural practices, Morocco ensures its exports meet global food safety standards.",
+
+"blog.oasis_irrigation_innovation.title": "Oasis and Innovation: Smart Irrigation for Sustainable Futures",
+"blog.oasis_irrigation_innovation.excerpt":
+  "New irrigation techniques and traditional know-how combine to protect Morocco’s oases from climate change.",
+
 
     // Blog Categories
     "blog.category.nutrition": "Nutrition",
@@ -243,6 +390,21 @@ const translations: Translations = {
     "blog.category.recipes": "Recipes",
     "blog.category.business": "Business",
     "blog.category.seasonal": "Seasonal",
+    
+    // News Categories
+    "news.category.trade": "Trade",
+    "news.category.agriculture": "Agriculture",
+    "news.category.economy": "Economy",
+    
+    // Morocco News Blog Posts
+    "news.morocco.export.spain.q1_2025": "Morocco's Vegetable Exports to Spain Surge 24% in Q1 2025",
+    "news.morocco.export.spain.q1_2025.excerpt": "Spanish imports of Moroccan fruits and vegetables surged by 24% in volume and 23% in value during Q1 2025 compared to Q1 2024, reaching 188,076 tons worth €481 million.",
+    "news.morocco.global_export_growth.strategy": "Morocco Strengthens Global Position with Advanced Farming Strategy",
+    "news.morocco.global_export_growth.strategy.excerpt": "Morocco ranks among the three fastest-growing agricultural exporters globally, driven by strategic adoption of advanced technologies that boost both productivity and sustainability.",
+    "news.morocco.exports.rebound.2024_25": "Strong Recovery: Morocco's Exports Rebound 18% in 2024-2025 Season",
+    "news.morocco.exports.rebound.2024_25.excerpt": "Morocco's fruit and vegetable exports rebounded strongly in the 2024-2025 season, climbing 18% year-on-year to reach 1.6 million tons with EU and UK accounting for 86% of exports.",
+    "news.morocco.zucchini.switzerland": "Record Zucchini Exports: Morocco Strengthens Swiss Market Presence",
+    "news.morocco.zucchini.switzerland.excerpt": "Morocco achieved a milestone in the Swiss market with zucchini exports surpassing 1,000 tons this season—a 25% increase over last year, now ranking among Switzerland's top seven suppliers.",
 
     // Shop Page
     "shop.title": "Fresh Produce Shop",
@@ -250,6 +412,21 @@ const translations: Translations = {
       "Browse our complete selection of premium organic fruits and vegetables, delivered fresh from our Moroccan farm to your doorstep",
     "shop.premiumQuality": "Premium Quality",
     "shop.fastDelivery": "Fast Delivery",
+    "shop.freshProduce": "Fresh Produce",
+    "shop.shop": "Shop",
+    "shop.browseSelection": "Browse our complete selection of premium organic fruits and vegetables, delivered fresh from our Moroccan farm to your doorstep",
+    "shop.categories": "Categories",
+    "shop.priceRange": "Price Range",
+    "shop.fruits": "Fruits",
+    "shop.vegetables": "Vegetables",
+    "shop.organic": "Organic",
+    "shop.seasonal": "Seasonal",
+    "shop.under5": "Under $5/kg",
+    "shop.5to10": "$5 - $10/kg",
+    "shop.10to20": "$10 - $20/kg",
+    "shop.over20": "Over $20/kg",
+
+
   },
   fr: {
     // Header
@@ -432,6 +609,50 @@ const translations: Translations = {
     "about.hectaresLabel": "Hectares de Terre",
     "about.countriesServed": "50+",
     "about.countriesLabel": "Pays Desservis",
+    "about.fromHumbleBeginnings": "Des Débuts Humbles à la Portée Mondiale",
+    "about.storyParagraph1": "Notre parcours a commencé en 1952 lorsque mon grand-père, Hassan, a commencé à cultiver une petite parcelle de terre dans les vallées fertiles du Maroc. Avec rien d'autre que la détermination et un profond amour pour la terre, il a cultivé les meilleurs fruits et légumes que la région ait jamais vus.",
+    "about.storyParagraph2": "Aujourd'hui, trois générations plus tard, nous continuons son héritage tout en adoptant des pratiques durables modernes. Notre ferme de 500 hectares fournit maintenant des produits biologiques premium aux clients de 50 pays, mais nous n'avons jamais oublié nos racines ou compromis la qualité.",
+    "about.storyParagraph3": "Chaque fruit et légume qui quitte notre ferme porte avec lui le même soin, attention et amour que Hassan a mis dans sa première récolte il y a plus de 70 ans.",
+    "about.threeGenerationsAlt": "Trois générations de notre famille agricole",
+    "about.coreValues": "Nos Valeurs Fondamentales",
+    "about.coreValuesDesc": "Ces principes guident tout ce que nous faisons, de la graine à la récolte jusqu'à votre table",
+    "about.sustainability": "Durabilité",
+    "about.sustainabilityDesc": "Nous utilisons des pratiques agricoles respectueuses de l'environnement qui protègent notre sol, notre eau et notre biodiversité pour les générations futures.",
+    "about.familyTradition": "Tradition Familiale",
+    "about.familyTraditionDesc": "Chaque décision que nous prenons honore l'héritage de notre famille tout en adoptant l'innovation et les meilleures pratiques modernes.",
+    "about.qualityExcellence": "Excellence Qualité",
+    "about.qualityExcellenceDesc": "Nous ne compromettons jamais la qualité. Chaque produit répond aux plus hauts standards internationaux avant d'atteindre nos clients.",
+    "about.communityCare": "Soin Communautaire",
+    "about.communityCareDesc": "Nous soutenons notre communauté locale en fournissant un emploi équitable et en investissant dans les infrastructures et l'éducation locales.",
+    "about.globalResponsibility": "Responsabilité Mondiale",
+    "about.globalResponsibilityDesc": "Nous croyons en un commerce mondial responsable qui profite à la fois à nos clients et à notre communauté agricole locale.",
+    "about.reliableService": "Service Fiable",
+    "about.reliableServiceDesc": "Nous garantissons une livraison ponctuelle et une qualité constante, construisant des partenariats à long terme avec nos clients du monde entier.",
+    "about.sustainablePractices": "Pratiques Agricoles Durables",
+    "about.sustainablePracticesDesc": "Nous nous engageons dans des méthodes agricoles qui protègent notre environnement tout en produisant les fruits et légumes de la plus haute qualité.",
+    "about.waterConservation": "Conservation de l'Eau",
+    "about.waterConservationDesc": "Les systèmes d'irrigation goutte à goutte avancés réduisent l'utilisation d'eau de 40% tout en assurant une hydratation optimale des plantes.",
+    "about.organicCertification": "Certification Biologique",
+    "about.organicCertificationDesc": "100% de pratiques biologiques certifiées sans pesticides ou engrais synthétiques.",
+    "about.solarEnergy": "Énergie Solaire",
+    "about.solarEnergyDesc": "Les panneaux solaires alimentent 80% de nos opérations agricoles, réduisant significativement notre empreinte carbone.",
+    "about.soilHealth": "Santé du Sol",
+    "about.soilHealthDesc": "La rotation des cultures et le compostage naturel maintiennent la fertilité du sol et préviennent l'érosion.",
+    "about.sustainablePracticesAlt": "Pratiques agricoles durables sur notre ferme",
+    "about.meetOurTeam": "Rencontrez Notre Équipe",
+    "about.teamDesc": "Les personnes passionnées derrière le succès de notre ferme",
+    "about.ahmedHassan": "Ahmed Hassan",
+    "about.ahmedRole": "Propriétaire de Ferme & PDG",
+    "about.ahmedDesc": "Agriculteur de troisième génération dirigeant nos initiatives d'agriculture durable et d'expansion mondiale.",
+    "about.ahmedAlt": "Ahmed Hassan - Propriétaire de Ferme",
+    "about.fatimaBenali": "Fatima Benali",
+    "about.fatimaRole": "Ingénieure Agricole",
+    "about.fatimaDesc": "Experte en pratiques agricoles durables et processus de certification biologique.",
+    "about.fatimaAlt": "Fatima Benali - Ingénieure Agricole",
+    "about.omarAlami": "Omar Alami",
+    "about.omarRole": "Gestionnaire Export",
+    "about.omarDesc": "Gère la logistique internationale et assure la livraison de qualité aux clients du monde entier.",
+    "about.omarAlt": "Omar Alami - Gestionnaire Export",
 
     // Contact Page
     "contact.title": "Contactez-Nous",
@@ -439,6 +660,95 @@ const translations: Translations = {
       "Prêt à commencer votre parcours de produits frais? Contactez-nous pour des commandes, partenariats ou toute question",
     "contact.quickResponse": "Réponse Rapide",
     "contact.partnershipReady": "Prêt pour Partenariat",
+    "contact.requestB2BQuote": "Demander un Devis B2B",
+    "contact.bulkOrdersDescription": "Vous cherchez des commandes en vrac ou un approvisionnement régulier? Obtenez un devis personnalisé pour vos besoins professionnels",
+    "contact.visitOurFarm": "Visitez Notre Ferme",
+    "contact.farmLocation": "Située dans les vallées fertiles d'Agadir, Maroc",
+    "contact.mapPlaceholder": "L'intégration Google Maps irait ici",
+
+    // Contact Form
+    "contactForm.sendMessage": "Envoyez-nous un Message",
+    "contactForm.fullName": "Nom Complet *",
+    "contactForm.emailAddress": "Adresse Email *",
+    "contactForm.phoneNumber": "Numéro de Téléphone",
+    "contactForm.companyName": "Nom de l'Entreprise",
+    "contactForm.subject": "Sujet *",
+    "contactForm.selectSubject": "Sélectionnez un sujet",
+    "contactForm.generalInquiry": "Demande Générale",
+    "contactForm.productOrder": "Commande de Produit",
+    "contactForm.partnershipOpportunity": "Opportunité de Partenariat",
+    "contactForm.exportInformation": "Information Export",
+    "contactForm.qualityConcern": "Problème de Qualité",
+    "contactForm.other": "Autre",
+    "contactForm.message": "Message *",
+    "contactForm.messagePlaceholder": "Veuillez fournir des détails sur votre demande...",
+    "contactForm.sendMessageButton": "Envoyer Message",
+
+    // Contact Info
+    "contactInfo.contactInformation": "Informations de Contact",
+    "contactInfo.helpDescription": "Nous sommes là pour vous aider avec tous vos besoins en produits frais. Contactez-nous par l'un de ces canaux.",
+    "contactInfo.farmLocation": "Emplacement de la Ferme",
+    "contactInfo.farmAddress": "Route de Taroudant, Km 15\nAgadir 80000, Maroc",
+    "contactInfo.phoneNumbers": "Numéros de Téléphone",
+    "contactInfo.mainPhone": "Principal: +212 528 123 456",
+    "contactInfo.exportPhone": "Export: +212 661 234 567",
+    "contactInfo.whatsapp": "WhatsApp",
+    "contactInfo.whatsappNumber": "+212 661 234 567",
+    "contactInfo.whatsappAvailable": "Disponible 24h/24 pour les demandes urgentes",
+    "contactInfo.emailAddresses": "Adresses Email",
+    "contactInfo.generalEmail": "Général: info@freshfarm.ma",
+    "contactInfo.salesEmail": "Ventes: sales@freshfarm.ma",
+    "contactInfo.exportEmail": "Export: export@freshfarm.ma",
+    "contactInfo.businessHours": "Heures d'Ouverture",
+    "contactInfo.weekdays": "Lundi - Vendredi: 8h00 - 18h00",
+    "contactInfo.saturday": "Samedi: 9h00 - 16h00",
+    "contactInfo.sunday": "Dimanche: Fermé",
+    "contactInfo.languages": "Langues",
+    "contactInfo.languagesList": "Arabe, Français, Anglais",
+    "contactInfo.spanishExport": "Espagnol (équipe export)",
+
+    // Quote Form
+    "quoteForm.b2bQuoteRequest": "Demande de Devis B2B",
+    "quoteForm.companyName": "Nom de l'Entreprise *",
+    "quoteForm.contactPerson": "Personne de Contact *",
+    "quoteForm.businessEmail": "Email Professionnel *",
+    "quoteForm.phoneNumber": "Numéro de Téléphone *",
+    "quoteForm.deliveryCountry": "Pays de Livraison *",
+    "quoteForm.selectDeliveryCountry": "Sélectionnez le pays de livraison",
+    "quoteForm.france": "France",
+    "quoteForm.spain": "Espagne",
+    "quoteForm.germany": "Allemagne",
+    "quoteForm.uk": "Royaume-Uni",
+    "quoteForm.netherlands": "Pays-Bas",
+    "quoteForm.uae": "Émirats Arabes Unis",
+    "quoteForm.other": "Autre",
+    "quoteForm.productsOfInterest": "Produits d'Intérêt *",
+    "quoteForm.freshOranges": "Oranges Fraîches",
+    "quoteForm.organicTomatoes": "Tomates Biologiques",
+    "quoteForm.freshAvocados": "Avocats Frais",
+    "quoteForm.bellPeppers": "Poivrons",
+    "quoteForm.freshLemons": "Citrons Frais",
+    "quoteForm.organicCarrots": "Carottes Biologiques",
+    "quoteForm.seasonalFruits": "Fruits de Saison",
+    "quoteForm.mixedVegetables": "Légumes Mixtes",
+    "quoteForm.expectedQuantity": "Quantité Attendue (kg/mois)",
+    "quoteForm.selectQuantityRange": "Sélectionnez la plage de quantité",
+    "quoteForm.quantity100500": "100 - 500 kg",
+    "quoteForm.quantity5001000": "500 - 1 000 kg",
+    "quoteForm.quantity10005000": "1 000 - 5 000 kg",
+    "quoteForm.quantity500010000": "5 000 - 10 000 kg",
+    "quoteForm.quantity10000plus": "10 000+ kg",
+    "quoteForm.deliveryFrequency": "Fréquence de Livraison",
+    "quoteForm.selectFrequency": "Sélectionnez la fréquence",
+    "quoteForm.weekly": "Hebdomadaire",
+    "quoteForm.biweekly": "Bi-hebdomadaire",
+    "quoteForm.monthly": "Mensuel",
+    "quoteForm.seasonal": "Saisonnier",
+    "quoteForm.oneTime": "Commande unique",
+    "quoteForm.specialRequirements": "Exigences Spéciales",
+    "quoteForm.requirementsPlaceholder": "Veuillez spécifier tout emballage spécial, certification ou exigences de livraison...",
+    "quoteForm.agreeTerms": "J'accepte les conditions générales et la politique de confidentialité *",
+    "quoteForm.requestQuote": "Demander Devis",
 
     // // Blog Page
     // "blog.title": "Blog & Actualités de la Ferme",
@@ -467,26 +777,39 @@ const translations: Translations = {
     "blog.emailPlaceholder": "Votre adresse email",
     "blog.subscribe": "S'abonner",
     "blog.readTime": "{time} min de lecture",
-
+    "blog.backToBlog": "Retour au Blog",
+    "blog.backToAllPosts": "Retour à Tous les Articles",
+    "blog.blogPostNotFound": "Article de Blog Non Trouvé",
+    "blog.postNotFoundMessage": "L'article de blog que vous recherchez n'existe pas.",
+    "blog.relatedPosts": "Articles Connexes",
+    "blog.keyPoints": "Points Clés",
+    "blog.loading": "Chargement...",
+    
     // Blog Posts Content
-    "blog.post1.title": "Les Avantages de Manger des Produits de Saison",
-    "blog.post1.excerpt":
-      "Découvrez pourquoi manger des fruits et légumes de saison est meilleur pour votre santé, votre portefeuille et l'environnement.",
-    "blog.post2.title": "Notre Parcours de Certification Biologique",
-    "blog.post2.excerpt":
-      "Apprenez-en plus sur le processus rigoureux que nous avons suivi pour obtenir la certification biologique et ce que cela signifie pour nos clients.",
-    "blog.post3.title": "Gestion Durable de l'Eau en Agriculture",
-    "blog.post3.excerpt":
-      "Comment nous utilisons des techniques d'irrigation avancées pour économiser l'eau tout en maintenant la qualité des cultures.",
-    "blog.post4.title": "Recette: Salade d'Oranges et d'Avocats Frais",
-    "blog.post4.excerpt":
-      "Une recette de salade rafraîchissante et nutritive utilisant nos oranges fraîches de la ferme et nos avocats crémeux.",
-    "blog.post5.title": "Succès Export: Atteindre de Nouveaux Marchés",
-    "blog.post5.excerpt":
-      "Notre parcours d'expansion vers de nouveaux marchés internationaux et les défis que nous avons surmontés.",
-    "blog.post6.title": "Récolte d'Hiver: Ce qui est Frais Cette Saison",
-    "blog.post6.excerpt":
-      "Explorez les délicieux produits d'hiver disponibles de notre ferme et leurs bienfaits nutritionnels.",
+    "blog.rainfall_impact_2024.title": "Pluies exceptionnelles 2024 : un bond de 41 % dans la récolte de céréales au Maroc",
+    "blog.rainfall_impact_2024.excerpt":
+      "Découvrez comment les pluies abondantes de 2024 ont stimulé la production céréalière marocaine, renforçant la sécurité alimentaire et redonnant espoir aux agriculteurs.",
+
+    "blog.sand_to_green_oasis.title": "Du sable aux vergers : l’agriculture régénérative transforme le désert marocain",
+    "blog.sand_to_green_oasis.excerpt":
+      "Pompage solaire, irrigation goutte à goutte et biochar : comment le projet Sand to Green redonne vie aux terres arides du Maroc.",
+
+    "blog.no_till_expansion.title": "Agriculture sans labour : le Maroc s’engage pour la résilience climatique",
+    "blog.no_till_expansion.excerpt":
+      "Le Maroc investit dans l’agriculture sans labour pour économiser l’eau, réduire l’érosion et accroître la productivité durablement.",
+
+    "blog.green_deal_opportunity.title": "Green Deal européen : une opportunité pour moderniser l’agriculture marocaine",
+    "blog.green_deal_opportunity.excerpt":
+      "Le ministre marocain de l’Agriculture voit dans le Green Deal une chance de renforcer la durabilité et la compétitivité sur les marchés de l’UE.",
+
+    "blog.food_quality_standards.title": "Normes et qualité : garantir la sécurité des produits alimentaires marocains",
+    "blog.food_quality_standards.excerpt":
+      "Des normes ISO aux bonnes pratiques agricoles, découvrez comment le Maroc assure la conformité de ses exportations aux standards mondiaux.",
+
+    "blog.oasis_irrigation_innovation.title": "Oasis et innovation : l’irrigation intelligente au service de la durabilité",
+    "blog.oasis_irrigation_innovation.excerpt":
+      "Nouvelles techniques d’irrigation et savoir-faire traditionnel se combinent pour préserver les oasis marocaines face au changement climatique.",
+
 
     // Blog Categories
     "blog.category.nutrition": "Nutrition",
@@ -495,6 +818,21 @@ const translations: Translations = {
     "blog.category.recipes": "Recettes",
     "blog.category.business": "Entreprise",
     "blog.category.seasonal": "Saisonnier",
+    
+    // News Categories
+    "news.category.trade": "Commerce",
+    "news.category.agriculture": "Agriculture",
+    "news.category.economy": "Économie",
+    
+    // Morocco News Blog Posts
+    "news.morocco.export.spain.q1_2025": "Les Exportations Marocaines de Légumes vers l'Espagne Augmentent de 24% au T1 2025",
+    "news.morocco.export.spain.q1_2025.excerpt": "Les importations espagnoles de fruits et légumes marocains ont augmenté de 24% en volume et 23% en valeur au T1 2025 par rapport au T1 2024, atteignant 188 076 tonnes pour 481 millions d'euros.",
+    "news.morocco.global_export_growth.strategy": "Le Maroc Renforce sa Position Mondiale avec une Stratégie Agricole Avancée",
+    "news.morocco.global_export_growth.strategy.excerpt": "Le Maroc se classe parmi les trois exportateurs agricoles à la croissance la plus rapide au monde, grâce à l'adoption stratégique de technologies avancées qui stimulent productivité et durabilité.",
+    "news.morocco.exports.rebound.2024_25": "Forte Reprise: Les Exportations Marocaines Rebondissent de 18% en 2024-2025",
+    "news.morocco.exports.rebound.2024_25.excerpt": "Les exportations marocaines de fruits et légumes ont rebondi fortement en 2024-2025, augmentant de 18% en glissement annuel pour atteindre 1,6 million de tonnes, l'UE et le Royaume-Uni représentant 86% des exportations.",
+    "news.morocco.zucchini.switzerland": "Exportations Record de Courgettes: Le Maroc Renforce sa Présence sur le Marché Suisse",
+    "news.morocco.zucchini.switzerland.excerpt": "Le Maroc a atteint un jalon sur le marché suisse avec des exportations de courgettes dépassant 1 000 tonnes cette saison—une augmentation de 25% par rapport à l'année dernière, se classant maintenant parmi les sept premiers fournisseurs de la Suisse.",
 
     // Shop Page
     "shop.title": "Boutique de Produits Frais",
@@ -502,8 +840,28 @@ const translations: Translations = {
       "Parcourez notre sélection complète de fruits et légumes biologiques premium, livrés frais de notre ferme marocaine à votre porte",
     "shop.premiumQuality": "Qualité Premium",
     "shop.fastDelivery": "Livraison Rapide",
+    "shop.freshProduce": "Produits Frais",
+    "shop.shop": "Boutique",
+    "shop.browseSelection": "Parcourez notre sélection complète de fruits et légumes biologiques premium, livrés frais de notre ferme marocaine à votre porte",
+    "shop.categories": "Catégories",
+    "shop.priceRange": "Fourchette de Prix",
+    "shop.fruits": "Fruits",
+    "shop.vegetables": "Légumes",
+    "shop.organic": "Biologique",
+    "shop.seasonal": "Saisonnier",
+    "shop.under5": "Moins de 5€/kg",
+    "shop.5to10": "5€ - 10€/kg",
+    "shop.10to20": "10€ - 20€/kg",
+    "shop.over20": "Plus de 20€/kg",
+
+
   },
 };
+
+// Server-side translation function
+export function getTranslation(key: TranslationKey, language: string = "en"): string {
+  return translations[language]?.[key] || translations["en"][key] || key
+}
 
 export function useTranslation() {
   const [language, setLanguage] = useState("en");

@@ -14,10 +14,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useTranslation } from "@/hooks/useTranslation"
+
 import { submitQuoteRequest, type QuoteFormData } from "@/lib/firebaseServices";
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function QuoteForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<QuoteFormData>({
     companyName: "",
     contactName: "",
@@ -254,16 +257,16 @@ export default function QuoteForm() {
               value={formData.country}
             >
               <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                <SelectValue placeholder="Select delivery country" />
+                <SelectValue placeholder={t("quoteForm.selectDeliveryCountry")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="france">France</SelectItem>
-                <SelectItem value="spain">Spain</SelectItem>
-                <SelectItem value="germany">Germany</SelectItem>
-                <SelectItem value="uk">United Kingdom</SelectItem>
-                <SelectItem value="netherlands">Netherlands</SelectItem>
-                <SelectItem value="uae">United Arab Emirates</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+                <SelectItem value="france">{t("quoteForm.france")}</SelectItem>
+                <SelectItem value="spain">{t("quoteForm.spain")}</SelectItem>
+                <SelectItem value="germany">{t("quoteForm.germany")}</SelectItem>
+                <SelectItem value="uk">{t("quoteForm.uk")}</SelectItem>
+                <SelectItem value="netherlands">{t("quoteForm.netherlands")}</SelectItem>
+                <SelectItem value="uae">{t("quoteForm.uae")}</SelectItem>
+                <SelectItem value="other">{t("quoteForm.other")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -308,14 +311,14 @@ export default function QuoteForm() {
                 value={formData.quantity}
               >
                 <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                  <SelectValue placeholder="Select quantity range" />
+                  <SelectValue placeholder={t("quoteForm.selectQuantityRange")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="100-500">100 - 500 kg</SelectItem>
-                  <SelectItem value="500-1000">500 - 1,000 kg</SelectItem>
-                  <SelectItem value="1000-5000">1,000 - 5,000 kg</SelectItem>
-                  <SelectItem value="5000-10000">5,000 - 10,000 kg</SelectItem>
-                  <SelectItem value="10000+">10,000+ kg</SelectItem>
+                  <SelectItem value="100-500">{t("quoteForm.quantity100500")}</SelectItem>
+                  <SelectItem value="500-1000">{t("quoteForm.quantity5001000")}</SelectItem>
+                  <SelectItem value="1000-5000">{t("quoteForm.quantity10005000")}</SelectItem>
+                  <SelectItem value="5000-10000">{t("quoteForm.quantity500010000")}</SelectItem>
+                  <SelectItem value="10000+">{t("quoteForm.quantity10000plus")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -332,14 +335,14 @@ export default function QuoteForm() {
                 value={formData.frequency}
               >
                 <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                  <SelectValue placeholder="Select frequency" />
+                  <SelectValue placeholder={t("quoteForm.selectFrequency")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="weekly">Weekly</SelectItem>
-                  <SelectItem value="biweekly">Bi-weekly</SelectItem>
-                  <SelectItem value="monthly">Monthly</SelectItem>
-                  <SelectItem value="seasonal">Seasonal</SelectItem>
-                  <SelectItem value="one-time">One-time order</SelectItem>
+                  <SelectItem value="weekly">{t("quoteForm.weekly")}</SelectItem>
+                  <SelectItem value="biweekly">{t("quoteForm.biweekly")}</SelectItem>
+                  <SelectItem value="monthly">{t("quoteForm.monthly")}</SelectItem>
+                  <SelectItem value="seasonal">{t("quoteForm.seasonal")}</SelectItem>
+                  <SelectItem value="one-time">{t("quoteForm.oneTime")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -359,7 +362,7 @@ export default function QuoteForm() {
               onChange={(e) => handleChange("requirements", e.target.value)}
               disabled={isSubmitting}
               className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
-              placeholder="Please specify any special packaging, certification, or delivery requirements..."
+              placeholder={t("quoteForm.requirementsPlaceholder")}
             />
           </div>
 

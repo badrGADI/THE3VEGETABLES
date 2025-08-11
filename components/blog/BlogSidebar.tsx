@@ -17,6 +17,26 @@ const categories = [
 
 const recentPosts = [
   {
+    id: 10,
+    titleKey: "news.morocco.zucchini.switzerland",
+    date: "2025-06-27",
+  },
+  {
+    id: 7,
+    titleKey: "news.morocco.export.spain.q1_2025",
+    date: "2025-06-07",
+  },
+  {
+    id: 9,
+    titleKey: "news.morocco.exports.rebound.2024_25",
+    date: "2025-06-02",
+  },
+  {
+    id: 8,
+    titleKey: "news.morocco.global_export_growth.strategy",
+    date: "2025-04-01",
+  },
+  {
     id: 1,
     titleKey: "blog.post1.title",
     date: "2024-01-15",

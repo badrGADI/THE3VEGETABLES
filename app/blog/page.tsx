@@ -4,6 +4,8 @@ import BlogHeader from "@/components/blog/BlogHeader"
 import BlogGrid from "@/components/blog/BlogGrid"
 import BlogSidebar from "@/components/blog/BlogSidebar"
 
+
+
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">

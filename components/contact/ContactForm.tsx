@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useTranslation } from "@/hooks/useTranslation"
 import {
   submitContactForm,
   type ContactFormData,
@@ -20,6 +21,7 @@ import {
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -205,7 +207,7 @@ export default function ContactForm() {
               value={formData.subject}
             >
               <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
-                <SelectValue placeholder="Select a subject" />
+                <SelectValue placeholder={t("contactForm.selectSubject")} />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="general">General Inquiry</SelectItem>
@@ -235,7 +237,7 @@ export default function ContactForm() {
               required
               disabled={isSubmitting}
               className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
-              placeholder="Please provide details about your inquiry..."
+              placeholder={t("contactForm.messagePlaceholder")}
             />
           </div>
 
