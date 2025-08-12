@@ -106,13 +106,15 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative w-full max-w-[400px] aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-2xl shadow-2xl mx-auto flex items-center justify-center overflow-hidden">
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
-                width={800}
-                height={600}
-                className="rounded-2xl shadow-2xl"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-2xl"
+                sizes="(max-width: 768px) 100vw, 600px"
+                priority
               />
             </div>
           </div>
