@@ -122,41 +122,172 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
                   {t(post.excerptKey)}
                 </p>
                 
-                {/* Placeholder content - in a real app, this would come from a CMS or database */}
+                {/* Blog post content using translation system */}
                 <div className="space-y-6 text-gray-700 leading-relaxed">
-                  <p>
-                    This is a detailed blog post about {t(post.titleKey).toLowerCase()}. 
-                    The content would typically be much longer and include multiple paragraphs, 
-                    images, and possibly embedded media.
-                  </p>
-                  
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  
-                  <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                    in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  
-                  <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-                    {t("blog.keyPoints")}
-                  </h2>
-                  
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Important information about the topic</li>
-                    <li>Key insights and findings</li>
-                    <li>Practical applications and recommendations</li>
-                    <li>Future implications and trends</li>
-                  </ul>
-                  
-                  <p className="mt-6">
-                    In conclusion, this blog post provides valuable insights into the subject matter 
-                    and offers practical guidance for readers interested in learning more about this topic.
-                  </p>
+                  {post.id === 1 && (
+                    <>
+                      <p>
+                        {t("blog.rainfall_impact_2024.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("blog.rainfall_impact_2024.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {post.id === 2 && (
+                    <>
+                      <p>
+                        {t("blog.sand_to_green_oasis.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("blog.sand_to_green_oasis.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {post.id === 3 && (
+                    <>
+                      <p>
+                        {t("blog.no_till_expansion.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("blog.no_till_expansion.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {post.id === 4 && (
+                    <>
+                      <p>
+                        {t("blog.green_deal_opportunity.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("blog.green_deal_opportunity.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {post.id === 5 && (
+                    <>
+                      <p>
+                        {t("blog.food_quality_standards.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("blog.food_quality_standards.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {post.id === 6 && (
+                    <>
+                      <p>
+                        {t("blog.oasis_irrigation_innovation.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("blog.oasis_irrigation_innovation.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {post.id === 10 && (
+                    <>
+                      <p>
+                        {t("news.morocco.zucchini.switzerland.content")}
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("news.morocco.zucchini.switzerland.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {/* Default content for other blog posts */}
+                  {![1, 2, 3, 4, 5, 6, 10].includes(post.id) && (
+                    <>
+                      <p>
+                        This is a detailed blog post about {t(post.titleKey).toLowerCase()}. 
+                        The content would typically be much longer and include multiple paragraphs, 
+                        images, and possibly embedded media.
+                      </p>
+                      
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                      
+                      <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+                        in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li>Important information about the topic</li>
+                        <li>Key insights and findings</li>
+                        <li>Practical applications and recommendations</li>
+                        <li>Future implications and trends</li>
+                      </ul>
+                      
+                      <p className="mt-6">
+                        In conclusion, this blog post provides valuable insights into the subject matter 
+                        and offers practical guidance for readers interested in learning more about this topic.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </CardContent>
