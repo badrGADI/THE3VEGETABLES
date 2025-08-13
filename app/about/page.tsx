@@ -296,7 +296,7 @@ export default function AboutPage() {
             <Card className="text-center dark:bg-gray-700">
               <CardContent className="p-8">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/Ahmed.png?height=200&width=200"
                   alt={t("about.omarAlt")}
                   width={200}
                   height={200}
