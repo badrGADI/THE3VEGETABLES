@@ -1,56 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://moroccofresh.ma/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/products</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/products</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/products/moroccan-tomatoes</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-tomatoes</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-carrots</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/products/moroccan-carrots</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-peppers</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/products/moroccan-peppers</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-onions</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/products/moroccan-onions</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-potatoes</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/about</loc>
-    <lastmod>2024-01-10</lastmod>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-cucumbers</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-oranges</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-lemons</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-avocados</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-melons</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-watermelons</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://t3v.the-3rocks.com/products/moroccan-grapes</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+   
+  <url>
+    <loc>https://t3v.the-3rocks.com/about</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/contact</loc>
-    <lastmod>2024-01-10</lastmod>
+    <loc>https://t3v.the-3rocks.com/contact</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://moroccofresh.ma/blog</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://t3v.the-3rocks.com/blog</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://t3v.the-3rocks.com/blog/1</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/2</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/3</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/4</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/5</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/6</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/7</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/8</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/9</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://t3v.the-3rocks.com/blog/10</loc>
+    <lastmod>2025-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
