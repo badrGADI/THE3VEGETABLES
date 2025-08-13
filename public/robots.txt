@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://moroccofresh.ma/sitemap.xml
+Sitemap: https://t3v.the-3rocks.com/sitemap.xml
 
 # Disallow admin areas
 Disallow: /admin/
