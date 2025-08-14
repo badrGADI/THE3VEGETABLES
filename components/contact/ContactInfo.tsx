@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Phone } from "lucide-react"
-import { useTranslation } from "@/hooks/useTranslation"
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Phone } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function ContactInfo() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Contact Information</h2>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+          Contact Information
+        </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-          We're here to help with all your fresh produce needs. Reach out to us through any of these channels.
+          We're here to help with all your fresh produce needs. Reach out to us
+          through any of these channels.
         </p>
       </div>
 
@@ -24,7 +27,9 @@ export default function ContactInfo() {
                 <MapPin className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Company Address</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  Company Address
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Route de Taroudant, Km 15
                   <br />
@@ -46,9 +51,11 @@ export default function ContactInfo() {
                 <Phone className="w-6 h-6 text-orange-500" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Phone Numbers</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  Phone Numbers
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Main: +212 528 123 456
+                  Main: +212 654 352 802
                   <br />
                   {t("contactInfo.exportPhone")}
                 </p>
@@ -58,5 +65,5 @@ export default function ContactInfo() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
