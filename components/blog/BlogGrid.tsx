@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,7 +14,17 @@ const POSTS_PER_PAGE = 5;
 
 export default function BlogGrid() {
   const { t } = useTranslation();
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Set initial page from query param on mount
+  useEffect(() => {
+    const pageParam = searchParams?.get("page");
+    if (pageParam && !isNaN(Number(pageParam))) {
+      setCurrentPage(Number(pageParam));
+    }
+  }, [searchParams]);
 
   const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
@@ -22,6 +33,8 @@ export default function BlogGrid() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+    // Update the URL with the new page param
+    router.push(`/blog?page=${page}`);
     // Scroll to top of the blog section
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -79,7 +92,7 @@ export default function BlogGrid() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 transition-colors">
-                    <Link href={`/blog/${post.id}`}>{t(post.titleKey)}</Link>
+                    <Link href={`/blog/${post.id}?page=${currentPage}`}>{t(post.titleKey)}</Link>
                   </h3>
 
                   <p className="text-gray-600 mb-4 line-clamp-3">
@@ -94,7 +107,7 @@ export default function BlogGrid() {
                       </span>
                     </div>
                     <Link
-                      href={`/blog/${post.id}`}
+                      href={`/blog/${post.id}?page=${currentPage}`}
                       className="text-orange-500 hover:text-orange-600 font-medium text-sm"
                     >
                       {t("blog.readMore")}

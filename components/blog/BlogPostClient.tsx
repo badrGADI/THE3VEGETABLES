@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, Tag, ArrowLeft, Clock } from "lucide-react"
@@ -13,10 +14,14 @@ interface BlogPostClientProps {
   params: Promise<{ id: string }>
 }
 
+
 export default function BlogPostClient({ params }: BlogPostClientProps) {
   const [post, setPost] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const { t } = useTranslation()
+  const searchParams = useSearchParams()
+  const page = searchParams?.get("page")
+  const backUrl = page ? `/blog?page=${page}` : "/blog"
 
   useEffect(() => {
     const loadPost = async () => {
@@ -47,7 +52,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">{t("blog.blogPostNotFound")}</h1>
           <p className="text-gray-600 mb-6">{t("blog.postNotFoundMessage")}</p>
-          <Link href="/blog">
+          <Link href={backUrl}>
             <Button className="bg-orange-500 hover:bg-orange-600">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t("blog.backToBlog")}
@@ -63,7 +68,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
       {/* Header */}
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-6">
-          <Link href="/blog">
+          <Link href={backUrl}>
             <Button variant="ghost" className="mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t("blog.backToBlog")}
@@ -124,6 +129,51 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
                 
                 {/* Blog post content using translation system */}
                 <div className="space-y-6 text-gray-700 leading-relaxed">
+                  {post.id === 7 && (
+                    <>
+                      <p>
+                        {t("news.morocco.export.spain.q1_2025.content")}
+                      </p>
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("news.morocco.export.spain.q1_2025.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {post.id === 8 && (
+                    <>
+                      <p>
+                        {t("news.morocco.global_export_growth.strategy.content")}
+                      </p>
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("news.morocco.global_export_growth.strategy.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {post.id === 9 && (
+                    <>
+                      <p>
+                        {t("news.morocco.exports.rebound.2024_25.content")}
+                      </p>
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        {t("blog.keyPoints")}
+                      </h2>
+                      <ul className="list-disc pl-6 space-y-2">
+                        {t("news.morocco.exports.rebound.2024_25.keyPoints").split(", ").map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                   {post.id === 1 && (
                     <>
                       <p>
@@ -251,7 +301,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
                   )}
 
                   {/* Default content for other blog posts */}
-                  {![1, 2, 3, 4, 5, 6, 10].includes(post.id) && (
+                  {![1, 2, 3, 4, 5, 6, 7, 8, 9, 10].includes(post.id) && (
                     <>
                       <p>
                         This is a detailed blog post about {t(post.titleKey).toLowerCase()}. 
@@ -332,7 +382,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
 
           {/* Back to Blog Button */}
           <div className="text-center">
-            <Link href="/blog">
+            <Link href={backUrl}>
               <Button className="bg-orange-500 hover:bg-orange-600">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 {t("blog.backToAllPosts")}
