@@ -38,7 +38,7 @@ const translations: Translations = {
     "hero.stats2Label": "Countries",
 
     // Why Choose Us
-    "whyChoose.title": "Why Choose MoroccoFresh?",
+    "whyChoose.title": "Why Choose The 3 Vegetables?",
     "whyChoose.subtitle":
       "Your trusted partner for bulk agricultural exports from Morocco to international markets",
     "whyChoose.farmFresh": "Farm Fresh Quality",
@@ -189,11 +189,11 @@ const translations: Translations = {
     "about.countriesLabel": "Countries Served",
     "about.fromHumbleBeginnings": "From Humble Beginnings to Global Reach",
     "about.storyParagraph1":
-      "Our journey began in 1952 when my grandfather, Hassan, started cultivating a small plot of land in the fertile valleys of Morocco. With nothing but determination and a deep love for the earth, he grew the finest fruits and vegetables the region had ever seen.",
+      "Our journey began in 1952 when my grandfather, Molay Ahmed, started cultivating a small plot of land in the fertile valleys of Morocco. With nothing but determination and a deep love for the earth, he grew the finest fruits and vegetables the region had ever seen.",
     "about.storyParagraph2":
       "Today, three generations later, we continue his legacy while embracing modern sustainable practices. Our 500-hectare farm now supplies premium organic produce to customers across 50 countries, but we've never forgotten our roots or compromised on quality.",
     "about.storyParagraph3":
-      "Every fruit and vegetable that leaves our farm carries with it the same care, attention, and love that Hassan put into his first harvest over 70 years ago.",
+      "Every fruit and vegetable that leaves our farm carries with it the same care, attention, and love that Molay Ahmed put into his first harvest over 70 years ago.",
     "about.threeGenerationsAlt": "Three generations of our farming family",
     "about.coreValues": "Our Core Values",
     "about.coreValuesDesc":
@@ -563,7 +563,7 @@ const translations: Translations = {
     "hero.stats2Label": "Pays",
 
     // Why Choose Us
-    "whyChoose.title": "Pourquoi Choisir MoroccoFresh?",
+    "whyChoose.title": "Pourquoi Choisir The 3 Vegetables?",
     "whyChoose.subtitle":
       "Votre partenaire de confiance pour les exportations agricoles en vrac du Maroc vers les marchés internationaux",
     "whyChoose.farmFresh": "Qualité Fraîche de la Ferme",
@@ -714,11 +714,11 @@ const translations: Translations = {
     "about.countriesLabel": "Pays Desservis",
     "about.fromHumbleBeginnings": "Des Débuts Humbles à la Portée Mondiale",
     "about.storyParagraph1":
-      "Notre parcours a commencé en 1952 lorsque mon grand-père, Hassan, a commencé à cultiver une petite parcelle de terre dans les vallées fertiles du Maroc. Avec rien d'autre que la détermination et un profond amour pour la terre, il a cultivé les meilleurs fruits et légumes que la région ait jamais vus.",
+      "Notre parcours a commencé en 1952 lorsque mon grand-père, Molay Ahmed, a commencé à cultiver une petite parcelle de terre dans les vallées fertiles du Maroc. Avec rien d'autre que la détermination et un profond amour pour la terre, il a cultivé les meilleurs fruits et légumes que la région ait jamais vus.",
     "about.storyParagraph2":
       "Aujourd'hui, trois générations plus tard, nous continuons son héritage tout en adoptant des pratiques durables modernes. Notre ferme de 500 hectares fournit maintenant des produits biologiques premium aux clients de 50 pays, mais nous n'avons jamais oublié nos racines ou compromis la qualité.",
     "about.storyParagraph3":
-      "Chaque fruit et légume qui quitte notre ferme porte avec lui le même soin, attention et amour que Hassan a mis dans sa première récolte il y a plus de 70 ans.",
+      "Chaque fruit et légume qui quitte notre ferme porte avec lui le même soin, attention et amour que Molay Ahmed a mis dans sa première récolte il y a plus de 70 ans.",
     "about.threeGenerationsAlt": "Trois générations de notre famille agricole",
     "about.coreValues": "Nos Valeurs Fondamentales",
     "about.coreValuesDesc":
