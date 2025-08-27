@@ -94,7 +94,7 @@ const translations: Translations = {
       "Tailored packaging and logistics for your needs",
 
     // Footer
-    companyName: "The 3 Vegetabeles",
+    companyName: "The 3 Vegetables",
     companyDescription: "Agricultural Export",
     companyMission:
       "Leading Moroccan agricultural export company supplying premium fresh produce to international markets worldwide.",
@@ -112,7 +112,7 @@ const translations: Translations = {
     location: "Agadir, Morocco",
     phoneNumber: "+212 654 352 802",
     email: "info@the-3rocks.com",
-    copyright: "© 2024 MoroccoFresh Agricultural Export. All rights reserved.",
+    copyright: "© 2025 MoroccoFresh Agricultural Export. All rights reserved.",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
 
@@ -619,7 +619,7 @@ const translations: Translations = {
       "Emballage et logistique adaptés à vos besoins",
 
     // Footer
-    companyName: "The 3 Vegetabeles",
+    companyName: "The 3 Vegetables",
     companyDescription: "Export Agricole",
     companyMission:
       "Entreprise leader d'export agricole marocain fournissant des produits frais premium aux marchés internationaux du monde entier.",
@@ -637,7 +637,7 @@ const translations: Translations = {
     location: "Agadir, Maroc",
     phoneNumber: "+212 654 352 802",
     email: "info@the-3rocks.com",
-    copyright: "© 2024 MoroccoFresh Export Agricole. Tous droits réservés.",
+    copyright: "© 2025 MoroccoFresh Export Agricole. Tous droits réservés.",
     privacyPolicy: "Politique de Confidentialité",
     termsOfService: "Conditions de Service",
 
@@ -761,17 +761,17 @@ const translations: Translations = {
     "about.meetOurTeam": "Rencontrez Notre Équipe",
     "about.teamDesc":
       "Les personnes passionnées derrière le succès de notre ferme",
-    "about.badrGadi": "Ahmed Hassan",
+    "about.badrGadi": "Badr GADI",
     "about.ahmedRole": "Propriétaire de Ferme & PDG",
     "about.ahmedDesc":
       "Agriculteur de troisième génération dirigeant nos initiatives d'agriculture durable et d'expansion mondiale.",
     "about.ahmedAlt": "Ahmed Hassan - Propriétaire de Ferme",
-    "about.ayoubElouazzani": "Fatima Benali",
+    "about.ayoubElouazzani": "Ayoub ELOUAZZANI",
     "about.ayoubRole": "Ingénieure Agricole",
     "about.ayoubDesc":
       "Experte en pratiques agricoles durables et processus de certification biologique.",
     "about.ayoubAlt": "Fatima Benali - Ingénieure Agricole",
-    "about.ahmedGadi": "Omar Alami",
+    "about.ahmedGadi": "Ahmed GADI",
     "about.ahmedRole": "Gestionnaire Export",
     "about.ahmedDesc":
       "Gère la logistique internationale et assure la livraison de qualité aux clients du monde entier.",
