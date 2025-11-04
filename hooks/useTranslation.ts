@@ -246,10 +246,10 @@ const translations: Translations = {
       "Expert in sustainable farming practices and organic certification processes.",
     "about.ayoubAlt": "Ayoub ELOUAZZANI - Agricultural Engineer",
     "about.ahmedGadi": "Ahmed GADI",
-    "about.ahmedRole": "Export Manager",
-    "about.ahmedDesc":
+    "about.ahmedGadiRole": "Export Manager",
+    "about.ahmedGadiDesc":
       "Manages international logistics and ensures quality delivery to customers worldwide.",
-    "about.ahmedAlt": "Ahmed GADI - Export Manager",
+    "about.ahmedGadiAlt": "Ahmed GADI - Export Manager",
 
     // Contact Page
     "contact.title": "Get In Touch",
@@ -530,6 +530,49 @@ const translations: Translations = {
     "shop.5to10": "$5 - $10/kg",
     "shop.10to20": "$10 - $20/kg",
     "shop.over20": "Over $20/kg",
+
+    // Privacy Policy
+    "privacy.title": "Privacy Policy",
+    "privacy.subtitle": "Your privacy is important to us. This privacy policy explains the types of information we collect, how we use it, and your rights regarding your information.",
+    "privacy.informationCollection.title": "Information Collection",
+    "privacy.informationCollection.description": "We collect various types of information in connection with the services we provide. This includes:",
+    "privacy.informationCollection.contactForm": "Information you provide directly to us through our contact form, such as your first name, last name, company name, phone number, country, and the products you are interested in.",
+    "privacy.informationCollection.catalog": "Information we collect when you download our product catalog, including your email address.",
+    "privacy.useOfInformation.title": "Use of Information",
+    "privacy.useOfInformation.description": "We use the information we collect to:",
+    "privacy.useOfInformation.maintain": "Provide, maintain, and improve our services.",
+    "privacy.useOfInformation.analyze": "Understand and analyze how you use our services.",
+    "privacy.useOfInformation.communicate": "Communicate with you about our products, services, and offers.",
+    "privacy.useOfInformation.support": "Respond to your inquiries and provide customer support.",
+    "privacy.dataStorage.title": "Data Storage",
+    "privacy.dataStorage.description": "All collected information is securely stored in our Firebase database. We take appropriate security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information.",
+    "privacy.yourRights.title": "Your Rights",
+    "privacy.yourRights.description": "You have the right to:",
+    "privacy.yourRights.access": "Access, correct, or delete your personal information.",
+    "privacy.yourRights.object": "Object to or restrict the processing of your information.",
+    "privacy.yourRights.withdraw": "Withdraw your consent at any time.",
+    "privacy.contactUs.title": "Contact Us",
+    "privacy.contactUs.description": "If you have any questions about this privacy policy or our data practices, please contact us at",
+
+    // Terms and Conditions
+    "terms.title": "Terms and Conditions",
+    "terms.subtitle": "Please read these terms and conditions carefully before using our website.",
+    "terms.introduction.title": "Introduction",
+    "terms.introduction.content": "Welcome to our website. By accessing and using our website, you agree to comply with and be bound by the following terms and conditions.",
+    "terms.intellectualProperty.title": "Intellectual Property",
+    "terms.intellectualProperty.content": "The content, layout, design, data, databases, and graphics on this website are protected by intellectual property laws and are owned by or licensed to us. You may not reproduce, distribute, or transmit any of the content on this website without our prior written permission.",
+    "terms.useOfWebsite.title": "Use of the Website",
+    "terms.useOfWebsite.content": "You agree to use this website for lawful purposes only. You must not use this website to engage in any activity that is unlawful, harmful, or fraudulent.",
+    "terms.privacy.title": "Privacy",
+    "terms.privacy.content": "Your use of our website is also subject to our Privacy Policy. Please review our Privacy Policy to understand our practices regarding your personal information.",
+    "terms.limitationOfLiability.title": "Limitation of Liability",
+    "terms.limitationOfLiability.content": "We will not be liable for any damages arising out of or in connection with the use of this website. This limitation of liability applies to all damages of any kind, including but not limited to direct, indirect, incidental, punitive, or consequential damages.",
+    "terms.changesToTerms.title": "Changes to the Terms",
+    "terms.changesToTerms.content": "We may update these terms and conditions from time to time. Any changes will be posted on this page, and it is your responsibility to review these terms regularly to ensure you are aware of any changes.",
+    "terms.governingLaw.title": "Governing Law",
+    "terms.governingLaw.content": "These terms and conditions are governed by and construed in accordance with the laws of Morocco. Any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of Morocco.",
+    "terms.contactUs.title": "Contact Us",
+    "terms.contactUs.description": "If you have any questions about these terms and conditions, please contact us at",
   },
   fr: {
     // Header
@@ -772,10 +815,10 @@ const translations: Translations = {
       "Experte en pratiques agricoles durables et processus de certification biologique.",
     "about.ayoubAlt": "Fatima Benali - Ingénieure Agricole",
     "about.ahmedGadi": "Ahmed GADI",
-    "about.ahmedRole": "Gestionnaire Export",
-    "about.ahmedDesc":
+    "about.ahmedGadiRole": "Gestionnaire Export",
+    "about.ahmedGadiDesc":
       "Gère la logistique internationale et assure la livraison de qualité aux clients du monde entier.",
-    "about.ahmedAlt": "Omar Alami - Gestionnaire Export",
+    "about.ahmedGadiAlt": "Ahmed GADI - Gestionnaire Export",
 
     // Contact Page
     "contact.title": "Contactez-Nous",
@@ -1036,6 +1079,49 @@ const translations: Translations = {
     "shop.5to10": "5€ - 10€/kg",
     "shop.10to20": "10€ - 20€/kg",
     "shop.over20": "Plus de 20€/kg",
+
+    // Privacy Policy (French)
+    "privacy.title": "Politique de Confidentialité",
+    "privacy.subtitle": "Votre vie privée est importante pour nous. Cette politique de confidentialité explique les types d'informations que nous collectons, comment nous les utilisons et vos droits concernant vos informations.",
+    "privacy.informationCollection.title": "Collecte d'Informations",
+    "privacy.informationCollection.description": "Nous collectons divers types d'informations dans le cadre des services que nous fournissons. Cela comprend:",
+    "privacy.informationCollection.contactForm": "Les informations que vous nous fournissez directement via notre formulaire de contact, telles que votre prénom, nom, nom de l'entreprise, numéro de téléphone, pays et les produits qui vous intéressent.",
+    "privacy.informationCollection.catalog": "Les informations que nous collectons lorsque vous téléchargez notre catalogue de produits, y compris votre adresse e-mail.",
+    "privacy.useOfInformation.title": "Utilisation des Informations",
+    "privacy.useOfInformation.description": "Nous utilisons les informations que nous collectons pour:",
+    "privacy.useOfInformation.maintain": "Fournir, maintenir et améliorer nos services.",
+    "privacy.useOfInformation.analyze": "Comprendre et analyser comment vous utilisez nos services.",
+    "privacy.useOfInformation.communicate": "Communiquer avec vous concernant nos produits, services et offres.",
+    "privacy.useOfInformation.support": "Répondre à vos demandes et fournir un support client.",
+    "privacy.dataStorage.title": "Stockage des Données",
+    "privacy.dataStorage.description": "Toutes les informations collectées sont stockées de manière sécurisée dans notre base de données Firebase. Nous prenons des mesures de sécurité appropriées pour protéger contre l'accès non autorisé, l'altération, la divulgation ou la destruction de vos informations personnelles.",
+    "privacy.yourRights.title": "Vos Droits",
+    "privacy.yourRights.description": "Vous avez le droit de:",
+    "privacy.yourRights.access": "Accéder, corriger ou supprimer vos informations personnelles.",
+    "privacy.yourRights.object": "Vous opposer ou restreindre le traitement de vos informations.",
+    "privacy.yourRights.withdraw": "Retirer votre consentement à tout moment.",
+    "privacy.contactUs.title": "Contactez-Nous",
+    "privacy.contactUs.description": "Si vous avez des questions concernant cette politique de confidentialité ou nos pratiques de données, veuillez nous contacter à",
+
+    // Terms and Conditions (French)
+    "terms.title": "Conditions Générales d'Utilisation",
+    "terms.subtitle": "Veuillez lire attentivement ces conditions générales d'utilisation avant d'utiliser notre site web.",
+    "terms.introduction.title": "Introduction",
+    "terms.introduction.content": "Bienvenue sur notre site web. En accédant et en utilisant notre site web, vous acceptez de respecter et d'être lié par les conditions générales suivantes.",
+    "terms.intellectualProperty.title": "Propriété Intellectuelle",
+    "terms.intellectualProperty.content": "Le contenu, la mise en page, le design, les données, les bases de données et les graphiques de ce site web sont protégés par les lois sur la propriété intellectuelle et appartiennent à nous ou sont sous licence. Vous ne pouvez pas reproduire, distribuer ou transmettre le contenu de ce site web sans notre autorisation écrite préalable.",
+    "terms.useOfWebsite.title": "Utilisation du Site Web",
+    "terms.useOfWebsite.content": "Vous acceptez d'utiliser ce site web uniquement à des fins légales. Vous ne devez pas utiliser ce site web pour vous livrer à des activités illégales, nuisibles ou frauduleuses.",
+    "terms.privacy.title": "Confidentialité",
+    "terms.privacy.content": "Votre utilisation de notre site web est également soumise à notre Politique de Confidentialité. Veuillez consulter notre Politique de Confidentialité pour comprendre nos pratiques concernant vos informations personnelles.",
+    "terms.limitationOfLiability.title": "Limitation de Responsabilité",
+    "terms.limitationOfLiability.content": "Nous ne serons pas responsables de tout dommage résultant de ou lié à l'utilisation de ce site web. Cette limitation de responsabilité s'applique à tous les dommages de quelque nature que ce soit, y compris, mais sans s'y limiter, les dommages directs, indirects, accessoires, punitifs ou consécutifs.",
+    "terms.changesToTerms.title": "Modifications des Conditions",
+    "terms.changesToTerms.content": "Nous pouvons mettre à jour ces conditions générales de temps à autre. Toute modification sera publiée sur cette page, et il est de votre responsabilité de consulter régulièrement ces conditions pour vous assurer que vous êtes informé de tout changement.",
+    "terms.governingLaw.title": "Loi Applicable",
+    "terms.governingLaw.content": "Ces conditions générales sont régies par et interprétées conformément aux lois du Maroc. Tout litige relatif à ces conditions générales sera soumis à la juridiction exclusive des tribunaux du Maroc.",
+    "terms.contactUs.title": "Contactez-Nous",
+    "terms.contactUs.description": "Si vous avez des questions concernant ces conditions générales, veuillez nous contacter à",
 
     // Blog 8 Full Content (French)
     "news.morocco.global_export_growth.strategy.content":

@@ -347,7 +347,7 @@ export default function AboutPage() {
               <CardContent className="p-8">
                 <Image
                   src="/Ahmed.png?height=200&width=200"
-                  alt={t("about.ahmedAlt")}
+                  alt={t("about.ahmedGadiAlt")}
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
@@ -356,10 +356,10 @@ export default function AboutPage() {
                   {t("about.ahmedGadi")}
                 </h3>
                 <p className="text-orange-500 font-medium mb-4">
-                  {t("about.ahmedRole")}
+                  {t("about.ahmedGadiRole")}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t("about.ahmedDesc")}
+                  {t("about.ahmedGadiDesc")}
                 </p>
               </CardContent>
             </Card>
