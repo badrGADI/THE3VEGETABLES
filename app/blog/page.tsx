@@ -17,7 +17,7 @@ export default function BlogPage() {
             </Suspense>
           </main>
           <aside className="lg:col-span-1">
-            <Suspense fallback={<div>Loading sidebar...</div>}>
+            <Suspense fallback={<div>Loading sidebar ...</div>}>
               <BlogSidebar />
             </Suspense>
           </aside>
