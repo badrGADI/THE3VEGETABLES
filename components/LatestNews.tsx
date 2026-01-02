@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { format } from "date-fns"
 import { Calendar, ArrowRight } from "lucide-react"
 import { useTranslation } from "@/hooks/useTranslation"
 import { blogPosts } from "@/lib/blogData"
@@ -46,10 +47,11 @@ export default function LatestNews() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                   />
               </Link>
+
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
                   <Calendar className="w-4 h-4 text-orange-600" />
-                  <span>{new Date(post.date).toLocaleDateString()}</span>
+                  <span>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</span>
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2 hover:text-orange-600 transition-colors">

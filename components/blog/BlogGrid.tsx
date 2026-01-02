@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, User, Tag } from "lucide-react";
+import { format } from "date-fns";
 import { useTranslation } from "@/hooks/useTranslation";
 import { blogPosts } from "@/lib/blogData";
 import BlogPagination from "./BlogPagination";
@@ -81,7 +82,7 @@ export default function BlogGrid() {
                     </div>
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <span>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</span>
                     </div>
                     <span>
                       {t("blog.readTime").replace(

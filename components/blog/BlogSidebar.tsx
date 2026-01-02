@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search, Tag } from "lucide-react"
+import { format } from "date-fns"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const categories = [
@@ -115,10 +116,11 @@ export default function BlogSidebar() {
           <div className="space-y-4">
             {recentPosts.map((post) => (
               <div key={post.id} className="border-b border-gray-100 pb-3 last:border-b-0">
+
                 <h4 className="text-sm font-medium text-gray-900 hover:text-orange-500 cursor-pointer mb-1">
                   {t(post.titleKey)}
                 </h4>
-                <p className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
+                <p className="text-xs text-gray-500">{`${format(new Date(post.date), "MMMM d, yyyy")}`}</p>
               </div>
             ))}
           </div>
