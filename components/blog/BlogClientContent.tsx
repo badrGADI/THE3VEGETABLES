@@ -37,7 +37,7 @@ export default function BlogClientContent({ post }: { post: BlogPost }) {
               <h1 className="text-4xl font-bold mb-4">{t(post.titleKey)}</h1>
               <div className="flex items-center space-x-4 text-sm text-gray-500 mb-6">
                 <span>{t(post.categoryKey)}</span>
-                <span>{new Date(post.date).toLocaleDateString()}</span>
+                <span suppressHydrationWarning>{new Date(post.date).toLocaleDateString()}</span>
                 <span>{t("blog.readTime").replace("{time}", post.readTime.toString())}</span>
                 <span>{post.author}</span>
               </div>

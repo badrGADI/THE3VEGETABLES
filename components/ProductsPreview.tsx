@@ -75,7 +75,7 @@ export default function ProductsPreview() {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <div className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="bg-orange-700 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {t("productsPreview.bulkExport")}
                   </div>
                 </div>

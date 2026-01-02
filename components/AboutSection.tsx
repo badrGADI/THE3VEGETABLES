@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Leaf className="w-6 h-6 text-orange-500" />
+                  <Leaf className="w-6 h-6 text-orange-700" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Sustainable Farming</h3>
@@ -37,7 +37,7 @@ export default function AboutSection() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Heart className="w-6 h-6 text-orange-500" />
+                  <Heart className="w-6 h-6 text-orange-700" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Family Values</h3>
@@ -49,7 +49,7 @@ export default function AboutSection() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Globe className="w-6 h-6 text-orange-500" />
+                  <Globe className="w-6 h-6 text-orange-700" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Global Reach</h3>
@@ -60,7 +60,7 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">Learn More About Us</Button>
+            <Button className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-3">Learn More About Us</Button>
           </div>
 
           {/* Right Content - Images */}

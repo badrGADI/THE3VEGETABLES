@@ -82,7 +82,7 @@ export default function BlogGrid() {
                     </div>
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
-                      <span>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</span>
+                      <span suppressHydrationWarning>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</span>
                     </div>
                     <span>
                       {t("blog.readTime").replace(

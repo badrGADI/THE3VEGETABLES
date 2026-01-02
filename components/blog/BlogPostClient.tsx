@@ -54,9 +54,9 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
           <h1 className="text-2xl font-bold text-gray-900 mb-4">{t("blog.blogPostNotFound")}</h1>
           <p className="text-gray-600 mb-6">{t("blog.postNotFoundMessage")}</p>
           <Link href={backUrl}>
-            <Button className="bg-orange-500 hover:bg-orange-600">
+            <Button className="bg-orange-700 hover:bg-orange-600">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {t("blog.backToBlog")}
+              {t("blog.backToAllPosts")}
             </Button>
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
               </div>
               <div className="flex items-center space-x-1">
                 <Calendar className="w-4 h-4" />
-                <span>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</span>
+                <span suppressHydrationWarning>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Clock className="w-4 h-4" />
@@ -369,7 +369,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
                             <Tag className="w-3 h-3" />
                             <span className="text-orange-500 font-medium">{t(relatedPost.categoryKey)}</span>
                           </div>
-                          <h4 className="text-lg font-bold text-gray-900 mb-2 hover:text-orange-500 transition-colors">
+                          <h4 className="text-lg font-bold text-gray-900 mb-2 hover:text-orange-700 transition-colors">
                             <Link href={`/blog/${relatedPost.id}`}>{t(relatedPost.titleKey)}</Link>
                           </h4>
                           <p className="text-gray-600 text-sm line-clamp-2">{t(relatedPost.excerptKey)}</p>

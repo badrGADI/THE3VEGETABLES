@@ -83,7 +83,7 @@ export default function BlogSidebar() {
         <CardContent>
           <div className="flex space-x-2">
             <Input placeholder={t("blog.searchPlaceholder")} className="flex-1" />
-            <Button className="bg-orange-500 hover:bg-orange-600">
+            <Button className="bg-orange-700 hover:bg-orange-800">
               <Search className="w-4 h-4" />
             </Button>
           </div>
@@ -99,7 +99,7 @@ export default function BlogSidebar() {
           <div className="space-y-3">
             {categories.map((category) => (
               <div key={category.nameKey} className="flex items-center justify-between">
-                <span className="text-gray-700 hover:text-orange-500 cursor-pointer">{t(category.nameKey)}</span>
+                <span className="text-gray-700 hover:text-orange-700 cursor-pointer">{t(category.nameKey)}</span>
                 <span className="text-gray-500 text-sm">({category.count})</span>
               </div>
             ))}
@@ -117,10 +117,10 @@ export default function BlogSidebar() {
             {recentPosts.map((post) => (
               <div key={post.id} className="border-b border-gray-100 pb-3 last:border-b-0">
 
-                <h4 className="text-sm font-medium text-gray-900 hover:text-orange-500 cursor-pointer mb-1">
+                <h4 className="text-sm font-medium text-gray-900 hover:text-orange-700 cursor-pointer mb-1">
                   {t(post.titleKey)}
                 </h4>
-                <p className="text-xs text-gray-500">{`${format(new Date(post.date), "MMMM d, yyyy")}`}</p>
+                <p className="text-xs text-gray-500" suppressHydrationWarning>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</p>
               </div>
             ))}
           </div>
@@ -140,7 +140,7 @@ export default function BlogSidebar() {
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-orange-100 hover:text-orange-700 cursor-pointer transition-colors"
+                className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-orange-100 hover:text-orange-800 cursor-pointer transition-colors"
               >
                 {tag}
               </span>
@@ -158,7 +158,7 @@ export default function BlogSidebar() {
           <p className="text-orange-800 text-sm mb-4">{t("blog.newsletterDesc")}</p>
           <div className="space-y-3">
             <Input placeholder={t("blog.emailPlaceholder")} className="border-orange-200 focus:border-orange-500" />
-            <Button className="w-full bg-orange-500 hover:bg-orange-600">{t("blog.subscribe")}</Button>
+            <Button className="w-full bg-orange-700 hover:bg-orange-800">{t("blog.subscribe")}</Button>
           </div>
         </CardContent>
       </Card>

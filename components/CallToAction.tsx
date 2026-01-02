@@ -20,7 +20,7 @@ export default function CallToAction() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/contact">
-              <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
+              <Button className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-3 text-lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t("callToAction.requestBulkQuote")}
               </Button>
@@ -38,7 +38,7 @@ export default function CallToAction() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-orange-700 rounded-lg flex items-center justify-center flex-shrink-0">
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -52,7 +52,7 @@ export default function CallToAction() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-orange-700 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -66,7 +66,7 @@ export default function CallToAction() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-orange-700 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
