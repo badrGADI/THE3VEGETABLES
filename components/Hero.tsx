@@ -127,11 +127,11 @@ export default function Hero() {
               <Image
                 src="/nobgmain.png"
                 alt="Fresh Moroccan vegetables ready for bulk export"
-                width={500}
-                height={600}
+                width={750}
+                height={750}
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="w-full h-auto"
+                className="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
