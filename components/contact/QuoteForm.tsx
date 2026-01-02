@@ -386,7 +386,7 @@ export default function QuoteForm() {
           <Button
             type="submit"
             disabled={!formData.agreedToTerms || isSubmitting}
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg disabled:opacity-50"
+            className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 text-lg disabled:opacity-50"
           >
             {isSubmitting ? (
               <>

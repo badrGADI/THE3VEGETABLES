@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "@/components/ThemeToggle"
@@ -18,7 +19,16 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img src="/logo.png" alt="The3Vegetables Logo" className="w-24 h-24 object-contain" />
+            <div className="relative w-24 h-24">
+              <Image
+                src="/logo.png"
+                alt="The3Vegetables Logo"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 96px, 96px"
+                priority
+              />
+            </div>
             <div>
               <div className="text-xl font-bold text-gray-900 dark:text-gray-100">
                 {(() => {
@@ -61,10 +71,7 @@ export default function Header() {
             <ThemeToggle />
             <LanguageToggle />
             <Link href="/contact">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-                <Phone className="w-4 h-4 mr-2" />
-                {t("nav.getQuote")}
-              </Button>
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white">{t("nav.getQuote")}</Button>
             </Link>
           </div>
 
@@ -103,7 +110,7 @@ export default function Header() {
                 <ThemeToggle />
                 <LanguageToggle />
                 <Link href="/contact">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">{t("nav.getQuote")}</Button>
+                  <Button className="bg-orange-600 hover:bg-orange-700 text-white">{t("nav.getQuote")}</Button>
                 </Link>
               </div>
             </nav>

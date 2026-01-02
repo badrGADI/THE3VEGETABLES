@@ -1,20 +1,21 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog Post | Farm Blog",
-  description: "Read our latest blog post about farming, nutrition, and sustainable agriculture.",
+  description:
+    "Read our latest blog post about farming, nutrition, and sustainable agriculture.",
   alternates: {
     languages: {
-      'en': '/blog/[id]',
-      'fr': '/blog/[id]',
+      en: "/blog/",
+      fr: "/blog/",
     },
   },
-}
+};
 
 export default function BlogPostLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return children
+  return children;
 }

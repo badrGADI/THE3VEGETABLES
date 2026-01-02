@@ -71,10 +71,11 @@ export default function ProductsPreview() {
                   alt={product.name}
                   width={400}
                   height={300}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {t("productsPreview.bulkExport")}
                   </div>
                 </div>
@@ -90,7 +91,7 @@ export default function ProductsPreview() {
 
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center space-x-2 text-sm">
-                    <Package className="w-4 h-4 text-orange-500" />
+                    <Package className="w-4 h-4 text-orange-600" />
                     <span className="text-gray-600 dark:text-gray-400">
                       {t("productsPreview.capacity")}
                       {product.capacity}
@@ -103,7 +104,7 @@ export default function ProductsPreview() {
                 </div>
 
                 <Link href={`/products/${product.slug}`}>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
                     {t("productsPreview.viewDetails")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -117,7 +118,7 @@ export default function ProductsPreview() {
           <Link href="/products">
             <Button
               variant="outline"
-              className="border-orange-500 text-orange-500 hover:bg-orange-50 hover:text-orange-500 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
+              className="border-orange-600 text-orange-600 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
             >
               {t("productsPreview.viewAllProducts")}
             </Button>

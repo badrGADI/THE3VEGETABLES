@@ -20,7 +20,7 @@ export default function CallToAction() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/contact">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t("callToAction.requestBulkQuote")}
               </Button>
@@ -45,7 +45,7 @@ export default function CallToAction() {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {t("callToAction.quickResponseTitle")}
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-300">
                   {t("callToAction.quickResponseDescription")}
                 </p>
               </div>
@@ -59,7 +59,7 @@ export default function CallToAction() {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {t("callToAction.directContactTitle")}
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-300">
                   {t("callToAction.directContactDescription")}
                 </p>
               </div>
@@ -73,7 +73,7 @@ export default function CallToAction() {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {t("callToAction.customSolutionsTitle")}
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-300">
                   {t("callToAction.customSolutionsDescription")}
                 </p>
               </div>

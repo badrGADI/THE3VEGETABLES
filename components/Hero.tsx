@@ -24,8 +24,8 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full">
-                <Award className="w-5 h-5 text-orange-600" />
-                <span className="text-orange-800 dark:text-orange-300 font-medium">
+                <Award className="w-5 h-5 text-orange-700 dark:text-orange-500" />
+                <span className="text-orange-900 dark:text-orange-200 font-medium">
                   {t("hero.badge")}
                 </span>
               </div>
@@ -105,7 +105,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/products">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
                   {t("hero.viewProducts")}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -113,7 +113,7 @@ export default function Hero() {
               <Link href="/contact">
                 <Button
                   variant="outline"
-                  className="border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
+                  className="border-orange-600 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
                 >
                   {t("hero.requestQuote")}
                 </Button>
@@ -129,6 +129,8 @@ export default function Hero() {
                 alt="Fresh Moroccan vegetables ready for bulk export"
                 width={500}
                 height={600}
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -136,19 +138,19 @@ export default function Hero() {
 
             {/* Floating Stats */}
             <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-orange-100 dark:border-orange-800">
-              <div className="text-2xl font-bold text-orange-500">
+              <div className="text-2xl font-bold text-orange-600 dark:text-orange-500">
                 {t("hero.stats1Value")}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm text-gray-700 dark:text-gray-300">
                 {t("hero.stats1Label")}
               </div>
             </div>
 
             <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-orange-100 dark:border-orange-800">
-              <div className="text-2xl font-bold text-orange-500">
+              <div className="text-2xl font-bold text-orange-600 dark:text-orange-500">
                 {t("hero.stats2Value")}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm text-gray-700 dark:text-gray-300">
                 {t("hero.stats2Label")}
               </div>
             </div>
