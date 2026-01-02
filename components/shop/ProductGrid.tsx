@@ -119,9 +119,6 @@ export default function ProductGrid() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">
-                  {product.description}
-                </p>
                 <div className="mt-auto flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-700">
                     ${product.price.toFixed(2)}/{product.unit}
