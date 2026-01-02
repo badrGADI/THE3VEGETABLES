@@ -8,6 +8,12 @@ const nextConfig = {
   },
   images: {
     // unoptimized: true, // optimization enabled for performance
+    localPatterns: [
+      {
+        pathname: '/**',
+        search: '?**',
+      },
+    ],
   },
 }
 
