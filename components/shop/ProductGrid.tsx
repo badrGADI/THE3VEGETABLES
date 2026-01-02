@@ -115,21 +115,31 @@ export default function ProductGrid() {
                   </Link>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{product.name}</h3>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-orange-500">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {product.description}
+                </p>
+                <div className="mt-auto flex items-center justify-between">
+                  <span className="text-2xl font-bold text-orange-700">
                     ${product.price.toFixed(2)}/{product.unit}
                   </span>
-                  <span className={`text-sm ${product.inStock ? "text-green-600" : "text-red-600"}`}>
-                    {product.inStock ? "In Stock" : "Out of Stock"}
-                  </span>
+                  <Link href={`/shop/products/${product.slug}`}>
+                    <Button
+                      size="sm"
+                      className="bg-orange-700 hover:bg-orange-800"
+                    >
+                      View Details
+                    </Button>
+                  </Link>
                 </div>
-                <Link href={`/shop/products/${product.slug}`} className="block">
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white" disabled={!product.inStock}>
-                    {product.inStock ? "View Product" : "Out of Stock"}
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <Button className="w-full bg-orange-700 hover:bg-orange-800 text-white" disabled={!product.inStock}>
+                    {product.inStock ? "Add to Quote" : "Out of Stock"}
                   </Button>
-                </Link>
+                </div>
               </div>
             </CardContent>
           </Card>

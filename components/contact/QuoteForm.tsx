@@ -185,7 +185,7 @@ export default function QuoteForm() {
                 onChange={(e) => handleChange("companyName", e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
             <div>
@@ -202,7 +202,7 @@ export default function QuoteForm() {
                 onChange={(e) => handleChange("contactName", e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function QuoteForm() {
                 onChange={(e) => handleChange("email", e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
             <div>
@@ -239,7 +239,7 @@ export default function QuoteForm() {
                 onChange={(e) => handleChange("phone", e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
           </div>
@@ -386,7 +386,7 @@ export default function QuoteForm() {
           <Button
             type="submit"
             disabled={!formData.agreedToTerms || isSubmitting}
-            className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 text-lg disabled:opacity-50"
+            className="w-full bg-orange-700 hover:bg-orange-800 text-white py-3 text-lg disabled:opacity-50"
           >
             {isSubmitting ? (
               <>

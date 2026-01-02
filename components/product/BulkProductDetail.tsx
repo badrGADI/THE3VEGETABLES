@@ -91,9 +91,8 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
-                  <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg">
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Request Quote
+                  <Button className="bg-white text-orange-700 hover:bg-gray-100 px-8 py-3 text-lg">
+                    Contact for Pricing
                   </Button>
                 </Link>
                 <Button

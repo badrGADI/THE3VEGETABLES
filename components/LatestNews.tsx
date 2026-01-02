@@ -29,7 +29,7 @@ export default function LatestNews() {
             </p>
           </div>
           <Link href="/blog">
-            <Button variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-900/20">
+            <Button variant="outline" className="border-orange-700 text-orange-700 hover:bg-orange-50 dark:hover:bg-orange-900/20">
               {t("blog.viewAllNews")} <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </Link>
@@ -64,7 +64,7 @@ export default function LatestNews() {
                   {t(post.excerptKey)}
                 </p>
                 
-                <Link href={`/blog/${post.id}`} className="inline-flex items-center text-orange-600 font-medium hover:text-orange-700 mt-auto">
+                <Link href={`/blog/${post.id}`} className="inline-flex items-center text-orange-700 font-medium hover:text-orange-800 mt-auto">
                   {t("blog.readMore")} <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
               </div>

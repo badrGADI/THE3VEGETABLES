@@ -168,9 +168,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </div>
 
               <div className="flex space-x-4">
-                <Button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white">
-                  <ShoppingCart className="w-5 h-5 mr-2" />
-                  Add to Cart
+                <Button className="flex-1 bg-orange-700 hover:bg-orange-800 text-white">
+                  Add to Quote Request
                 </Button>
                 <Button variant="outline" size="icon">
                   <Heart className="w-5 h-5" />

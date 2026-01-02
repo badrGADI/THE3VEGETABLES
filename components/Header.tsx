@@ -110,7 +110,7 @@ export default function Header() {
                 <ThemeToggle />
                 <LanguageToggle />
                 <Link href="/contact">
-                  <Button className="bg-orange-600 hover:bg-orange-700 text-white">{t("nav.getQuote")}</Button>
+                  <Button className="bg-orange-700 hover:bg-orange-800 text-white">{t("nav.getQuote")}</Button>
                 </Link>
               </div>
             </nav>

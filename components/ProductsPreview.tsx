@@ -104,7 +104,7 @@ export default function ProductsPreview() {
                 </div>
 
                 <Link href={`/products/${product.slug}`}>
-                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                  <Button className="w-full bg-orange-700 hover:bg-orange-800 text-white">
                     {t("productsPreview.viewDetails")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -118,7 +118,7 @@ export default function ProductsPreview() {
           <Link href="/products">
             <Button
               variant="outline"
-              className="border-orange-600 text-orange-600 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
+              className="border-orange-700 text-orange-700 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
             >
               {t("productsPreview.viewAllProducts")}
             </Button>

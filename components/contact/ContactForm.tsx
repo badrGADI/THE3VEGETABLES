@@ -137,7 +137,7 @@ export default function ContactForm() {
                 onChange={(e) => handleChange("name", e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
             <div>
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 onChange={(e) => handleChange("email", e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={(e) => handleChange("phone", e.target.value)}
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
             <div>
@@ -189,7 +189,7 @@ export default function ContactForm() {
                 value={formData.company}
                 onChange={(e) => handleChange("company", e.target.value)}
                 disabled={isSubmitting}
-                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               />
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function ContactForm() {
               disabled={isSubmitting}
               value={formData.subject}
             >
-              <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
+              <SelectTrigger className="border-gray-300 focus:border-orange-700 focus:ring-orange-700">
                 <SelectValue placeholder={t("contactForm.selectSubject")} />
               </SelectTrigger>
               <SelectContent>
@@ -236,7 +236,7 @@ export default function ContactForm() {
               onChange={(e) => handleChange("message", e.target.value)}
               required
               disabled={isSubmitting}
-              className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+              className="border-gray-300 focus:border-orange-700 focus:ring-orange-700"
               placeholder={t("contactForm.messagePlaceholder")}
             />
           </div>
@@ -244,7 +244,7 @@ export default function ContactForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 text-lg disabled:opacity-50"
+            className="w-full bg-orange-700 hover:bg-orange-800 text-white py-3 text-lg disabled:opacity-50"
           >
             {isSubmitting ? (
               <>

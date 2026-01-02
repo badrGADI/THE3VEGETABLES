@@ -70,7 +70,7 @@ export default function FeaturedProducts() {
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-orange-700 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {product.category}
                     </span>
                   </div>
@@ -81,12 +81,12 @@ export default function FeaturedProducts() {
                   </h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-orange-600">
+                    <span className="text-lg font-bold text-orange-700">
                       {product.price}
                     </span>
                     <Button
                       size="sm"
-                      className="bg-orange-600 hover:bg-orange-700"
+                      className="bg-orange-700 hover:bg-orange-800"
                     >
                       View Details
                     </Button>
@@ -99,7 +99,7 @@ export default function FeaturedProducts() {
 
         <div className="text-center">
           <Link href="/shop">
-            <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
+            <Button className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-3 text-lg">
               View All Products
             </Button>
           </Link>
