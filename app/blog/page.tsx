@@ -15,11 +15,10 @@ export const metadata: Metadata = {
 
 const POSTS_PER_PAGE = 5;
 
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
+export default async function BlogPage(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const page = typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const currentPage = !isNaN(page) && page > 0 ? page : 1;
   
