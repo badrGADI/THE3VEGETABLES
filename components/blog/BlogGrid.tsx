@@ -125,7 +125,6 @@ export default function BlogGrid() {
         <BlogPagination
           currentPage={currentPage}
           totalPages={totalPages}
-          onPageChange={handlePageChange}
         />
       )}
     </div>
