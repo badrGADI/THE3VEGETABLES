@@ -13,10 +13,12 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 
 interface BlogPostClientProps {
-  post: any; // Type should be inferred ideally, but 'any' matches current state. Better: typeof blogPosts[0]
+  post: any;
+  prevPost?: any;
+  nextPost?: any;
 }
 
-export default function BlogPostClient({ post }: BlogPostClientProps) {
+export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostClientProps) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
   const page = searchParams?.get("page")
@@ -366,8 +368,38 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
               </Button>
             </Link>
           </div>
+
+          {/* Next/Previous Navigation */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 border-t pt-8">
+            <div className="text-left">
+              {prevPost && (
+                <Link href={`/blog/${prevPost.id}`} className="group block">
+                  <span className="text-sm text-gray-500 mb-1 block group-hover:text-orange-600 transition-colors">
+                    &larr; {t("blog.previous")}
+                  </span>
+                  <span className="text-lg font-bold text-gray-900 group-hover:text-orange-700 transition-colors">
+                    {t(prevPost.titleKey)}
+                  </span>
+                </Link>
+              )}
+            </div>
+            <div className="text-right">
+              {nextPost && (
+                <Link href={`/blog/${nextPost.id}`} className="group block">
+                  <span className="text-sm text-gray-500 mb-1 block group-hover:text-orange-600 transition-colors">
+                    {t("blog.next")} &rarr;
+                  </span>
+                  <span className="text-lg font-bold text-gray-900 group-hover:text-orange-700 transition-colors">
+                    {t(nextPost.titleKey)}
+                  </span>
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   )
 }
+
+

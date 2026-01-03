@@ -79,10 +79,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
 
+
+  const currentIndex = blogPosts.findIndex((p) => p.id === post.id);
+  const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
+  const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
+
   return (
+
     <Suspense fallback={<div>Loading post...</div>}>
-      <BlogPostClient post={post} />
+      <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />
     </Suspense>
   );
 }
+
 
