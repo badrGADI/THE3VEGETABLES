@@ -5,13 +5,24 @@ import BlogSidebar from "@/components/blog/BlogSidebar";
 import { blogPosts } from "@/lib/blogData";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Farm Blog | Harvest Updates, Nutrition Tips & Agriculture Insights",
-  description: "Stay updated with the latest news from our farm, seasonal harvest reports, nutrition tips, and insights into sustainable agriculture practices.",
-  alternates: {
-    canonical: "https://t3v.the-3rocks.com/blog",
-  },
-};
+
+export async function generateMetadata(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}): Promise<Metadata> {
+  const searchParams = await props.searchParams;
+  const page = typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
+  const currentPage = !isNaN(page) && page > 0 ? page : 1;
+
+  return {
+    title: `Farm Blog${currentPage > 1 ? ` - Page ${currentPage}` : ""} | Harvest Updates, Nutrition Tips & Agriculture Insights`,
+    description: "Stay updated with the latest news from our farm, seasonal harvest reports, nutrition tips, and insights into sustainable agriculture practices.",
+    alternates: {
+      canonical: currentPage > 1 
+        ? `https://t3v.the-3rocks.com/blog?page=${currentPage}` 
+        : "https://t3v.the-3rocks.com/blog",
+    },
+  };
+}
 
 const POSTS_PER_PAGE = 5;
 
