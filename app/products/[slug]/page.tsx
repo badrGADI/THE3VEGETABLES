@@ -273,7 +273,7 @@ const getProduct = (slug: string) => {
       id: 11,
       name: "Moroccan Watermelons",
       subtitle: "Bulk Export",
-      image: "/watermelon.png?height=300&width=400",
+      image: "/watermelon.png",
       description: "Refreshing watermelons in bulk quantities",
       annualProduction: "400+ tons/year",
       currentAvailability: "60 tons ready for export – Agadir warehouse",

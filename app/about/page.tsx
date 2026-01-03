@@ -102,7 +102,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="/story.png?height=500&width=600"
+                src="/story.png"
                 alt={t("about.threeGenerationsAlt")}
                 width={600}
                 height={500}
@@ -219,7 +219,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="/business.png?height=500&width=600"
+                src="/business.png"
                 alt={t("about.sustainablePracticesAlt")}
                 width={600}
                 height={500}
@@ -304,7 +304,7 @@ export default function AboutPage() {
             <Card className="text-center dark:bg-gray-700">
               <CardContent className="p-8">
                 <Image
-                  src="/badr.png?height=200&width=200"
+                  src="/badr.png"
                   alt={t("about.ahmedAlt")}
                   width={200}
                   height={200}
@@ -325,7 +325,7 @@ export default function AboutPage() {
             <Card className="text-center dark:bg-gray-700">
               <CardContent className="p-8">
                 <Image
-                  src="/Ayoub.png?height=200&width=200"
+                  src="/Ayoub.png"
                   alt={t("about.ayoubAlt")}
                   width={200}
                   height={200}
@@ -346,7 +346,7 @@ export default function AboutPage() {
             <Card className="text-center dark:bg-gray-700">
               <CardContent className="p-8">
                 <Image
-                  src="/Ahmed.png?height=200&width=200"
+                  src="/Ahmed.png"
                   alt={t("about.ahmedGadiAlt")}
                   width={200}
                   height={200}

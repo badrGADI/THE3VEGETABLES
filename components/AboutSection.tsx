@@ -68,14 +68,14 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <Image
-                  src="/placeholder.svg?height=250&width=250"
+                  src="/placeholder.svg"
                   alt="Our farm team"
                   width={250}
                   height={250}
                   className="rounded-lg shadow-md w-full h-auto"
                 />
                 <Image
-                  src="/placeholder.svg?height=200&width=250"
+                  src="/placeholder.svg"
                   alt="Organic vegetables"
                   width={250}
                   height={200}
@@ -84,14 +84,14 @@ export default function AboutSection() {
               </div>
               <div className="space-y-4 mt-8">
                 <Image
-                  src="/placeholder.svg?height=200&width=250"
+                  src="/placeholder.svg"
                   alt="Fresh fruit harvest"
                   width={250}
                   height={200}
                   className="rounded-lg shadow-md w-full h-auto"
                 />
                 <Image
-                  src="/placeholder.svg?height=250&width=250"
+                  src="/placeholder.svg"
                   alt="Farm landscape"
                   width={250}
                   height={250}
