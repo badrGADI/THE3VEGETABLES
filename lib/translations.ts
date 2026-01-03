@@ -9,6 +9,7 @@ export const translations: Translations = {
     // Header
     "nav.home": "Home",
     "nav.products": "Products",
+    "nav.shop": "Shop Online",
     "nav.farm": "Our Farm",
     "nav.blog": "Blog",
     "nav.contact": "Contact",
@@ -577,6 +578,7 @@ export const translations: Translations = {
     // Header
     "nav.home": "Accueil",
     "nav.products": "Produits",
+    "nav.shop": "Boutique en Ligne",
     "nav.farm": "Notre Ferme",
     "nav.blog": "Blog",
     "nav.contact": "Contact",

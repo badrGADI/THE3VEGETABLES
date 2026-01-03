@@ -58,6 +58,9 @@ export default function Header() {
             <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
               {t("nav.farm")}
             </Link>
+            <Link href="/shop" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
+              {t("nav.shop")}
+            </Link>
             <Link href="/blog" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
               {t("nav.blog")}
             </Link>
@@ -96,6 +99,9 @@ export default function Header() {
               </Link>
               <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
                 {t("nav.farm")}
+              </Link>
+              <Link href="/shop" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
+                {t("nav.shop")}
               </Link>
               <Link href="/blog" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
                 {t("nav.blog")}
