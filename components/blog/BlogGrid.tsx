@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,34 +9,20 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { blogPosts } from "@/lib/blogData";
 import BlogPagination from "./BlogPagination";
 
-const POSTS_PER_PAGE = 5;
+type BlogPost = typeof blogPosts[0];
 
-export default function BlogGrid() {
+interface BlogGridProps {
+  posts: BlogPost[];
+  currentPage: number;
+  totalPages: number;
+  totalPosts: number;
+}
+
+export default function BlogGrid({ posts, currentPage, totalPages, totalPosts }: BlogGridProps) {
   const { t } = useTranslation();
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const [currentPage, setCurrentPage] = useState(1);
-
-  // Set initial page from query param on mount
-  useEffect(() => {
-    const pageParam = searchParams?.get("page");
-    if (pageParam && !isNaN(Number(pageParam))) {
-      setCurrentPage(Number(pageParam));
-    }
-  }, [searchParams]);
-
-  const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const endIndex = startIndex + POSTS_PER_PAGE;
-  const currentPosts = blogPosts.slice(startIndex, endIndex);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    // Update the URL with the new page param
-    router.push(`/blog?page=${page}`);
-    // Scroll to top of the blog section
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  
+  const startIndex = (currentPage - 1) * 5; // POSTS_PER_PAGE = 5 hardcoded in page.tsx as well
+  const endIndex = startIndex + posts.length;
 
   return (
     <div className="space-y-8">
@@ -48,15 +32,15 @@ export default function BlogGrid() {
         </h2>
         <div className="text-gray-600">
           {t("blog.showingArticles")
-            .replace("{count}", blogPosts.length.toString())
-            .replace("{current}", currentPosts.length.toString())
+            .replace("{count}", totalPosts.toString())
+            .replace("{current}", posts.length.toString())
             .replace("{start}", (startIndex + 1).toString())
-            .replace("{end}", Math.min(endIndex, blogPosts.length).toString())}
+            .replace("{end}", (startIndex + posts.length).toString())}
         </div>
       </div>
 
       <div className="grid grid-cols-1 gap-8">
-        {currentPosts.map((post) => (
+        {posts.map((post) => (
           <Card
             key={post.id}
             className="overflow-hidden hover:shadow-lg transition-shadow"
