@@ -35,24 +35,32 @@ export async function generateMetadata({
   const title = getTranslation(post.titleKey, "en"); // Default to English for SEO tags
   const description = getTranslation(post.excerptKey, "en");
 
+
+  // SEO Content Optimization: Truncate title and description
+  const cleanTitle = title.split(":")[0]; // Use the main part of the title (before colon) to keep it short
+  const optimizedTitle = cleanTitle.length > 60 ? cleanTitle.substring(0, 57) + "..." : cleanTitle;
+  const optimizedDescription = description.length > 160 ? description.substring(0, 157) + "..." : description;
+
   return {
-    title: `${title} | Farm Blog`,
-    description: description,
+    title: `${optimizedTitle} | Farm Blog`,
+    description: optimizedDescription,
     alternates: {
       canonical: `https://t3v.the-3rocks.com/blog/${id}`,
     },
     openGraph: {
-      title: title,
-      description: description,
+      title: optimizedTitle,
+      description: optimizedDescription,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      siteName: "The 3 Vegetables",
+      locale: "en_US",
       images: [
         {
           url: post.image,
           width: 800,
           height: 600,
-          alt: title,
+          alt: optimizedTitle,
         },
       ],
     },
@@ -70,11 +78,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+
   return (
     <Suspense fallback={<div>Loading post...</div>}>
-      <BlogPostClient params={params} />
+      <BlogPostClient post={post} />
     </Suspense>
   );
 }
-
 

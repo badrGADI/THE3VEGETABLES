@@ -11,41 +11,16 @@ import { Calendar, User, Tag, ArrowLeft, Clock } from "lucide-react"
 import { blogPosts } from "@/lib/blogData"
 import { useTranslation } from "@/hooks/useTranslation"
 
+
 interface BlogPostClientProps {
-  params: Promise<{ id: string }>
+  post: any; // Type should be inferred ideally, but 'any' matches current state. Better: typeof blogPosts[0]
 }
 
-
-export default function BlogPostClient({ params }: BlogPostClientProps) {
-  const [post, setPost] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+export default function BlogPostClient({ post }: BlogPostClientProps) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
   const page = searchParams?.get("page")
   const backUrl = page ? `/blog?page=${page}` : "/blog"
-
-  useEffect(() => {
-    const loadPost = async () => {
-      const { id } = await params
-      const postId = parseInt(id)
-      const foundPost = blogPosts.find(p => p.id === postId)
-      setPost(foundPost)
-      setLoading(false)
-    }
-
-    loadPost()
-  }, [params])
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t("blog.loading")}</p>
-        </div>
-      </div>
-    )
-  }
 
   if (!post) {
     return (
@@ -63,6 +38,7 @@ export default function BlogPostClient({ params }: BlogPostClientProps) {
       </div>
     )
   }
+
 
   return (
     <div className="min-h-screen bg-gray-50">
