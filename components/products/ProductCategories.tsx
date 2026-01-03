@@ -7,143 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Package, Leaf } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
-const vegetables = [
-  {
-    id: 1,
-    slug: "moroccan-tomatoes",
-    name: "Fresh Moroccan Tomatoes",
-    image: "/tomato.png",
-    description: "Premium quality tomatoes in bulk quantities",
-    capacity: "300+ tons/year",
-    varieties: "Cherry, Roma, Round",
-    season: "March - November",
-    organic: true,
-  },
-  {
-    id: 2,
-    slug: "moroccan-carrots",
-    name: "Organic Moroccan Carrots",
-    image: "/carrot.png",
-    description: "Fresh organic carrots for international markets",
-    capacity: "200+ tons/year",
-    varieties: "Nantes, Imperator",
-    season: "October - June",
-    organic: true,
-  },
-  {
-    id: 3,
-    slug: "moroccan-peppers",
-    name: "Moroccan Bell Peppers",
-    image: "/pepper.png",
-    description: "Colorful bell peppers in container loads",
-    capacity: "150+ tons/year",
-    varieties: "Red, Yellow, Green",
-    season: "April - October",
-    organic: false,
-  },
-  {
-    id: 4,
-    slug: "moroccan-onions",
-    name: "Moroccan Red Onions",
-    image: "/onion.png",
-    description: "High-quality red onions for bulk export",
-    capacity: "400+ tons/year",
-    varieties: "Red Globe, Spanish",
-    season: "May - September",
-    organic: false,
-  },
-  {
-    id: 5,
-    slug: "moroccan-potatoes",
-    name: "Moroccan Potatoes",
-    image: "/potato.png",
-    description: "Premium potatoes for international distribution",
-    capacity: "500+ tons/year",
-    varieties: "Spunta, Nicola, Désirée",
-    season: "January - May",
-    organic: false,
-  },
-  {
-    id: 6,
-    slug: "moroccan-cucumbers",
-    name: "Fresh Moroccan Cucumbers",
-    image: "/cucumber.png",
-    description: "Crisp cucumbers perfect for export markets",
-    capacity: "180+ tons/year",
-    varieties: "Long English, Mini",
-    season: "October - May",
-    organic: true,
-  },
-];
-
-const fruits = [
-  {
-    id: 7,
-    slug: "moroccan-oranges",
-    name: "Moroccan Oranges",
-    image: "/orange.png",
-    description: "Sweet, juicy oranges packed with vitamin C",
-    capacity: "600+ tons/year",
-    varieties: "Valencia, Navel",
-    season: "November - May",
-    organic: true,
-  },
-  {
-    id: 8,
-    slug: "moroccan-lemons",
-    name: "Fresh Moroccan Lemons",
-    image: "/lemon.png",
-    description: "Premium quality lemons for global markets",
-    capacity: "250+ tons/year",
-    varieties: "Eureka, Meyer",
-    season: "October - June",
-    organic: true,
-  },
-  {
-    id: 9,
-    slug: "moroccan-avocados",
-    name: "Moroccan Avocados",
-    image: "/avocado.png",
-    description: "Creamy, nutrient-rich avocados ready for export",
-    capacity: "120+ tons/year",
-    varieties: "Hass, Fuerte",
-    season: "November - April",
-    organic: false,
-  },
-  {
-    id: 10,
-    slug: "moroccan-melons",
-    name: "Moroccan Melons",
-    image: "/melon.png",
-    description: "Sweet melons perfect for international markets",
-    capacity: "300+ tons/year",
-    varieties: "Cantaloupe, Honeydew",
-    season: "May - September",
-    organic: false,
-  },
-  {
-    id: 11,
-    slug: "moroccan-watermelons",
-    name: "Moroccan Watermelons",
-    image: "/watermelon.png",
-    description: "Refreshing watermelons in bulk quantities",
-    capacity: "400+ tons/year",
-    varieties: "Crimson Sweet, Sugar Baby",
-    season: "June - September",
-    organic: false,
-  },
-  {
-    id: 12,
-    slug: "moroccan-grapes",
-    name: "Moroccan Table Grapes",
-    image: "/grapes.png",
-    description: "Premium table grapes for export markets",
-    capacity: "200+ tons/year",
-    varieties: "Red Globe, Thompson",
-    season: "July - October",
-    organic: true,
-  },
-];
+import { vegetables, fruits } from "@/lib/products";
 
 function ProductCard({
   product,
@@ -197,7 +61,7 @@ function ProductCard({
           {t("categories.varieties")}:
         </span>
         <span className="font-medium text-gray-700 dark:text-gray-300">
-          {product.varieties}
+          {Array.isArray(product.varieties) ? product.varieties.join(", ") : product.varieties}
         </span>
       </div>
       <div className="flex items-center justify-between text-sm">

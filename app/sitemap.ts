@@ -1,6 +1,7 @@
 
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blogData'
+import { allProducts } from '@/lib/products'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://t3v.the-3rocks.com'
@@ -13,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/shop',
     '/blog',
     '/contact',
+    '/privacy',
+    '/terms',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -28,5 +31,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...routes, ...posts]
+  // Product pages
+  const products = allProducts.map((product) => ({
+    url: `${baseUrl}/products/${product.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
+  return [...routes, ...posts, ...products]
 }
