@@ -9,9 +9,18 @@ interface BlogPostPageProps {
   params: Promise<{ id: string }>;
 }
 
+
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    id: post.id.toString(),
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
+
+
   const { id } = await params;
   const post = blogPosts.find((p) => p.id === Number(id));
 
@@ -21,6 +30,7 @@ export async function generateMetadata({
       description: "The blog post you are looking for does not exist.",
     };
   }
+
 
   const title = getTranslation(post.titleKey, "en"); // Default to English for SEO tags
   const description = getTranslation(post.excerptKey, "en");
@@ -49,11 +59,22 @@ export async function generateMetadata({
   };
 }
 
+
+import { notFound } from "next/navigation";
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { id } = await params;
+  const post = blogPosts.find((p) => p.id === Number(id));
+  
+  if (!post) {
+    notFound();
+  }
+
   return (
     <Suspense fallback={<div>Loading post...</div>}>
       <BlogPostClient params={params} />
     </Suspense>
   );
 }
+
 

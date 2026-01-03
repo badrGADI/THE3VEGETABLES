@@ -3,6 +3,15 @@ import BlogHeader from "@/components/blog/BlogHeader";
 import BlogGrid from "@/components/blog/BlogGrid";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 import { blogPosts } from "@/lib/blogData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Farm Blog | Harvest Updates, Nutrition Tips & Agriculture Insights",
+  description: "Stay updated with the latest news from our farm, seasonal harvest reports, nutrition tips, and insights into sustainable agriculture practices.",
+  alternates: {
+    canonical: "https://t3v.the-3rocks.com/blog",
+  },
+};
 
 const POSTS_PER_PAGE = 5;
 

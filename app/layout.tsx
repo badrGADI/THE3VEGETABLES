@@ -8,7 +8,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://t3v.the-3rocks.com"),
   title: "Moroccan Agricultural Export | Bulk Fresh Produce Supplier",
   description:
     "Leading Moroccan agricultural export company supplying bulk quantities of fresh fruits and vegetables worldwide. Direct from farm to international markets with guaranteed quality.",
