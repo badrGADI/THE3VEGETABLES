@@ -606,6 +606,7 @@ export const translations: Translations = {
     "hero.stats2Value": "18+",
     "hero.stats2Label": "Pays",
 
+
     // Why Choose Us
     "whyChoose.title": "Pourquoi Choisir The 3 Vegetables?",
     "whyChoose.subtitle":
