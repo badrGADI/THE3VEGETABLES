@@ -105,19 +105,25 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-              size="lg"
-              className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              {t("hero.ctaPrimary")}
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-orange-700 text-orange-700 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-6 text-lg rounded-full transition-all duration-300"
-            >
-              {t("hero.ctaSecondary")}
-            </Button>
+                asChild
+                size="lg"
+                className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
+              >
+                <Link href="/contact">
+                  {t("hero.requestQuote")}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-orange-700 text-orange-700 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-6 text-lg rounded-full transition-all duration-300"
+              >
+                <Link href="/products">
+                  {t("hero.viewProducts")}
+                </Link>
+              </Button>
             </div>
           </div>
 
