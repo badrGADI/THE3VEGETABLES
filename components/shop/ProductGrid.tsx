@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Eye } from "lucide-react"
+
 
 const products = [
   {
@@ -107,19 +107,6 @@ export default function ProductGrid() {
                     <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Organic</span>
                   )}
                 </div>
-                <button className="absolute top-4 right-4 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
-                  <Heart className="w-5 h-5 text-gray-600" />
-                </button>
-
-                {/* Quick View Overlay */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Link href={`/products/${product.slug}`}>
-                    <Button className="bg-white text-gray-900 hover:bg-gray-100">
-                      <Eye className="w-4 h-4 mr-2" />
-                      View Details
-                    </Button>
-                  </Link>
-                </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -140,11 +127,6 @@ export default function ProductGrid() {
                       View Details
                     </Button>
                   </Link>
-                </div>
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <Button className="w-full bg-orange-700 hover:bg-orange-800 text-white" disabled={!product.inStock}>
-                    {product.inStock ? "Add to Quote" : "Out of Stock"}
-                  </Button>
                 </div>
               </div>
             </CardContent>

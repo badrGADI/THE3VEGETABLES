@@ -29,8 +29,11 @@ export default function ContactPage() {
             </h1>
 
             {/* Description */}
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed max-w-3xl mx-auto">
               {t("contact.subtitle")}
+            </p>
+            <p className="text-base md:text-lg text-gray-400 mb-8 leading-relaxed max-w-3xl mx-auto">
+              Our team specializes in B2B agricultural export. We handle bulk orders from 500 kg to full container loads, provide customized packaging and labeling, manage all export documentation and phytosanitary certificates, and coordinate door-to-door shipping to any destination worldwide. Whether you need weekly supply contracts or spot purchases, we offer competitive pricing backed by consistent quality and reliable delivery schedules.
             </p>
 
             {/* Feature Pills */}

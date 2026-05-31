@@ -121,62 +121,35 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
       </section>
 
       <div className="container mx-auto px-4 py-16">
+        {/* Product Summary */}
+        <section className="mb-16 max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              Our {product.name.toLowerCase()} are sourced from {product.origin}, where optimal growing conditions and generations of farming expertise ensure exceptional quality. We offer {product.varieties.join(", ")} varieties, harvested during the {product.harvestSeason.toLowerCase()} season to capture peak flavor and nutritional value. With an annual production capacity of {product.annualProduction.toLowerCase()} and {product.currentAvailability.toLowerCase()}, we maintain consistent supply for our international partners. Each shipment is packed in {product.packaging.join(", ")} and stored under controlled conditions ({product.storage}) to preserve freshness from farm to destination. All products carry {product.certifications.join(", ")}, reflecting our commitment to the highest food safety and quality standards.
+            </p>
+          </div>
+        </section>
+
         {/* Availability & Capacity */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
             Availability & Capacity
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="border-orange-200 dark:border-orange-800">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Package className="w-6 h-6 text-orange-500" />
-                  <span>Annual Production</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold text-orange-600 mb-2">
-                  {product.annualProduction}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Total yearly capacity from our farms
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-green-200 dark:border-green-800">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Container className="w-6 h-6 text-green-500" />
-                  <span>Current Stock</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold text-green-600 mb-2">
-                  {product.currentAvailability}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Ready for immediate export
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-blue-200 dark:border-blue-800">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Calendar className="w-6 h-6 text-blue-500" />
-                  <span>Harvest Season</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-lg font-semibold text-blue-600 mb-2">
-                  {product.harvestSeason}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Optimal quality period
-                </p>
-              </CardContent>
-            </Card>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-orange-600 mb-1">{product.annualProduction}</div>
+                <div className="text-sm text-gray-500">Annual Production</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-600 mb-1">{product.currentAvailability}</div>
+                <div className="text-sm text-gray-500">Current Stock Ready for Export</div>
+              </div>
+              <div>
+                <div className="text-xl font-bold text-blue-600 mb-1">{product.harvestSeason}</div>
+                <div className="text-sm text-gray-500">Harvest Season</div>
+              </div>
+            </div>
           </div>
         </section>
 

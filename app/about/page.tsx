@@ -21,13 +21,7 @@ export default function AboutPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-800 via-emerald-800 to-gray-900 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-40 h-40 border border-white rounded-full"></div>
-          <div className="absolute bottom-32 right-16 w-28 h-28 border border-white rounded-full"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full"></div>
-          <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-white rounded-full"></div>
-        </div>
+
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
@@ -209,6 +203,24 @@ export default function AboutPage() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Operations Overview */}
+      <section className="py-16 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Our Farm Operations</h2>
+          <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Our farming operations span 500 hectares across Morocco most productive agricultural regions. In the Souss Valley, our greenhouses produce tomatoes, peppers, and cucumbers during the winter months when European production is at its lowest. The Doukkala region supplies our root vegetables and onions, while the citrus orchards around Agadir yield oranges and lemons from November through May.
+            </p>
+            <p>
+              We employ 200 permanent farm workers and up to 500 seasonal workers during peak harvest periods. Our packhouse facilities in Agadir and Casablanca are equipped with modern sorting, grading, and cold storage systems capable of processing 20 tons of produce per hour. Every shipment undergoes quality inspection by certified agronomists before receiving final export clearance.
+            </p>
+            <p>
+              Our logistics network covers all major Moroccan ports including Agadir, Casablanca, and Tangier Med, giving us direct access to shipping routes to Europe, the Middle East, Africa, and the Americas. We manage the entire cold chain with temperature-controlled storage and refrigerated containers to maintain product freshness from farm gate to destination port.
+            </p>
           </div>
         </div>
       </section>
