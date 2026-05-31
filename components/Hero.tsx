@@ -10,13 +10,6 @@ export default function Hero() {
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-orange-50 to-green-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-orange-500 rounded-full"></div>
-        <div className="absolute bottom-32 right-16 w-24 h-24 border border-orange-500 rounded-full"></div>
-        <div className="absolute top-1/2 left-1/3 w-4 h-4 bg-orange-500 rounded-full"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-orange-500 rounded-full"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

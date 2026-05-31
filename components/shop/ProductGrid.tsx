@@ -15,6 +15,7 @@ const products = [
     unit: "kg",
     inStock: true,
     organic: true,
+    description: "Sweet and juicy Valencia oranges, hand-picked at peak ripeness from our orchards in the Souss Valley. Rich in vitamin C and naturally sweet, perfect for fresh consumption or juicing.",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const products = [
     unit: "kg",
     inStock: true,
     organic: true,
+    description: "Vine-ripened organic tomatoes grown in Morocco's fertile coastal plains. Roma and cherry varieties available, known for their deep red color, firm texture, and rich tomato flavor.",
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ const products = [
     unit: "kg",
     inStock: true,
     organic: false,
+    description: "Creamy Hass avocados with a rich, buttery texture and nutty flavor. Harvested at optimal maturity and ripened to perfection, ideal for guacamole, salads, and toast.",
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ const products = [
     unit: "kg",
     inStock: true,
     organic: true,
+    description: "Colorful bell peppers in red, yellow, and green varieties. Grown in Moroccan greenhouses, these peppers are crisp, sweet, and packed with vitamins A and C.",
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ const products = [
     unit: "kg",
     inStock: true,
     organic: true,
+    description: "Zesty Eureka and Meyer lemons from the sun-drenched citrus groves of Agadir. Known for their bright flavor, high juice content, and aromatic peel.",
   },
   {
     id: 6,
@@ -70,6 +75,7 @@ const products = [
     unit: "kg",
     inStock: false,
     organic: true,
+    description: "Certified organic Nantes and Imperator carrots grown in sandy loam soils. Sweet, tender, and rich in beta-carotene, harvested at peak sweetness.",
   },
 ]
 
@@ -119,6 +125,9 @@ export default function ProductGrid() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {product.name}
                 </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                  {product.description}
+                </p>
                 <div className="mt-auto flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-700">
                     ${product.price.toFixed(2)}/{product.unit}

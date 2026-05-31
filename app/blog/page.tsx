@@ -44,6 +44,13 @@ export default async function BlogPage(props: {
   return (
     <div className="min-h-screen bg-gray-50">
       <BlogHeader />
+      <section className="bg-white dark:bg-gray-800 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center max-w-4xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            Stay informed with the latest news from our Moroccan family farm. We share seasonal harvest reports, sustainable agriculture insights, export market updates, nutrition tips, and stories from our farming community. Whether you are a buyer, distributor, or agriculture enthusiast, our blog offers valuable perspectives on Moroccan farming and global produce trade.
+          </p>
+        </div>
+      </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <main className="lg:col-span-2">

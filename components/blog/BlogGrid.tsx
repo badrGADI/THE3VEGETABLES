@@ -77,7 +77,7 @@ export default function BlogGrid({ posts, currentPage, totalPages, totalPosts }:
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 transition-colors">
-                    <Link href={`/blog/${post.id}?page=${currentPage}`}>{t(post.titleKey)}</Link>
+                    <Link href={`/blog/${post.id}`}>{t(post.titleKey)}</Link>
                   </h3>
 
                   <p className="text-gray-600 mb-4 line-clamp-3">
@@ -92,7 +92,7 @@ export default function BlogGrid({ posts, currentPage, totalPages, totalPosts }:
                       </span>
                     </div>
                     <Link
-                      href={`/blog/${post.id}?page=${currentPage}`}
+                      href={`/blog/${post.id}`}
                       className="text-orange-500 hover:text-orange-600 font-medium text-sm"
                     >
                       {t("blog.readMore")}

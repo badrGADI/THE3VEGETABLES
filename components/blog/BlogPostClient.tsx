@@ -1,10 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { format } from "date-fns"
-import { useSearchParams } from "next/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, Tag, ArrowLeft, Clock } from "lucide-react"
@@ -20,9 +18,7 @@ interface BlogPostClientProps {
 
 export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostClientProps) {
   const { t } = useTranslation()
-  const searchParams = useSearchParams()
-  const page = searchParams?.get("page")
-  const backUrl = page ? `/blog?page=${page}` : "/blog"
+  const backUrl = "/blog"
 
   if (!post) {
     return (
@@ -281,41 +277,11 @@ export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostCli
 
                   {/* Default content for other blog posts */}
                   {![1, 2, 3, 4, 5, 6, 7, 8, 9, 10].includes(post.id) && (
-                    <>
-                      <p>
-                        This is a detailed blog post about {t(post.titleKey).toLowerCase()}. 
-                        The content would typically be much longer and include multiple paragraphs, 
-                        images, and possibly embedded media.
-                      </p>
-                      
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      </p>
-                      
-                      <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                        in culpa qui officia deserunt mollit anim id est laborum.
-                      </p>
-                      
-                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-                        {t("blog.keyPoints")}
-                      </h2>
-                      
-                      <ul className="list-disc pl-6 space-y-2">
-                        <li>Important information about the topic</li>
-                        <li>Key insights and findings</li>
-                        <li>Practical applications and recommendations</li>
-                        <li>Future implications and trends</li>
-                      </ul>
-                      
-                      <p className="mt-6">
-                        In conclusion, this blog post provides valuable insights into the subject matter 
-                        and offers practical guidance for readers interested in learning more about this topic.
-                      </p>
-                    </>
+                    <p className="text-gray-600">
+                      This blog post is being updated with the latest information about {t(post.titleKey).toLowerCase()}. 
+                      Please check back soon for the complete article with detailed insights, analysis, and key takeaways 
+                      about this topic related to Moroccan agriculture and farming practices.
+                    </p>
                   )}
                 </div>
               </div>
