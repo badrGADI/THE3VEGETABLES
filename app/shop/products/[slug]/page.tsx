@@ -1,112 +1,88 @@
 import type { Metadata } from "next"
 import ProductDetail from "@/components/product/ProductDetail"
+import { allProducts, vegetables, fruits } from "@/lib/products"
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string
+  }>
+}
+
+const slugAliases: Record<string, string> = {
+  "fresh-oranges": "moroccan-oranges",
+  "organic-tomatoes": "moroccan-tomatoes",
+  "bell-peppers": "moroccan-peppers",
+  "fresh-avocados": "moroccan-avocados",
+  "fresh-lemons": "moroccan-lemons",
+  "organic-carrots": "moroccan-carrots",
+}
+
+function resolveProduct(slug: string) {
+  let product = allProducts.find((p) => p.slug === slug)
+  if (product) return product
+
+  const alias = slugAliases[slug]
+  if (alias) {
+    return allProducts.find((p) => p.slug === alias) || null
+  }
+
+  return null
+}
+
+function adaptProduct(product: any) {
+  const isVegetable = vegetables.some((v) => v.id === product.id)
+  return {
+    id: product.id,
+    name: product.name,
+    category: isVegetable ? "Vegetables" : "Fruits",
+    images: [product.image, product.image, product.image],
+    price: isVegetable ? 2.5 : 3.5,
+    bulkPrice: isVegetable ? 1800 : 2200,
+    unit: "kg",
+    inStock: true,
+    organic: product.organic,
+    shortDescription: product.description,
+    variety: (product.varieties || []).join(", "),
+    origin: product.origin,
+    availableQuantity: product.currentAvailability,
+    yearlyProduction: product.annualProduction,
+    seasonalAvailability: product.harvestSeason,
+    packaging: (product.packaging || []).join(", "),
+    storage: product.storage,
+    certifications: product.certifications || [],
+    qualitySteps: product.qualityProcess || [],
+    testimonials: product.testimonials || [],
   }
 }
 
-// This would typically come from a database or API
-const getProduct = (slug: string) => {
-  const products = {
-    "fresh-oranges": {
-      id: 1,
-      name: "Fresh Oranges",
-      category: "Fruits",
-      images: [
-        "/placeholder.svg?height=500&width=500",
-        "/placeholder.svg?height=500&width=500",
-        "/placeholder.svg?height=500&width=500",
-      ],
-      price: 2.5,
-      bulkPrice: 2200,
-      unit: "kg",
-      inStock: true,
-      organic: true,
-      shortDescription: "Sweet, juicy oranges packed with vitamin C and natural goodness",
-      variety: "Valencia & Navel",
-      origin: "FreshFarm, Agadir, Morocco",
-      availableQuantity: "500 kg",
-      yearlyProduction: "150 tons/year",
-      seasonalAvailability: "November - May (Peak season)",
-      packaging: "10kg cartons, 15kg wooden crates, or custom packaging",
-      storage: "Store at 3-8°C, 85-90% humidity",
-      certifications: ["Organic Certified", "GlobalGAP", "ISO 22000"],
-      qualitySteps: [
-        "Hand-picked at optimal ripeness",
-        "Sorted by size and quality",
-        "Cold storage within 2 hours",
-        "Quality inspection before packaging",
-      ],
-      testimonials: [
-        {
-          company: "Fresh Market Co.",
-          location: "London, UK",
-          text: "Exceptional quality oranges that our customers love. Consistent supply and great service.",
-        },
-      ],
-    },
-    "organic-tomatoes": {
-      id: 2,
-      name: "Organic Tomatoes",
-      category: "Vegetables",
-      images: [
-        "/placeholder.svg?height=500&width=500",
-        "/placeholder.svg?height=500&width=500",
-        "/placeholder.svg?height=500&width=500",
-      ],
-      price: 3.2,
-      bulkPrice: 2800,
-      unit: "kg",
-      inStock: true,
-      organic: true,
-      shortDescription: "Vine-ripened organic tomatoes, perfect for cooking and fresh consumption",
-      variety: "Roma & Cherry varieties",
-      origin: "FreshFarm, Agadir, Morocco",
-      availableQuantity: "800 kg",
-      yearlyProduction: "200 tons/year",
-      seasonalAvailability: "March - November",
-      packaging: "5kg plastic crates, 10kg cartons",
-      storage: "Store at 12-15°C, avoid direct sunlight",
-      certifications: ["Organic Certified", "HACCP", "BRC"],
-      qualitySteps: [
-        "Harvested at perfect ripeness",
-        "Gentle handling to prevent bruising",
-        "Temperature controlled storage",
-        "Regular quality assessments",
-      ],
-      testimonials: [
-        {
-          company: "Mediterranean Foods",
-          location: "Barcelona, Spain",
-          text: "The best organic tomatoes we've sourced. Great flavor and excellent shelf life.",
-        },
-      ],
-    },
-  }
-
-  return products[slug as keyof typeof products] || null
+export async function generateStaticParams() {
+  const allSlugs = allProducts.map((p) => ({ slug: p.slug }))
+  const aliasSlugs = Object.keys(slugAliases).map((slug) => ({ slug }))
+  return [...allSlugs, ...aliasSlugs]
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = getProduct(params.slug)
+  const { slug } = await params
+  const product = resolveProduct(slug)
 
   if (!product) {
     return {
       title: "Product Not Found",
+      description:
+        "The requested product could not be found. Browse our complete range of premium Moroccan fruits and vegetables available for export.",
     }
   }
 
   return {
     title: `${product.name} | Fresh Organic Produce from Morocco`,
-    description: product.shortDescription,
-    keywords: `${product.name.toLowerCase()}, organic ${product.category.toLowerCase()}, moroccan produce, fresh ${product.category.toLowerCase()}`,
+    description: product.description,
+    keywords: `${product.name.toLowerCase()}, ${(product.varieties || []).join(", ").toLowerCase()}, moroccan produce, fresh ${product.name.toLowerCase()}`,
   }
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProduct(params.slug)
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = await params
+  const product = resolveProduct(slug)
 
   if (!product) {
     return (
@@ -119,5 +95,5 @@ export default function ProductPage({ params }: ProductPageProps) {
     )
   }
 
-  return <ProductDetail product={product} />
+  return <ProductDetail product={adaptProduct(product)} />
 }

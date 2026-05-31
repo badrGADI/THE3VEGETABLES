@@ -15,7 +15,9 @@ export async function generateMetadata(props: {
 
   return {
     title: `Farm Blog${currentPage > 1 ? ` - Page ${currentPage}` : ""} | Harvest Updates, Nutrition Tips & Agriculture Insights`,
-    description: "Stay updated with the latest news from our farm, seasonal harvest reports, nutrition tips, and insights into sustainable agriculture practices.",
+    description: currentPage > 1
+      ? `Stay updated with the latest news from our farm, seasonal harvest reports, nutrition tips, and insights into sustainable agriculture practices. (Page ${currentPage})`
+      : "Stay updated with the latest news from our farm, seasonal harvest reports, nutrition tips, and insights into sustainable agriculture practices.",
     alternates: {
       canonical: currentPage > 1 
         ? `https://t3v.the-3rocks.com/blog?page=${currentPage}` 

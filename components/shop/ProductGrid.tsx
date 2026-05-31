@@ -7,7 +7,7 @@ import { Heart, Eye } from "lucide-react"
 const products = [
   {
     id: 1,
-    slug: "fresh-oranges",
+    slug: "moroccan-oranges",
     name: "Fresh Oranges",
     category: "Fruits",
     image: "/orange.png",
@@ -18,7 +18,7 @@ const products = [
   },
   {
     id: 2,
-    slug: "organic-tomatoes",
+    slug: "moroccan-tomatoes",
     name: "Organic Tomatoes",
     category: "Vegetables",
     image: "/tomato.png",
@@ -29,7 +29,7 @@ const products = [
   },
   {
     id: 3,
-    slug: "fresh-avocados",
+    slug: "moroccan-avocados",
     name: "Fresh Avocados",
     category: "Fruits",
     image: "/placeholder.svg",
@@ -40,7 +40,7 @@ const products = [
   },
   {
     id: 4,
-    slug: "bell-peppers",
+    slug: "moroccan-peppers",
     name: "Bell Peppers",
     category: "Vegetables",
     image: "/pepper.png",
@@ -51,7 +51,7 @@ const products = [
   },
   {
     id: 5,
-    slug: "fresh-lemons",
+    slug: "moroccan-lemons",
     name: "Fresh Lemons",
     category: "Fruits",
     image: "/placeholder.svg",
@@ -62,7 +62,7 @@ const products = [
   },
   {
     id: 6,
-    slug: "organic-carrots",
+    slug: "moroccan-carrots",
     name: "Organic Carrots",
     category: "Vegetables",
     image: "/carrot.png",
@@ -107,7 +107,7 @@ export default function ProductGrid() {
 
                 {/* Quick View Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Link href={`/shop/products/${product.slug}`}>
+                  <Link href={`/products/${product.slug}`}>
                     <Button className="bg-white text-gray-900 hover:bg-gray-100">
                       <Eye className="w-4 h-4 mr-2" />
                       View Details
@@ -123,7 +123,7 @@ export default function ProductGrid() {
                   <span className="text-2xl font-bold text-orange-700">
                     ${product.price.toFixed(2)}/{product.unit}
                   </span>
-                  <Link href={`/shop/products/${product.slug}`}>
+                  <Link href={`/products/${product.slug}`}>
                     <Button
                       size="sm"
                       className="bg-orange-700 hover:bg-orange-800"

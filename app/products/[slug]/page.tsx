@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   if (!product) {
     return {
       title: "Product Not Found",
+      description: "The requested product could not be found. Browse our complete range of premium Moroccan agricultural export products.",
     };
   }
 
