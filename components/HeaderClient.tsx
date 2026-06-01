@@ -1,40 +1,34 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageToggle from "@/components/LanguageToggle";
-import HeaderClient from "@/components/HeaderClient";
 
-export default function Header() {
+export default function HeaderClient() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative w-24 h-24">
-              <Image
-                src="/logo.png"
-                alt="The 3 Vegetables Logo"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 96px, 96px"
-                priority
-              />
-            </div>
-            <div>
-              <div className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                The{" "}
-                <span className="text-green-600 dark:text-green-400">3</span>{" "}
-                Vegetables
-              </div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">
-                Moroccan agricultural export
-              </div>
-            </div>
-          </Link>
+    <>
+      <div className="hidden md:flex items-center space-x-4">
+        <ThemeToggle />
+        <LanguageToggle />
+        <Link href="/contact">
+          <Button className="bg-orange-700 hover:bg-orange-800 text-white">
+            Get Quote
+          </Button>
+        </Link>
+      </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+      <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+
+      {isMenuOpen && (
+        <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
+          <nav className="flex flex-col space-y-4">
             <Link
               href="/"
               className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors"
@@ -71,11 +65,18 @@ export default function Header() {
             >
               Contact
             </Link>
+            <div className="flex items-center space-x-4 pt-4">
+              <ThemeToggle />
+              <LanguageToggle />
+              <Link href="/contact">
+                <Button className="bg-orange-700 hover:bg-orange-800 text-white">
+                  Get Quote
+                </Button>
+              </Link>
+            </div>
           </nav>
-
-          <HeaderClient />
         </div>
-      </div>
-    </header>
+      )}
+    </>
   );
 }
