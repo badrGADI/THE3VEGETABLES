@@ -97,6 +97,18 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Export Process */}
+      <section className="py-20 bg-white dark:bg-gray-800 border-t">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Our Export Process</h2>
+          <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>When you contact us, our export team begins by understanding your specific requirements including product type, volume, quality grade preferences, packaging requirements, destination country, and delivery timeline. We then prepare a comprehensive quotation covering the product price based on current market rates and available stock, detailed specifications aligned with your quality requirements, shipping options with estimated transit times and freight costs, documentation requirements specific to your destination, and proposed payment terms.</p>
+            <p>Once the quotation is accepted, our team coordinates production scheduling to ensure your order is harvested at the optimal time, arranges quality inspection with our internal QA team and third-party certifiers if required, manages packhouse processing including washing, sorting, grading, and packing according to your specifications, and books shipping space with our partner carriers. Throughout the process, you receive regular updates including photos and inspection reports.</p>
+            <p>Before shipment, we prepare and share all export documentation including the commercial invoice and packing list, Certificate of Origin, Phytosanitary Certificate issued by ONSSA, health certificate, bill of lading or airway bill, and any additional certificates required by your country. After departure, we provide real-time tracking information and remain available to assist with customs clearance and any documentation questions that may arise at the destination.</p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

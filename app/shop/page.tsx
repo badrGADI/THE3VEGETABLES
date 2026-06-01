@@ -54,6 +54,26 @@ export default function ShopPage() {
           </div>
         </div>
       </section>
+      <section className="bg-white dark:bg-gray-800 py-16 border-t">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Quality & Freshness Guarantee</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>Every product listed in our online shop meets the same rigorous quality standards as our bulk export shipments. Our fruits and vegetables are harvested at peak maturity, sorted by trained graders who inspect each item for size, color, firmness, and visual appeal. Only the top two grades make it to our online shop, ensuring that every box you receive meets professional quality expectations. We stand behind every order with our freshness guarantee if any item does not meet your expectations, we will replace it or issue a full refund.</p>
+            <p>For international buyers, we provide full traceability documentation including the farm of origin, harvest date, and quality inspection report with each order. Our packaging is designed for export-grade protection with ventilated cartons, moisture barriers, and cushioning materials that prevent bruising during transit. We ship in insulated boxes with gel ice packs for temperature-sensitive items and use express courier services that handle perishable goods with priority handling throughout the logistics chain.</p>
+            <p>Bulk buyers and wholesale importers should note that the pricing on this shop reflects retail and small wholesale quantities. For container-load pricing and volume discounts, we invite you to visit our B2B products page or contact our export team directly for a customized quotation. We offer graduated pricing tiers starting at 50 kg for single-product orders and can scale up to full container loads with proportional freight savings passed on to our volume customers.</p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 border-t">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Customer Support & Order Process</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>Our customer support team is available Monday through Friday from 8 AM to 6 PM Moroccan time (GMT+1) to assist with product selection, order placement, and delivery inquiries. You can reach us through the contact form on our website, by email, or by phone. We aim to respond to all inquiries within 2 hours during business hours and within 12 hours for messages received outside of business hours. For urgent orders and time-sensitive deliveries, we recommend contacting us directly so we can prioritize your request.</p>
+            <p>Placing an order through our online shop is straightforward. Browse our product selection, add items to your cart, specify the quantity you need (minimum order is 1 kg per product), and proceed to checkout. You will receive an order confirmation email immediately, followed by a shipping notification with tracking information once your package is dispatched. For international orders, please allow additional time for customs processing in the destination country. We provide full support with customs documentation and can prepare any additional certificates required by your local authorities.</p>
+            <p>Payment options include major credit cards (Visa, Mastercard, American Express), PayPal, and bank wire transfers for larger orders. All transactions are processed through secure, encrypted payment gateways. For first-time international buyers, we may require verification of your business credentials before processing large orders to ensure compliance with export regulations. Your financial information is never stored on our servers and all payment data is handled directly by our PCI-compliant payment processors.</p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

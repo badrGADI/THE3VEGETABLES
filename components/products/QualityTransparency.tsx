@@ -1,5 +1,4 @@
 "use client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Shield,
@@ -95,25 +94,18 @@ export default function QualityTransparency() {
             {qualityStandards.map((standard, index) => {
               const IconComponent = standard.icon;
               return (
-                <Card
-                  key={index}
-                  className="text-center hover:shadow-lg transition-shadow duration-300"
-                >
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-orange-600" />
-                    </div>
-                    <CardTitle className="text-lg">{standard.title}</CardTitle>
-                    <Badge className="bg-green-500 text-white mx-auto">
-                      {t(standard.badgeKey)}
-                    </Badge>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      {standard.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div key={index} className="bg-white dark:bg-gray-900 rounded-2xl p-6 text-center shadow-sm border border-gray-100 dark:border-gray-700">
+                  <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-orange-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{standard.title}</h3>
+                  <Badge className="bg-green-500 text-white mx-auto mb-3">
+                    {t(standard.badgeKey)}
+                  </Badge>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {standard.description}
+                  </p>
+                </div>
               );
             })}
           </div>
@@ -128,26 +120,19 @@ export default function QualityTransparency() {
             {transparencyFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <Card
-                  key={index}
-                  className="hover:shadow-lg transition-shadow duration-300"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                          {feature.title}
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div key={index} className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -160,9 +145,7 @@ export default function QualityTransparency() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">1</span>
-              </div>
+              <span className="text-2xl font-bold text-orange-500 block mb-2">1</span>
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 {t("quality.farmSelection")}
               </h4>
@@ -172,9 +155,7 @@ export default function QualityTransparency() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">2</span>
-              </div>
+              <span className="text-2xl font-bold text-orange-500 block mb-2">2</span>
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 {t("quality.inspection")}
               </h4>
@@ -184,9 +165,7 @@ export default function QualityTransparency() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">3</span>
-              </div>
+              <span className="text-2xl font-bold text-orange-500 block mb-2">3</span>
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 {t("quality.coldChain")}
               </h4>
@@ -196,9 +175,7 @@ export default function QualityTransparency() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">4</span>
-              </div>
+              <span className="text-2xl font-bold text-orange-500 block mb-2">4</span>
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 {t("quality.exportReady")}
               </h4>

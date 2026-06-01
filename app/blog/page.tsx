@@ -83,6 +83,15 @@ export default async function BlogPage(props: {
             <p>
               Topics we regularly cover include monthly harvest outlook reports that forecast availability and pricing for key export crops, detailed profiles of specific products from seed variety selection through to harvest and export, sustainability initiatives such as our solar-powered irrigation systems and organic conversion programs, nutritional information about our produce with recipe ideas, and profiles of the international markets we serve. We also publish buyer guides covering quality grading standards, packaging options, and import documentation requirements for different destination countries.
             </p>
+            </div>
+          </div>
+      </section>
+      <section className="bg-white dark:bg-gray-800 py-16 border-t">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Subscribe to Our Blog Updates</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>Stay connected with our farming community by subscribing to our blog newsletter. Subscribers receive weekly email notifications whenever new articles are published, along with a monthly digest featuring the most popular posts, seasonal harvest highlights, and exclusive insights into our farming operations that are not published anywhere else. Our newsletter is written by our farm manager and export team and provides valuable intelligence for produce buyers, industry professionals, and agriculture enthusiasts.</p>
+            <p>We respect your inbox and promise never to share your email address with third parties. You can unsubscribe at any time with a single click, and we will never send you promotional content unrelated to our farm, our products, or the agricultural industry. Our subscriber community includes importers, distributors, retailers, food bloggers, nutritionists, and fellow farmers from over 30 countries who value authentic, first-hand information about Moroccan agriculture and the global fresh produce trade.</p>
           </div>
         </div>
       </section>

@@ -129,6 +129,9 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               We export {product.name.toLowerCase()} from our facilities in Agadir and Casablanca, shipping through the ports of Agadir, Casablanca, and Tangier Med to reach markets across Europe, the Middle East, Africa, and the Americas. Our {product.exportExperience} of export experience means we understand the documentation, phytosanitary requirements, and cold chain logistics needed for each destination. With {product.deliveryPorts.toLowerCase()} delivery capability and {product.logisticsSupport.toLowerCase()}, we make international procurement straightforward and reliable for our partners.
             </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              {product.name} are in strong demand across international markets due to their consistent quality, competitive pricing, and reliable supply from Morocco. Our customers include wholesale distributors supplying major retail chains, food processing companies requiring consistent raw material specifications, and importers serving ethnic and specialty markets. We offer flexible contract terms including spot purchases, monthly supply agreements, and seasonal forward contracts with fixed pricing. All exports are fully insured and backed by our quality guarantee, with replacement or credit issued for any shipment that does not meet the agreed specifications upon arrival at the destination port.
+            </p>
           </div>
         </section>
 

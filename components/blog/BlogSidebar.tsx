@@ -1,6 +1,5 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search, Tag } from "lucide-react"
@@ -73,95 +72,74 @@ export default function BlogSidebar() {
   return (
     <div className="space-y-8">
       {/* Search */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <Search className="w-5 h-5" />
-            <span>{t("blog.search")}</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex space-x-2">
-            <Input placeholder={t("blog.searchPlaceholder")} className="flex-1" />
-            <Button className="bg-orange-700 hover:bg-orange-800">
-              <Search className="w-4 h-4" />
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center space-x-2">
+          <Search className="w-5 h-5" />
+          <span>{t("blog.search")}</span>
+        </h3>
+        <div className="flex space-x-2">
+          <Input placeholder={t("blog.searchPlaceholder")} className="flex-1" />
+          <Button className="bg-orange-700 hover:bg-orange-800">
+            <Search className="w-4 h-4" />
+          </Button>
+        </div>
+      </div>
 
       {/* Categories */}
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("blog.categories")}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-3">
-            {categories.map((category) => (
-              <div key={category.nameKey} className="flex items-center justify-between">
-                <span className="text-gray-700 hover:text-orange-700 cursor-pointer">{t(category.nameKey)}</span>
-                <span className="text-gray-500 text-sm">({category.count})</span>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("blog.categories")}</h3>
+        <div className="space-y-3">
+          {categories.map((category) => (
+            <div key={category.nameKey} className="flex items-center justify-between">
+              <span className="text-gray-700 hover:text-orange-700 cursor-pointer">{t(category.nameKey)}</span>
+              <span className="text-gray-500 text-sm">({category.count})</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Recent Posts */}
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("blog.recentPosts")}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {recentPosts.map((post) => (
-              <div key={post.id} className="border-b border-gray-100 pb-3 last:border-b-0">
-
-                <h4 className="text-sm font-medium text-gray-900 hover:text-orange-700 cursor-pointer mb-1">
-                  {t(post.titleKey)}
-                </h4>
-                <p className="text-xs text-gray-500" suppressHydrationWarning>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">{t("blog.recentPosts")}</h3>
+        <div className="space-y-4">
+          {recentPosts.map((post) => (
+            <div key={post.id} className="border-b border-gray-100 dark:border-gray-700 pb-3 last:border-b-0">
+              <h4 className="text-sm font-medium text-gray-900 hover:text-orange-700 cursor-pointer mb-1">
+                {t(post.titleKey)}
+              </h4>
+              <p className="text-xs text-gray-500" suppressHydrationWarning>{`${format(new Date(post.date), "MMMM d, yyyy")}`}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Tags */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <Tag className="w-5 h-5" />
-            <span>{t("blog.tags")}</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-orange-100 hover:text-orange-800 cursor-pointer transition-colors"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center space-x-2">
+          <Tag className="w-5 h-5" />
+          <span>{t("blog.tags")}</span>
+        </h3>
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-orange-100 hover:text-orange-800 cursor-pointer transition-colors"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
 
       {/* Newsletter */}
-      <Card className="bg-orange-50 border-orange-200">
-        <CardHeader>
-          <CardTitle className="text-orange-900">{t("blog.newsletter")}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-orange-800 text-sm mb-4">{t("blog.newsletterDesc")}</p>
-          <div className="space-y-3">
-            <Input placeholder={t("blog.emailPlaceholder")} className="border-orange-200 focus:border-orange-500" />
-            <Button className="w-full bg-orange-700 hover:bg-orange-800">{t("blog.subscribe")}</Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-6 border border-orange-200 dark:border-orange-800">
+        <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100 mb-4">{t("blog.newsletter")}</h3>
+        <p className="text-orange-800 dark:text-orange-300 text-sm mb-4">{t("blog.newsletterDesc")}</p>
+        <div className="space-y-3">
+          <Input placeholder={t("blog.emailPlaceholder")} className="border-orange-200 focus:border-orange-500" />
+          <Button className="w-full bg-orange-700 hover:bg-orange-800">{t("blog.subscribe")}</Button>
+        </div>
+      </div>
     </div>
   )
 }
