@@ -1,28 +1,26 @@
-"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Mail } from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
 
 export default function CallToAction() {
-  const { t } = useTranslation();
-
   return (
     <section className="py-20 bg-gray-700 dark:bg-gray-900">
       <div className="container mx-auto px-4 text-center dark:bg-gray-900 rounded-2xl">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t("callToAction.title")}
+            Ready to Import Premium Moroccan Produce?
           </h2>
           <p className="text-xl text-gray-300 mb-7">
-            {t("callToAction.description")}
+            Contact our export team for bulk quotations, shipping arrangements,
+            and partnership opportunities. We're here to support your
+            international sourcing needs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/contact">
               <Button className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-3 text-lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
-                {t("callToAction.requestBulkQuote")}
+                Request Bulk Quote
               </Button>
             </Link>
             <Link href="/contact">
@@ -31,7 +29,7 @@ export default function CallToAction() {
                 className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg bg-transparent"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                {t("callToAction.scheduleCall")}
+                Schedule Call
               </Button>
             </Link>
           </div>
@@ -43,10 +41,10 @@ export default function CallToAction() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {t("callToAction.quickResponseTitle")}
+                  Quick Response
                 </h3>
                 <p className="text-gray-300">
-                  {t("callToAction.quickResponseDescription")}
+                  Get quotes within 24 hours for all bulk inquiries.
                 </p>
               </div>
             </div>
@@ -57,10 +55,10 @@ export default function CallToAction() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {t("callToAction.directContactTitle")}
+                  Direct Contact
                 </h3>
                 <p className="text-gray-300">
-                  {t("callToAction.directContactDescription")}
+                  Speak directly with our export specialists.
                 </p>
               </div>
             </div>
@@ -71,10 +69,10 @@ export default function CallToAction() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {t("callToAction.customSolutionsTitle")}
+                  Custom Solutions
                 </h3>
                 <p className="text-gray-300">
-                  {t("callToAction.customSolutionsDescription")}
+                  Tailored packaging and logistics for your needs.
                 </p>
               </div>
             </div>

@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import {
   Facebook,
@@ -9,44 +8,38 @@ import {
   MapPin,
   Linkedin,
 } from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Footer() {
-  const { t } = useTranslation();
-
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="The3Vegetables Logo" className="w-20 h-20 object-contain" />
-            
-              <div>
-                <div className="text-xl font-bold">
-                  {(() => {
-                    const name = t("companyName");
-                    const parts = name.split("3");
-                    return (
-                      <>
-                        {parts[0]}
-                        <span className="text-green-600 dark:text-green-400">3</span>
-                        {parts[1]}
-                      </>
-                    );
-                  })()}
+              <Link href="/" className="flex items-center space-x-2">
+                <img
+                  src="/logo.png"
+                  alt="The3Vegetables Logo"
+                  className="w-20 h-20 object-contain"
+                />
+                <div>
+                  <div className="text-xl font-bold">
+                    The{" "}
+                    <span className="text-green-600 dark:text-green-400">
+                      3
+                    </span>{" "}
+                    Vegetables
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Agricultural Export
+                  </div>
                 </div>
-                
-                <div className="text-sm text-gray-400">
-                  {t("companyDescription")}
-                </div>
-              </div>
               </Link>
             </div>
-            <p className="text-gray-400 mb-4">{t("companyMission")}</p>
+            <p className="text-gray-400 mb-4">
+              Leading Moroccan agricultural export company supplying premium
+              fresh produce to international markets worldwide.
+            </p>
             <div className="flex space-x-4">
               <Facebook className="w-5 h-5 text-gray-400 hover:text-orange-500 cursor-pointer" />
               <Instagram className="w-5 h-5 text-gray-400 hover:text-orange-500 cursor-pointer" />
@@ -55,16 +48,15 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t("quickLinks")}</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/products"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("ourProducts")}
+                  Our Products
                 </Link>
               </li>
               <li>
@@ -72,7 +64,7 @@ export default function Footer() {
                   href="/about"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("ourFarm")}
+                  Our Farm
                 </Link>
               </li>
               <li>
@@ -80,7 +72,7 @@ export default function Footer() {
                   href="/blog"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("blogAndNews")}
+                  Blog & News
                 </Link>
               </li>
               <li>
@@ -88,24 +80,21 @@ export default function Footer() {
                   href="/contact"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("contactUs")}
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">
-              {t("exportProducts")}
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Export Products</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/products/moroccan-tomatoes"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("moroccanTomatoes")}
+                  Moroccan Tomatoes
                 </Link>
               </li>
               <li>
@@ -113,7 +102,7 @@ export default function Footer() {
                   href="/products/moroccan-carrots"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("organicCarrots")}
+                  Organic Carrots
                 </Link>
               </li>
               <li>
@@ -121,7 +110,7 @@ export default function Footer() {
                   href="/products/moroccan-peppers"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("bellPeppers")}
+                  Bell Peppers
                 </Link>
               </li>
               <li>
@@ -129,27 +118,26 @@ export default function Footer() {
                   href="/products/moroccan-onions"
                   className="text-gray-400 hover:text-orange-500"
                 >
-                  {t("redOnions")}
+                  Red Onions
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t("contactInfo")}</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-400">{t("location")}</span>
+                <span className="text-gray-400">Agadir, Morocco</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-400">{t("phoneNumber")}</span>
+                <span className="text-gray-400">+212 654 352 802</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-400">{t("email")}</span>
+                <span className="text-gray-400">info@the-3rocks.com</span>
               </div>
             </div>
           </div>
@@ -157,13 +145,13 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            {t("copyright")} |
+            © 2025 MoroccoFresh Agricultural Export. All rights reserved. |
             <Link href="/privacy" className="hover:text-orange-500 ml-1">
-              {t("privacyPolicy")}
+              Privacy Policy
             </Link>{" "}
             |
             <Link href="/terms" className="hover:text-orange-500 ml-1">
-              {t("termsOfService")}
+              Terms of Service
             </Link>
           </p>
         </div>

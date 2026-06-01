@@ -1,9 +1,7 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package } from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
 
 const products = [
   {
@@ -45,17 +43,16 @@ const products = [
 ];
 
 export default function ProductsPreview() {
-  const { t } = useTranslation();
-
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            {t("productsPreview.title")}
+            Our Export Products
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-            {t("productsPreview.description")}
+            Premium Moroccan produce available in bulk quantities for
+            international distribution.
           </p>
         </div>
 
@@ -76,7 +73,7 @@ export default function ProductsPreview() {
                 />
                 <div className="absolute top-4 left-4">
                   <div className="bg-orange-700 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {t("productsPreview.bulkExport")}
+                    Bulk Export
                   </div>
                 </div>
               </div>
@@ -93,19 +90,17 @@ export default function ProductsPreview() {
                   <div className="flex items-center space-x-2 text-sm">
                     <Package className="w-4 h-4 text-orange-600" />
                     <span className="text-gray-600 dark:text-gray-400">
-                      {t("productsPreview.capacity")}
-                      {product.capacity}
+                      Capacity: {product.capacity}
                     </span>
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {t("productsPreview.varieties")}
-                    {product.varieties}
+                    Varieties: {product.varieties}
                   </div>
                 </div>
 
                 <Link href={`/products/${product.slug}`}>
                   <Button className="w-full bg-orange-700 hover:bg-orange-800 text-white">
-                    {t("productsPreview.viewDetails")}
+                    View Details
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -120,7 +115,7 @@ export default function ProductsPreview() {
               variant="outline"
               className="border-orange-700 text-orange-700 hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-900/20 px-8 py-3 text-lg bg-transparent"
             >
-              {t("productsPreview.viewAllProducts")}
+              View All Products
             </Button>
           </Link>
         </div>

@@ -1,20 +1,9 @@
-"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Handshake,
-  Users,
-  Globe,
-  Award,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
+import { Handshake, Users, Globe, Award } from "lucide-react";
 
 export default function PartnershipSection() {
-  const { t } = useTranslation();
-
   const partnershipBenefits = [
     {
       icon: Handshake,
@@ -83,17 +72,18 @@ export default function PartnershipSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            {t("partnership.title")}
+            Partnership Opportunities
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto">
-            {t("partnership.subtitle")}
+            We work with importers, distributors, and retailers to deliver
+            premium Moroccan produce worldwide.
           </p>
         </div>
 
         {/* Partnership Benefits */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
-            {t("partnership.whyPartner")}
+            Why Partner With Us
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {partnershipBenefits.map((benefit, index) => {
@@ -123,7 +113,7 @@ export default function PartnershipSection() {
         {/* Partner Types */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
-            {t("partnership.opportunities")}
+            Partnership Types
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {partnerTypes.map((type, index) => (
@@ -165,7 +155,7 @@ export default function PartnershipSection() {
         {/* Success Stories */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
-            {t("partnership.successStories")}
+            Success Stories
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 border-orange-200 dark:border-orange-800">
@@ -217,25 +207,26 @@ export default function PartnershipSection() {
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-12">
           <h3 className="text-3xl font-bold text-white mb-4">
-            {t("partnership.readyPartner")}
+            Ready to Partner With Us?
           </h3>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            {t("partnership.joinNetwork")}
+          <p className="text-orange-100 max-w-2xl mx-auto mb-8">
+            Contact our export team and start a reliable supply partnership for
+            premium Moroccan fruits and vegetables.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact">
-              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                {t("partnership.becomePartner")}
+              <Button className="bg-white text-orange-600 hover:bg-orange-50">
+                Get Started
               </Button>
             </Link>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg bg-transparent"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              {t("partnership.scheduleMeeting")}
-            </Button>
+            <Link href="/about">
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

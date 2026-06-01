@@ -1,16 +1,11 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, Shield, Globe, Award } from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Hero() {
-  const { t } = useTranslation();
-
   return (
     <section className="relative py-20 bg-gradient-to-br from-orange-50 to-green-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -19,20 +14,20 @@ export default function Hero() {
               <div className="inline-flex items-center space-x-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full">
                 <Award className="w-5 h-5 text-orange-700 dark:text-orange-500" />
                 <span className="text-orange-900 dark:text-orange-200 font-medium">
-                  {t("hero.badge")}
+                  Premium Moroccan Produce
                 </span>
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-                {t("hero.title")}
-                <span className="text-orange-500 block">
-                  {t("hero.titleHighlight")}
-                </span>
-                {t("hero.titleEnd")}
+                Bulk Export of
+                <span className="text-orange-500 block">Fresh Moroccan</span>
+                Vegetables & Fruits
               </h1>
 
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                {t("hero.description")}
+                Direct from our family farms to international markets. Supplying
+                wholesalers, distributors, and importers worldwide with premium
+                quality produce in container loads.
               </p>
             </div>
 
@@ -44,10 +39,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-gray-100">
-                    {t("hero.feature1Label")}
+                    Container Loads
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {t("hero.feature1Description")}
+                    20-40ft containers
                   </div>
                 </div>
               </div>
@@ -58,10 +53,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-gray-100">
-                    {t("hero.feature2Label")}
+                    Global Shipping
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {t("hero.feature2Description")}
+                    Any port worldwide
                   </div>
                 </div>
               </div>
@@ -72,10 +67,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-gray-100">
-                    {t("hero.feature3Label")}
+                    Quality Certified
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {t("hero.feature3Description")}
+                    GlobalGAP & ISO
                   </div>
                 </div>
               </div>
@@ -86,10 +81,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-gray-100">
-                    {t("hero.feature4Label")}
+                    15+ Years
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {t("hero.feature4Description")}
+                    Export experience
                   </div>
                 </div>
               </div>
@@ -103,7 +98,7 @@ export default function Hero() {
                 className="bg-orange-700 hover:bg-orange-800 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 <Link href="/contact">
-                  {t("hero.requestQuote")}
+                  Request Quote
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -113,9 +108,7 @@ export default function Hero() {
                 variant="outline"
                 className="border-orange-700 text-orange-700 hover:bg-orange-50 dark:hover:bg-orange-900/20 px-8 py-6 text-lg rounded-full transition-all duration-300"
               >
-                <Link href="/products">
-                  {t("hero.viewProducts")}
-                </Link>
+                <Link href="/products">View Products</Link>
               </Button>
             </div>
           </div>
@@ -138,19 +131,19 @@ export default function Hero() {
             {/* Floating Stats */}
             <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-orange-100 dark:border-orange-800">
               <div className="text-2xl font-bold text-orange-600 dark:text-orange-500">
-                {t("hero.stats1Value")}
+                500+
               </div>
               <div className="text-sm text-gray-700 dark:text-gray-300">
-                {t("hero.stats1Label")}
+                Tons/Month
               </div>
             </div>
 
             <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-orange-100 dark:border-orange-800">
               <div className="text-2xl font-bold text-orange-600 dark:text-orange-500">
-                {t("hero.stats2Value")}
+                18+
               </div>
               <div className="text-sm text-gray-700 dark:text-gray-300">
-                {t("hero.stats2Label")}
+                Countries
               </div>
             </div>
           </div>

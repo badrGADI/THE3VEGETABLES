@@ -1,46 +1,46 @@
-"use client";
 import { Leaf, Award, Globe, Users } from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
+
+const features = [
+  {
+    icon: Leaf,
+    title: "Farm Fresh Quality",
+    description:
+      "Direct from our certified organic farms in Morocco's fertile regions",
+    iconColor: "text-green-600 dark:text-green-400",
+  },
+  {
+    icon: Award,
+    title: "International Standards",
+    description:
+      "GlobalGAP, ISO 22000, and organic certifications for global markets",
+    iconColor: "text-orange-600 dark:text-orange-400",
+  },
+  {
+    icon: Globe,
+    title: "Worldwide Export",
+    description:
+      "Reliable shipping to any port with temperature-controlled logistics",
+    iconColor: "text-blue-600 dark:text-blue-400",
+  },
+  {
+    icon: Users,
+    title: "Trusted Partner",
+    description: "15+ years serving international importers and distributors",
+    iconColor: "text-purple-600 dark:text-purple-400",
+  },
+];
 
 export default function WhyChooseUs() {
-  const { t } = useTranslation();
-
-  const features = [
-    {
-      icon: Leaf,
-      titleKey: "whyChoose.farmFresh",
-      descKey: "whyChoose.farmFreshDesc",
-      iconColor: "text-green-600 dark:text-green-400",
-    },
-    {
-      icon: Award,
-      titleKey: "whyChoose.international",
-      descKey: "whyChoose.internationalDesc",
-      iconColor: "text-orange-600 dark:text-orange-400",
-    },
-    {
-      icon: Globe,
-      titleKey: "whyChoose.worldwide",
-      descKey: "whyChoose.worldwideDesc",
-      iconColor: "text-blue-600 dark:text-blue-400",
-    },
-    {
-      icon: Users,
-      titleKey: "whyChoose.trusted",
-      descKey: "whyChoose.trustedDesc",
-      iconColor: "text-purple-600 dark:text-purple-400",
-    },
-  ];
-
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            {t("whyChoose.title")}
+            Why Choose The 3 Vegetables?
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-            {t("whyChoose.subtitle")}
+            Your trusted partner for bulk agricultural exports from Morocco to
+            international markets.
           </p>
         </div>
 
@@ -58,10 +58,10 @@ export default function WhyChooseUs() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-                  {t(feature.titleKey)}
+                  {feature.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  {t(feature.descKey)}
+                  {feature.description}
                 </p>
               </div>
             );
