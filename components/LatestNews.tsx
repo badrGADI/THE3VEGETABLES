@@ -64,9 +64,6 @@ export default function LatestNews() {
                   {t(post.excerptKey)}
                 </p>
                 
-                <Link href={`/blog/${post.id}`} className="inline-flex items-center text-orange-700 font-medium hover:text-orange-800 mt-auto">
-                  {t("blog.readMore")} <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
               </div>
             </div>
           ))}

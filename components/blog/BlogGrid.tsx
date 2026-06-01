@@ -84,19 +84,11 @@ export default function BlogGrid({ posts, currentPage, totalPages, totalPosts }:
                     {t(post.excerptKey)}
                   </p>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <User className="w-4 h-4 text-gray-400" />
-                      <span className="text-sm text-gray-600">
-                        {post.author}
-                      </span>
-                    </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="text-orange-500 hover:text-orange-600 font-medium text-sm"
-                    >
-                      {t("blog.readMore")}
-                    </Link>
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4 text-gray-400" />
+                    <span className="text-sm text-gray-600">
+                      {post.author}
+                    </span>
                   </div>
                 </div>
               </div>
