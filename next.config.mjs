@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
+  compress: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -8,15 +8,15 @@ const nextConfig = {
     // unoptimized: true, // optimization enabled for performance
     localPatterns: [
       {
-        pathname: '/**',
-        search: '',
+        pathname: "/**",
+        search: "",
       },
       {
-        pathname: '/**',
-        search: '?**',
+        pathname: "/**",
+        search: "?**",
       },
     ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
