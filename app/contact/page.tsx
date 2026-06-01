@@ -84,6 +84,17 @@ export default function ContactPage() {
             </div>
             <QuoteForm />
           </div>
+          <div className="mt-16 space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              MoroccoFresh is one of Morocco leading agricultural exporters with a presence in over 25 countries across Europe, the Middle East, Africa, and North America. Our cold storage facilities in Agadir and Casablanca maintain strict temperature controls throughout the supply chain, ensuring that your shipments arrive in optimal condition. All our products are traceable from farm to port with batch-level tracking and digital documentation.
+            </p>
+            <p>
+              We are certified under GlobalG.A.P., BRC, Organic (EU/USDA equivalent), and Fair Trade standards. Each shipment includes a Certificate of Origin, Phytosanitary Certificate, and Laboratory Analysis Report upon request. Our quality assurance team conducts visual inspection, size grading, sugar content testing, and shelf-life validation before every shipment. Non-conforming lots are rejected before they enter the export packhouse.
+            </p>
+            <p>
+              For terms of trade, we support FOB (Casablanca, Agadir, Tangier Med), CNF, CIF, and DAP delivery terms with flexible payment options including TT, LC at sight, and DP terms for established buyers. Minimum order quantities start at 500 kg for mixed pallets and 20 ft containers for single-product shipments. Seasonal contracts with fixed pricing and volume commitments receive priority allocation during peak demand periods.
+            </p>
+          </div>
         </div>
       </section>
     </div>

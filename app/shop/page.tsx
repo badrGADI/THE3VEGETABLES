@@ -32,6 +32,19 @@ export default function ShopPage() {
           </main>
         </div>
       </div>
+      <section className="bg-white dark:bg-gray-800 py-16 border-t">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Farm Direct Guarantee</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Every product on our online shop is sourced directly from our own farms or from trusted partner growers in our cooperative network. We do not use third-party wholesalers or middlemen, which means you get the freshest possible produce at the most competitive prices. Our integrated supply chain gives us full control over every stage — from seed selection and cultivation to harvesting, packing, and shipping.
+            </p>
+            <p>
+              For wholesale buyers and bulk importers, we recommend visiting our B2B products page where you will find detailed product specifications, container load pricing, and export documentation requirements. Our shop offers an easy way to sample individual products, place smaller trial orders, or purchase seasonal produce in retail-friendly quantities before committing to larger volume contracts.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

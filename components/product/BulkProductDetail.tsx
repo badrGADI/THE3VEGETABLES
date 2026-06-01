@@ -2,14 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   MessageCircle,
   Package,
   Calendar,
-  MapPin,
-  Thermometer,
   Award,
   Shield,
   Truck,
@@ -17,7 +14,6 @@ import {
   CheckCircle,
   Star,
   Users,
-  Container,
   Clock,
 } from "lucide-react";
 
@@ -159,68 +155,42 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
             Product Specifications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Varieties & Origin</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                    Available Varieties:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {product.varieties.map((variety, index) => (
-                      <Badge key={index} variant="secondary">
-                        {variety}
-                      </Badge>
-                    ))}
-                  </div>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 space-y-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Varieties & Origin</h3>
+              <div>
+                <div className="text-sm font-medium text-gray-500 mb-2">Available Varieties:</div>
+                <div className="flex flex-wrap gap-2">
+                  {product.varieties.map((variety, index) => (
+                    <Badge key={index} variant="secondary">
+                      {variety}
+                    </Badge>
+                  ))}
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center space-x-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>Origin:</span>
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {product.origin}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+              <div>
+                <div className="text-sm font-medium text-gray-500 mb-1">Origin:</div>
+                <p className="text-gray-700 dark:text-gray-300">{product.origin}</p>
+              </div>
+            </div>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Packaging & Storage</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center space-x-2">
-                    <Package className="w-4 h-4" />
-                    <span>Packaging Options:</span>
-                  </h4>
-                  <ul className="space-y-1">
-                    {product.packaging.map((option, index) => (
-                      <li
-                        key={index}
-                        className="text-gray-600 dark:text-gray-400 flex items-center space-x-2"
-                      >
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span>{option}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center space-x-2">
-                    <Thermometer className="w-4 h-4" />
-                    <span>Storage Conditions:</span>
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {product.storage}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 space-y-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Packaging & Storage</h3>
+              <div>
+                <div className="text-sm font-medium text-gray-500 mb-2">Packaging Options:</div>
+                <ul className="space-y-1">
+                  {product.packaging.map((option, index) => (
+                    <li key={index} className="text-gray-700 dark:text-gray-300 flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <span>{option}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div className="text-sm font-medium text-gray-500 mb-1">Storage Conditions:</div>
+                <p className="text-gray-700 dark:text-gray-300">{product.storage}</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -229,70 +199,39 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
             Quality & Certification
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Award className="w-6 h-6 text-orange-500" />
-                  <span>International Certifications</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-3">
-                  {product.certifications.map((cert, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <Shield className="w-5 h-5 text-green-500" />
-                      <span className="text-gray-900 dark:text-gray-100 text-sm">
-                        {cert}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <CheckCircle className="w-6 h-6 text-orange-500" />
-                  <span>Quality Control Process</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {product.qualityProcess.map((step, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-orange-600 text-sm font-bold">
-                          {index + 1}
-                        </span>
-                      </div>
-                      <span className="text-gray-900 dark:text-gray-100 text-sm">
-                        {step}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="mt-6 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800">
-            <CardContent className="p-6">
-              <div className="flex items-center space-x-3">
-                <Award className="w-8 h-8 text-orange-500" />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                    Samples Available
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Free samples available for qualified bulk buyers. Contact us
-                    for sample requests.
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">International Certifications</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {product.certifications.map((cert, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <Shield className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700 dark:text-gray-300 text-sm">{cert}</span>
+                  </div>
+                ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Quality Control Process</h3>
+              <div className="space-y-3">
+                {product.qualityProcess.map((step, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-orange-600 text-sm font-bold">{index + 1}</span>
+                    </div>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm">{step}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-6 border border-orange-200 dark:border-orange-800 flex items-center space-x-3">
+            <Award className="w-8 h-8 text-orange-500 flex-shrink-0" />
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Samples Available</h3>
+              <p className="text-gray-600 dark:text-gray-400">Free samples available for qualified bulk buyers. Contact us for sample requests.</p>
+            </div>
+          </div>
         </section>
 
         {/* Trust & Export Guarantee */}
@@ -301,47 +240,23 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
             Trust & Export Guarantee
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <Clock className="w-12 h-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Export Experience
-                </h3>
-                <div className="text-2xl font-bold text-orange-600 mb-2">
-                  {product.exportExperience}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Serving international markets
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <Globe className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Global Delivery
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-2">
-                  {product.deliveryPorts}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-500">
-                  Temperature-controlled shipping
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <Truck className="w-12 h-12 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Logistics Support
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {product.logisticsSupport}
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 text-center">
+              <Clock className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Export Experience</h3>
+              <div className="text-2xl font-bold text-orange-600 mb-2">{product.exportExperience}</div>
+              <p className="text-gray-600 dark:text-gray-400">Serving international markets</p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 text-center">
+              <Globe className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Global Delivery</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">{product.deliveryPorts}</p>
+              <p className="text-sm text-gray-500">Temperature-controlled shipping</p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 text-center">
+              <Truck className="w-12 h-12 text-green-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Logistics Support</h3>
+              <p className="text-gray-600 dark:text-gray-400">{product.logisticsSupport}</p>
+            </div>
           </div>
 
           {/* Testimonials */}
@@ -351,41 +266,25 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
             </h3>
             <div className="space-y-6">
               {product.testimonials.map((testimonial, index) => (
-                <Card
-                  key={index}
-                  className="border-orange-100 dark:border-orange-800"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
-                          <Users className="w-6 h-6 text-orange-500" />
-                        </div>
+                <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-orange-100 dark:border-orange-800">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-orange-500" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-1 mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        ))}
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-1 mb-2">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-4 h-4 text-yellow-400 fill-current"
-                            />
-                          ))}
-                        </div>
-                        <p className="text-gray-600 dark:text-gray-300 mb-3 italic">
-                          "{testimonial.text}"
-                        </p>
-                        <div>
-                          <div className="font-semibold text-gray-900 dark:text-gray-100">
-                            {testimonial.company}
-                          </div>
-                          <div className="text-sm text-orange-500">
-                            {testimonial.location}
-                          </div>
-                        </div>
+                      <p className="text-gray-600 dark:text-gray-300 mb-3 italic">&ldquo;{testimonial.text}&rdquo;</p>
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-gray-100">{testimonial.company}</div>
+                        <div className="text-sm text-orange-500">{testimonial.location}</div>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

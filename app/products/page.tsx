@@ -26,6 +26,22 @@ export default function ProductsPage() {
       <ProductCategories />
       <QualityTransparency />
       <PartnershipSection />
+      <section className="bg-gray-50 dark:bg-gray-900 py-16">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Export Capabilities</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Our farming operations span 500 hectares across Morocco most productive agricultural regions. In the Souss Valley, our climate-controlled greenhouses produce tomatoes, bell peppers, and cucumbers from November to April, filling the winter supply gap in European markets. The fertile plains of Doukkala and Gharb supply our root vegetables including carrots, onions, and potatoes, while the Atlantic coastal region around Agadir produces our citrus fruits.
+            </p>
+            <p>
+              Each product category follows dedicated quality protocols tailored to the commodity type and destination market requirements. Our tomatoes are graded by size and Brix value for European retailers, our citrus undergoes color sorting and juice content testing, and our root vegetables are washed, sized, and packed according to buyer specifications. We offer both conventional and certified organic production lines.
+            </p>
+            <p>
+              Logistically, we consolidate shipments at our packhouse facilities and deliver to port within 24 hours of harvest. Cold chain integrity is maintained through pre-cooling chambers, refrigerated trucks, and reefer containers set to product-specific temperature ranges. We provide weekly supply programs and spot availability throughout each product season.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
