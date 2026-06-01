@@ -119,9 +119,15 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
       <div className="container mx-auto px-4 py-16">
         {/* Product Summary */}
         <section className="mb-16 max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 space-y-6">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Our {product.name.toLowerCase()} are sourced from {product.origin}, where optimal growing conditions and generations of farming expertise ensure exceptional quality. We offer {product.varieties.join(", ")} varieties, harvested during the {product.harvestSeason.toLowerCase()} season to capture peak flavor and nutritional value. With an annual production capacity of {product.annualProduction.toLowerCase()} and {product.currentAvailability.toLowerCase()}, we maintain consistent supply for our international partners. Each shipment is packed in {product.packaging.join(", ")} and stored under controlled conditions ({product.storage}) to preserve freshness from farm to destination. All products carry {product.certifications.join(", ")}, reflecting our commitment to the highest food safety and quality standards.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              Our quality control process for this product involves {product.qualityProcess.join(", ")}. These rigorous procedures ensure that every shipment meets the specific requirements of our international buyers, whether supplying retail chains in Europe, wholesale markets in the Middle East, or food processing facilities in Africa. Each batch is traceable through our farm-to-port digital tracking system, providing full transparency from field to final delivery.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              We export {product.name.toLowerCase()} from our facilities in Agadir and Casablanca, shipping through the ports of Agadir, Casablanca, and Tangier Med to reach markets across Europe, the Middle East, Africa, and the Americas. Our {product.exportExperience} of export experience means we understand the documentation, phytosanitary requirements, and cold chain logistics needed for each destination. With {product.deliveryPorts.toLowerCase()} delivery capability and {product.logisticsSupport.toLowerCase()}, we make international procurement straightforward and reliable for our partners.
             </p>
           </div>
         </section>

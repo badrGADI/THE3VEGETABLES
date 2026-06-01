@@ -42,6 +42,15 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+      <section className="bg-white dark:bg-gray-800 py-16 border-t">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Sourcing & Quality Standards</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>All products listed in our bulk export catalog are sourced either from our own 500-hectare farms or from trusted partner growers who meet our strict quality and sustainability criteria. Our internal sourcing team works directly with growers throughout Morocco major growing regions, including the Souss Valley, Doukkala, Gharb, and the Agadir coastal belt. We conduct regular audits of each partner farm to verify compliance with GlobalGAP, organic, and other certification standards before their produce enters our supply chain.</p>
+            <p>Each product page provides detailed technical specifications including available varieties, packaging options, optimal storage conditions, and current stock availability. For export pricing, minimum order quantities, and delivery terms, please contact our sales team who will provide a tailored quotation based on your destination, volume requirements, and preferred delivery timeline. We work with FOB, CNF, CIF, and DAP terms and can arrange door-to-door logistics for most international destinations.</p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

@@ -45,6 +45,15 @@ export default function ShopPage() {
           </div>
         </div>
       </section>
+      <section className="bg-gray-50 dark:bg-gray-900 py-16">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Seasonal Availability & Shipping Information</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>Our product availability follows the natural growing seasons of Morocco Mediterranean climate. From March through November, we offer the widest selection including tomatoes, peppers, cucumbers, melons, watermelons, and table grapes. During the winter months of November through April, our greenhouse production ensures continued supply of tomatoes, peppers, and cucumbers, supplemented by citrus fruits including oranges and lemons which reach peak season from December through May. Root vegetables such as carrots, onions, and potatoes are available year-round with peak harvests in spring and autumn.</p>
+            <p>All orders placed through our shop are packed and dispatched within 24-48 hours of ordering for domestic deliveries and within 72 hours of order confirmation for international shipments. We use temperature-controlled packaging for perishable items with ice packs and insulated liners for warm-weather destinations. Express shipping options are available for urgent orders with delivery within 2-4 business days to most European destinations and 5-7 business days to Middle Eastern, African, and North American markets.</p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

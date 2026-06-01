@@ -70,6 +70,22 @@ export default async function BlogPage(props: {
           </aside>
         </div>
       </div>
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 border-t">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">About Our Farm Blog</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Our farm blog is written by the team behind The 3 Vegetables, a third-generation family farming business based in the Souss Valley region of Morocco. We publish regular updates covering our seasonal harvest cycles, agricultural innovations we are implementing on our 500-hectare farm, sustainable farming practices including drip irrigation and integrated pest management, and insights into the international produce export market from a Moroccan perspective.
+            </p>
+            <p>
+              Readers include wholesale produce buyers looking for supply intelligence, food industry professionals tracking seasonal availability, agriculture students and researchers, and consumers interested in understanding where their food comes from. Each article is researched and written by our team members who work directly in our fields, packhouses, and export offices, providing authentic first-hand perspectives on modern Moroccan agriculture.
+            </p>
+            <p>
+              Topics we regularly cover include monthly harvest outlook reports that forecast availability and pricing for key export crops, detailed profiles of specific products from seed variety selection through to harvest and export, sustainability initiatives such as our solar-powered irrigation systems and organic conversion programs, nutritional information about our produce with recipe ideas, and profiles of the international markets we serve. We also publish buyer guides covering quality grading standards, packaging options, and import documentation requirements for different destination countries.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
