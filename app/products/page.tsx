@@ -1,8 +1,10 @@
+import Link from "next/link"
 import type { Metadata } from "next"
 import ProductsHeader from "@/components/products/ProductsHeader"
 import ProductCategories from "@/components/products/ProductCategories"
 import QualityTransparency from "@/components/products/QualityTransparency"
 import PartnershipSection from "@/components/products/PartnershipSection"
+import { allProducts } from "@/lib/products"
 
 export const metadata: Metadata = {
   title: "Bulk Export Products | Moroccan Vegetables & Fruits | MoroccoFresh",
@@ -48,6 +50,18 @@ export default function ProductsPage() {
           <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             <p>All products listed in our bulk export catalog are sourced either from our own 500-hectare farms or from trusted partner growers who meet our strict quality and sustainability criteria. Our internal sourcing team works directly with growers throughout Morocco major growing regions, including the Souss Valley, Doukkala, Gharb, and the Agadir coastal belt. We conduct regular audits of each partner farm to verify compliance with GlobalGAP, organic, and other certification standards before their produce enters our supply chain.</p>
             <p>Each product page provides detailed technical specifications including available varieties, packaging options, optimal storage conditions, and current stock availability. For export pricing, minimum order quantities, and delivery terms, please contact our sales team who will provide a tailored quotation based on your destination, volume requirements, and preferred delivery timeline. We work with FOB, CNF, CIF, and DAP terms and can arrange door-to-door logistics for most international destinations.</p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 border-t">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Browse Our Complete Product Catalog</h2>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-lg">
+            {allProducts.map((p) => (
+              <Link key={p.id} href={`/products/${p.slug}`} className="text-orange-600 hover:text-orange-700 underline underline-offset-2">
+                {p.name.replace("Fresh Moroccan ", "").replace("Moroccan ", "").replace("Organic Moroccan ", "").replace("Fresh ", "")}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
