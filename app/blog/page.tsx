@@ -95,6 +95,16 @@ export default async function BlogPage(props: {
           </div>
         </div>
       </section>
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 border-t">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">About Our Farm Blog</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>Welcome to The 3 Vegetables farm blog, your source for authentic insights into Moroccan agriculture, export markets, sustainable farming practices, and the people behind the produce. Our articles are written by our farm managers, agronomists, export team members, and guest contributors from the Moroccan agricultural sector. We cover a wide range of topics including seasonal harvest updates, weather impacts on crop production, innovations in irrigation and soil management, changes in international trade regulations, and profiles of the fruit and vegetable varieties we grow.</p>
+            <p>Our goal is to provide transparency into how we grow, pack, and ship our products so that buyers, distributors, and consumers can make informed decisions. We share data on production volumes, quality metrics, and market trends that we believe are valuable for anyone involved in the fresh produce trade. Whether you are an importer looking for supply intelligence, a buyer researching Moroccan product quality, or a consumer curious about where your food comes from, our blog offers practical, first-hand information you will not find in trade publications.</p>
+            <p>We publish new articles every two weeks, with special editions covering major industry events, trade show participation, and seasonal crop forecasts. Follow our blog to stay updated on the latest developments in Moroccan horticulture, export logistics, and sustainable food production. We welcome reader questions and suggestions for future article topics. If there is a specific aspect of Moroccan farming or export that you would like to learn more about, please reach out to us through the contact page.</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

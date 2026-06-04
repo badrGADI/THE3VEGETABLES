@@ -45,6 +45,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-white dark:bg-gray-800 border-t">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Sustainability & Certifications</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Sustainability is at the core of our farming philosophy. We have implemented integrated pest management across all our greenhouse operations, reducing chemical pesticide use by 40% compared to conventional methods. Our drip irrigation systems deliver water directly to plant roots with 90% efficiency, and we have invested in solar-powered water pumps that reduce our carbon footprint while ensuring reliable irrigation even during peak summer months. Water conservation is particularly critical in Morocco semi-arid climate, and we continuously monitor soil moisture levels to optimize irrigation scheduling.
+            </p>
+            <p>
+              Our certifications reflect our commitment to quality and food safety. We are GlobalGAP certified for all export products, ensuring compliance with European retail standards for good agricultural practices. Our packhouses operate under ISO 22000 food safety management systems, and we hold organic certification for our carrot and select vegetable production lines. The BRC certification for our main processing facility guarantees that our packing and storage operations meet the highest international standards for food safety, quality, and operational management.
+            </p>
+            <p>
+              We work closely with smallholder farmers in the Doukkala region through our partnership program, providing technical training, quality seeds, and guaranteed purchase agreements. This program supports over 200 farming families and helps maintain consistent supply during peak demand periods. By combining our own farm production with partner grower output, we can offer year-round availability across our full product range while supporting rural agricultural communities and preserving traditional farming knowledge.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

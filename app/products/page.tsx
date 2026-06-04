@@ -66,6 +66,16 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+      <section className="bg-white dark:bg-gray-800 py-16 border-t">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Quality Certifications & Export Standards</h2>
+          <div className="space-y-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>Every product we export undergoes rigorous quality assurance testing before it leaves our packhouses. Our quality control process begins at the field level, where our agricultural engineers monitor crop development, pest pressure, irrigation scheduling, and harvest timing. Produce is hand-picked at the optimal maturity stage and transported to our packhouses within two hours of harvest. Upon arrival, each batch is inspected for size, color, firmness, sugar content, and visual defects before being accepted into the processing line.</p>
+            <p>Our packhouses in Agadir, Casablanca, and Tangier Med are equipped with modern sorting and grading lines that can handle different product types and pack sizes. For tomatoes and peppers, we use electronic color sorters that ensure uniform ripeness across every box. Carrots and root vegetables pass through automated sizing graders that separate product by diameter and length according to buyer specifications. All products are packed in food-grade materials that comply with European Union food contact regulations, and each package is labeled with product details, batch number, pack date, and country of origin.</p>
+            <p>We maintain cold chain integrity from packhouse to port through a network of refrigerated storage facilities and temperature-controlled trucks. Pre-cooling chambers rapidly reduce field heat, extending shelf life by up to 7 days compared to non-pre-cooled product. Our quality team conducts random inspections during loading to verify temperature compliance and packaging integrity. Each shipment is accompanied by a Certificate of Origin issued by the Moroccan Chamber of Commerce, a Phytosanitary Certificate from ONSSA, and a packing list with detailed weight and product specifications. Laboratory analysis reports for pesticide residue testing are available upon request for all shipments.</p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

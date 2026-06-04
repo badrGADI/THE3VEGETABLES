@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -186,6 +186,24 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
         </div>
 
+        {/* About This Product */}
+        <div className="bg-white dark:bg-gray-800 rounded-lg border p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            About {product.name}
+          </h2>
+          <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p>
+              Our {product.name.toLowerCase()} are sourced directly from the fertile growing regions of {product.origin}, where optimal climate conditions and rich soil produce exceptional quality produce. Grown using sustainable agricultural practices, each {product.category.toLowerCase()} is carefully cultivated to meet the highest standards of flavor, nutrition, and freshness.
+            </p>
+            <p>
+              We offer premium {product.variety.toLowerCase()} varieties that are hand-selected at peak ripeness. Our experienced farming team monitors the entire growing cycle, from seedling to harvest, ensuring consistent quality throughout the season. The {product.seasonalAvailability} growing period allows us to supply fresh {product.name.toLowerCase()} during the natural harvest window.
+            </p>
+            <p>
+              Our {product.storage} storage conditions ensure that every shipment arrives in optimal condition. Each batch undergoes rigorous quality control checks before packing. With our streamlined supply chain, we deliver directly from our farms to your destination, guaranteeing farm-to-table freshness. We invite you to experience the superior taste and quality of Moroccan {product.name.toLowerCase()} today.
+            </p>
+          </div>
+        </div>
+
         {/* Detailed Information Tabs */}
         <Tabs defaultValue="availability" className="space-y-8">
           <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5">
@@ -199,67 +217,67 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           {/* Availability Section */}
           <TabsContent value="availability">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Package className="w-5 h-5 text-orange-500" />
                     <span>Current Stock</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="text-2xl font-bold text-green-600 mb-2">
                     {product.availableQuantity}
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Available for immediate shipping
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-orange-500" />
                     <span>Annual Production</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="text-2xl font-bold text-blue-600 mb-2">
                     {product.yearlyProduction}
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Total yearly harvest capacity
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-orange-500" />
                     <span>Season</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                     {product.seasonalAvailability}
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Best quality period
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
           {/* Details Section */}
           <TabsContent value="details">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Product Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3>Product Information</h3>
+                
+                <div className="space-y-4">
                   <div>
                     <div className="font-semibold text-gray-900 dark:text-gray-100">
                       Variety
@@ -277,14 +295,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       {product.origin}
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Packaging & Storage</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3>Packaging & Storage</h3>
+                
+                <div className="space-y-4">
                   <div>
                     <div className="font-semibold text-gray-900 dark:text-gray-100 flex items-center space-x-2">
                       <Package className="w-4 h-4" />
@@ -303,22 +321,22 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       {product.storage}
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
           {/* Quality Section */}
           <TabsContent value="quality">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Award className="w-5 h-5 text-orange-500" />
                     <span>Certifications</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="grid grid-cols-1 gap-3">
                     {product.certifications.map((cert, index) => (
                       <div key={index} className="flex items-center space-x-2">
@@ -329,17 +347,17 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Shield className="w-5 h-5 text-orange-500" />
                     <span>Quality Control</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="space-y-3">
                     {product.qualitySteps.map((step, index) => (
                       <div key={index} className="flex items-start space-x-2">
@@ -354,36 +372,36 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
 
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle>Sample Availability</CardTitle>
-              </CardHeader>
-              <CardContent>
+            <div className="mt-6 bg-white dark:bg-gray-800 rounded-lg border p-6">
+              
+                <h3>Sample Availability</h3>
+              
+              <div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   We offer free samples for bulk orders (minimum 1 ton). Samples
                   include quality certificates and detailed product
                   specifications.
                 </p>
                 <Button variant="outline">Request Sample</Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </TabsContent>
 
           {/* Trust Section */}
           <TabsContent value="trust">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Truck className="w-5 h-5 text-orange-500" />
                     <span>Export Experience</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span>Years in Export</span>
@@ -398,17 +416,17 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       <span className="font-bold">200+ Containers</span>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                
+                  <h3 className="flex items-center space-x-2">
                     <Shield className="w-5 h-5 text-orange-500" />
                     <span>Guarantees</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </h3>
+                
+                <div>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="w-5 h-5 text-green-500" />
@@ -427,8 +445,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       <span>24/7 customer support</span>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
@@ -436,8 +454,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           <TabsContent value="reviews">
             <div className="space-y-6">
               {product.testimonials.map((testimonial, index) => (
-                <Card key={index}>
-                  <CardContent className="p-6">
+                <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border p-6">
+                  <div className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
                         <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
@@ -466,8 +484,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                         </div>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               ))}
             </div>
           </TabsContent>
