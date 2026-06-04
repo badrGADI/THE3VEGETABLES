@@ -1,9 +1,8 @@
-
 import BlogPostClient from "@/components/blog/BlogPostClient";
-import { Suspense } from "react";
 import { Metadata } from "next";
 import { blogPosts } from "@/lib/blogData";
 import { getTranslation } from "@/lib/translations";
+import { notFound } from "next/navigation";
 
 interface BlogPostPageProps {
   params: Promise<{ id: string }>;
@@ -68,8 +67,6 @@ export async function generateMetadata({
 }
 
 
-import { notFound } from "next/navigation";
-
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { id } = await params;
   const post = blogPosts.find((p) => p.id === Number(id));
@@ -85,11 +82,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
 
   return (
-
-    <Suspense fallback={<div>Loading post...</div>}>
-      <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />
-    </Suspense>
+    <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />
   );
 }
-
-
