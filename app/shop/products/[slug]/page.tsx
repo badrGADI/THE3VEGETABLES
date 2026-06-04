@@ -73,9 +73,11 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     }
   }
 
+  const shopDescription = `Buy premium ${(product.varieties || [product.name]).join(", ").toLowerCase()} directly from Morocco. Freshly harvested, carefully packed, and shipped to your doorstep. Farm-fresh quality guaranteed.`;
+
   return {
     title: `${product.name} | Fresh Organic Produce from Morocco`,
-    description: product.description,
+    description: shopDescription,
     keywords: `${product.name.toLowerCase()}, ${(product.varieties || []).join(", ").toLowerCase()}, moroccan produce, fresh ${product.name.toLowerCase()}`,
   }
 }
