@@ -170,6 +170,12 @@ export default function BulkProductDetail({ product }: BulkProductDetailProps) {
               credit issued for any shipment that does not meet the agreed
               specifications upon arrival at the destination port.
             </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              Our {product.name.toLowerCase()} are grown in the fertile soils of Morocco, where the Mediterranean climate with over 300 days of sunshine per year provides ideal growing conditions. The combination of modern irrigation systems, experienced farming teams, and strict adherence to GlobalGAP and organic certification standards ensures that every shipment meets the highest international quality requirements. We monitor each crop throughout the growing cycle, from soil preparation and planting through irrigation management, pest control, and harvest timing.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              For international importers and wholesale buyers, we provide complete supply chain transparency including farm origin documentation, quality inspection reports, laboratory analysis results upon request, and real-time shipment tracking. Our dedicated export team manages all customs documentation, phytosanitary certificates, and destination-specific compliance requirements. We have established logistics partnerships with major shipping lines serving all major European, Middle Eastern, African, and North American ports, ensuring competitive freight rates and reliable transit schedules for our customers.
+            </p>
           </div>
         </section>
 

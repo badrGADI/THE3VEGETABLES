@@ -1,13 +1,10 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { format } from "date-fns"
-import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, Tag, ArrowLeft, Clock } from "lucide-react"
 import { blogPosts } from "@/lib/blogData"
-import { useTranslation } from "@/hooks/useTranslation"
+import { getTranslation } from "@/lib/translations"
 
 
 interface BlogPostClientProps {
@@ -17,7 +14,7 @@ interface BlogPostClientProps {
 }
 
 export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostClientProps) {
-  const { t } = useTranslation()
+  const t = (key: string) => getTranslation(key, "en")
   const backUrl = "/blog"
 
   if (!post) {
@@ -95,8 +92,7 @@ export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostCli
           </div>
 
           {/* Article Content */}
-          <Card className="mb-8">
-            <CardContent className="p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 mb-8">
               <div className="prose prose-lg max-w-none">
                 <p className="text-xl text-gray-600 leading-relaxed mb-6">
                   {t(post.excerptKey)}
@@ -285,28 +281,25 @@ export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostCli
                   )}
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
 
           {/* Related Posts */}
-          <div className="mb-8">
+          <div className="mt-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">{t("blog.relatedPosts")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {blogPosts
                 .filter(p => p.id !== post.id)
                 .slice(0, 2)
                 .map((relatedPost) => (
-                  <Card key={relatedPost.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                    <CardContent className="p-0">
-                      <div className="grid grid-cols-1 gap-0">
-                        <div>
-                          <Image
-                            src={relatedPost.image || "/placeholder.svg"}
-                            alt={t(relatedPost.titleKey)}
-                            width={400}
-                            height={200}
-                            className="w-full h-48 object-cover"
-                          />
+                  <div key={relatedPost.id} className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <div>
+                      <Image
+                        src={relatedPost.image || "/placeholder.svg"}
+                        alt={t(relatedPost.titleKey)}
+                        width={400}
+                        height={200}
+                        className="w-full h-48 object-cover"
+                      />
                         </div>
                         <div className="p-4">
                           <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2">
@@ -318,9 +311,7 @@ export default function BlogPostClient({ post, prevPost, nextPost }: BlogPostCli
                           </h4>
                           <p className="text-gray-600 text-sm line-clamp-2">{t(relatedPost.excerptKey)}</p>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                    </div>
                 ))}
             </div>
           </div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, User, Tag } from "lucide-react";
 import { format } from "date-fns";
 import { blogPosts } from "@/lib/blogData";
@@ -35,12 +34,11 @@ export default function BlogGrid({
 
       <div className="grid grid-cols-1 gap-8">
         {posts.map((post) => (
-          <Card
+          <div
             key={post.id}
-            className="overflow-hidden hover:shadow-lg transition-shadow"
+            className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700"
           >
-            <CardContent className="p-0">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                 <div className="md:col-span-1">
                   <Image
                     src={post.image || "/placeholder.svg"}
@@ -81,8 +79,7 @@ export default function BlogGrid({
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
         ))}
       </div>
 
