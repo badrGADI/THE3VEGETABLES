@@ -1,8 +1,10 @@
-import BlogPostClient from "@/components/blog/BlogPostClient";
+import { Suspense } from "react";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blogData";
 import { getTranslation } from "@/lib/translations";
-import { notFound } from "next/navigation";
+import BlogPostClient from "@/components/blog/BlogPostClient";
+import BlogPostContent from "@/components/blog/BlogPostContent";
 
 interface BlogPostPageProps {
   params: Promise<{ id: string }>;
@@ -31,12 +33,11 @@ export async function generateMetadata({
   }
 
 
-  const title = getTranslation(post.titleKey, "en"); // Default to English for SEO tags
+  const title = getTranslation(post.titleKey, "en");
   const description = getTranslation(post.excerptKey, "en");
 
 
-  // SEO Content Optimization: Truncate title and description
-  const cleanTitle = title.split(":")[0]; // Use the main part of the title (before colon) to keep it short
+  const cleanTitle = title.split(":")[0];
   const optimizedTitle = cleanTitle.length > 60 ? cleanTitle.substring(0, 57) + "..." : cleanTitle;
   const optimizedDescription = description.length > 160 ? description.substring(0, 157) + "..." : description;
 
@@ -70,18 +71,19 @@ export async function generateMetadata({
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { id } = await params;
   const post = blogPosts.find((p) => p.id === Number(id));
-  
-  if (!post) {
-    notFound();
-  }
 
-
+  if (!post) notFound();
 
   const currentIndex = blogPosts.findIndex((p) => p.id === post.id);
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
 
   return (
-    <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />
+    <>
+      <BlogPostContent post={post} prevPost={prevPost} nextPost={nextPost} />
+      <Suspense fallback={null}>
+        <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />
+      </Suspense>
+    </>
   );
 }
