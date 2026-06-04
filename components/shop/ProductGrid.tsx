@@ -119,7 +119,7 @@ export default function ProductGrid() {
                   <span className="text-2xl font-bold text-orange-700">
                     ${product.price.toFixed(2)}/{product.unit}
                   </span>
-                  <Link href={`/products/${product.slug}`}>
+                  <Link href={`/shop/products/${product.slug}`}>
                     <Button
                       size="sm"
                       className="bg-orange-700 hover:bg-orange-800"

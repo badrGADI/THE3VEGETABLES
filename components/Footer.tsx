@@ -121,6 +121,30 @@ export default function Footer() {
                   Red Onions
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/products/moroccan-oranges"
+                  className="text-gray-400 hover:text-orange-500"
+                >
+                  Fresh Oranges
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products/moroccan-lemons"
+                  className="text-gray-400 hover:text-orange-500"
+                >
+                  Fresh Lemons
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products/moroccan-avocados"
+                  className="text-gray-400 hover:text-orange-500"
+                >
+                  Fresh Avocados
+                </Link>
+              </li>
             </ul>
           </div>
 
